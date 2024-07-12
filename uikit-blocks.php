@@ -23,5 +23,5 @@ if ( ! defined( 'ABSPATH' ) ) {
 define( 'UIKIT_BLOCKS_PATH', untrailingslashit( plugin_dir_path( __FILE__ ) ) );
 define( 'UIKIT_BLOCKS_URL', untrailingslashit( plugin_dir_url( __FILE__ ) ) );
 
-require_once UIKIT_BLOCKS_PATH . '/src/class-uikit-blocks.php';
+require_once UIKIT_BLOCKS_PATH . '/includes/class-uikit-blocks.php';
 UIkit_Blocks\UIkit_Blocks::get_instance();
