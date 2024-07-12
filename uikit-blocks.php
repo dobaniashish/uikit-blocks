@@ -17,7 +17,7 @@
  */
 
 if ( ! defined( 'ABSPATH' ) ) {
-	exit; // Exit if accessed directly.
+	exit;
 }
 
 define( 'UIKIT_BLOCKS_PATH', untrailingslashit( plugin_dir_path( __FILE__ ) ) );
