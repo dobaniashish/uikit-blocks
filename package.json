@@ -1,0 +1,36 @@
+{
+  "name": "uikit-blocks",
+  "version": "1.0.0",
+  "description": "UIkit Gutenberg Blocks for WordPress",
+  "author": "dobaniashish",
+  "license": "GPL-2.0-or-later",
+  "homepage": "https://github.com/dobaniashish/uikit-blocks",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dobaniashish/uikit-blocks.git"
+  },
+  "bugs": {
+    "url": "https://github.com/dobaniashish/uikit-blocks/issues"
+  },
+  "devDependencies": {
+    "@wordpress/eslint-plugin": "^20.0.0",
+    "@wordpress/scripts": "^27.9.0",
+    "autoprefixer": "^10.4.19",
+    "chokidar-cli": "^3.0.0",
+    "clean-css": "^5.3.3",
+    "fs-extra": "^11.2.0",
+    "less": "^4.2.0",
+    "path": "^0.12.7",
+    "postcss": "^8.4.39"
+  },
+  "scripts": {
+    "build": "wp-scripts build && node build-scripts/less && node build-scripts/copy",
+    "build:dev": "wp-scripts build --mode development && node build-scripts/less && node build-scripts/copy",
+    "watch": "chokidar \"src\" --initial -c \"npm run build:dev\"",
+    "wp-env": "wp-env"
+  },
+  "dependencies": {
+    "@wordpress/icons": "^10.3.0",
+    "uikit": "^3.21.6"
+  }
+}

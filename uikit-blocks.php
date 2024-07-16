@@ -20,8 +20,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'UIKIT_BLOCKS_PATH', untrailingslashit( plugin_dir_path( __FILE__ ) ) );
-define( 'UIKIT_BLOCKS_URL', untrailingslashit( plugin_dir_url( __FILE__ ) ) );
+if ( ! defined( 'UIKIT_BLOCKS_PATH' ) ) {
+	define( 'UIKIT_BLOCKS_PATH', untrailingslashit( plugin_dir_path( __FILE__ ) ) );
+}
+
+
+if ( ! defined( 'UIKIT_BLOCKS_URL' ) ) {
+	define( 'UIKIT_BLOCKS_URL', untrailingslashit( plugin_dir_url( __FILE__ ) ) );
+}
 
 require_once UIKIT_BLOCKS_PATH . '/includes/class-uikit-blocks.php';
 UIkit_Blocks\UIkit_Blocks::get_instance();

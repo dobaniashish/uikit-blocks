@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<ruleset name="uikit-blocks">
+	<description>Coding standards for uikit-blocks</description>
+
+	<arg name="extensions" value="php"/>
+
+	<exclude-pattern>*/node_modules/*</exclude-pattern>
+	<exclude-pattern>./*.asset.php$</exclude-pattern>
+	<exclude-pattern>/stubs/*</exclude-pattern>
+
+	<rule ref="WordPress-Extra"></rule>
+</ruleset>

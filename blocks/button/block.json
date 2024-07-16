@@ -1,0 +1,41 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 1,
+	"name": "uikit-blocks/button",
+	"title": "Button",
+	"category": "uikit-blocks",
+	"keywords": [ "Button", "UIkit Button", "UIkit" ],
+	"textdomain": "uikit-blocks",
+	"version": "1.0",
+	"attributes": {
+		"text": {
+			"type": "string"
+		},
+		"url": {
+			"type": "string"
+		},
+		"style": {
+			"type": "string",
+			"enum": [
+				"default",
+				"primary",
+				"secondary",
+				"danger",
+				"text",
+				"link"
+			],
+			"default": "default"
+		},
+		"size": {
+			"type": "string",
+			"enum": [ "", "small", "large" ]
+		},
+		"target": {
+			"type": "string",
+			"enum": [ "", "_blank", "lightbox" ]
+		},
+		"rel": {
+			"type": "string"
+		}
+	}
+}
