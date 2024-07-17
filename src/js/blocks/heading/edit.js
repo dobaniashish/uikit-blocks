@@ -21,18 +21,18 @@ import {
 
 import { parseAttributes } from '../../helpers/util';
 
+const headingIcons = {
+	div: heading,
+	h1: headingLevel1,
+	h2: headingLevel2,
+	h3: headingLevel3,
+	h4: headingLevel4,
+	h5: headingLevel5,
+	h6: headingLevel6,
+};
+
 export default function Edit( { attributes, setAttributes } ) {
 	const { text, tag, style, decoration, color } = attributes;
-
-	const headingIcons = {
-		div: heading,
-		h1: headingLevel1,
-		h2: headingLevel2,
-		h3: headingLevel3,
-		h4: headingLevel4,
-		h5: headingLevel5,
-		h6: headingLevel6,
-	};
 
 	return (
 		<>
