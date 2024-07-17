@@ -1,6 +1,6 @@
 {
 	"$schema": "https://schemas.wp.org/trunk/block.json",
-	"apiVersion": 1,
+	"apiVersion": 2,
 	"name": "uikit-blocks/heading",
 	"title": "Heading (UIkit)",
 	"category": "uikit-blocks",
@@ -41,12 +41,7 @@
 		},
 		"decoration": {
 			"type": "string",
-			"enum": [
-				"",
-				"divider",
-				"bullet",
-				"line"
-			],
+			"enum": [ "", "divider", "bullet", "line" ],
 			"default": ""
 		},
 		"color": {
