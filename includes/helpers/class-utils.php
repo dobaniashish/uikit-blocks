@@ -66,7 +66,14 @@ class Utils {
 
 		// Return string
 		if ( $return_buffer ) {
-			$attributes = implode( ' ', $attrs );
+
+			$attrs_escaped = array();
+
+			foreach ( $attrs as $name => $value ) {
+				$attrs_escaped [ esc_attr( $name ) ] = esc_attr( $value );
+			}
+
+			$attributes = implode( ' ', $attrs_escaped );
 
 			if ( $attributes && $prefix_space ) {
 				$attributes = ' ' . $attributes;
@@ -86,6 +93,7 @@ class Utils {
 				echo ' '; // Space.
 			}
 			echo esc_attr( $name ) . '="' . esc_attr( $value ) . '"';
+			++$i;
 		}
 	}
 
