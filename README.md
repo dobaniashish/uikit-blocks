@@ -13,14 +13,14 @@ Inspired by [liip/bootstrap-blocks-wordpress-plugin](https://github.com/liip/boo
 
 -   Button
 
-## Bootstrap library
+## UIkit library
 
 Please be aware that this plugin does not include the UIkit library in your website. You need to do this by yourself. We decided not to include the library so that you can modify UIkit to your own needs before loading it.
 
 The easiest way to do this is to add the following to your theme's `functions.php`:
 
 ```php
-function mytheme_load_bootstrap() {
+function mytheme_load_uikit() {
     if ( is_admin() ) {
         return;
     }
@@ -29,7 +29,7 @@ function mytheme_load_bootstrap() {
     wp_enqueue_script( 'uikit', 'https://cdn.jsdelivr.net/npm/uikit@3.21.7/dist/js/uikit.min.js', array(), '3.21.7', true );
     wp_enqueue_script( 'uikit-icons', 'https://cdn.jsdelivr.net/npm/uikit@3.21.7/dist/js/uikit-icons.min.js', array(), '3.21.7', true );
 }
-add_action( 'wp_enqueue_scripts', 'mytheme_load_bootstrap' );
+add_action( 'wp_enqueue_scripts', 'mytheme_load_uikit' );
 ```
 
 ## Templates
