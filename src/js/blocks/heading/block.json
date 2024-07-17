@@ -2,7 +2,7 @@
 	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 1,
 	"name": "uikit-blocks/heading",
-	"title": "Heading",
+	"title": "Heading (UIkit)",
 	"category": "uikit-blocks",
 	"keywords": [ "Heading", "UIkit Heading", "UIkit" ],
 	"textdomain": "uikit-blocks",
