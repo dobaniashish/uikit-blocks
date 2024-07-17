@@ -23,6 +23,8 @@ import {
 
 import { link, linkOff } from '@wordpress/icons';
 
+import { parseAttributes } from '../../helpers/util';
+
 export default function Edit( { attributes, setAttributes, isSelected } ) {
 	const { text, url, style, size, target, rel } = attributes;
 
@@ -249,11 +251,13 @@ export default function Edit( { attributes, setAttributes, isSelected } ) {
 
 			<div { ...useBlockProps() }>
 				<span
-					className={ [
-						'ukb-button',
-						`ukb-button-${ style }`,
-						`${ size ? `ukb-button-${ size }` : '' }`,
-					].join( ' ' ) }
+					{ ...parseAttributes( {
+						className: {
+							[ `ukb-button` ]: true,
+							[ `ukb-button-${ style }` ]: style,
+							[ `ukb-button-${ size }` ]: size,
+						},
+					} ) }
 					ref={ setPopoverAnchor }
 				>
 					<RichText
