@@ -11,7 +11,7 @@ Inspired by [liip/bootstrap-blocks-wordpress-plugin](https://github.com/liip/boo
 
 ## Available blocks
 
-### Button
+-   Button
 
 ## Bootstrap library
 
