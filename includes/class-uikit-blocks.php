@@ -62,6 +62,9 @@ class UIkit_Blocks {
 
 		// Hook: Editor assets.
 		add_action( 'enqueue_block_editor_assets', array( $this, 'enqueue_block_editor_assets' ), 99 );
+
+		// Register block category.
+		add_filter( 'block_categories_all', array( $this, 'block_categories_all' ), 10, 2 );
 	}
 
 	/**
@@ -95,6 +98,24 @@ class UIkit_Blocks {
 			$js_asset_file['version'],
 			false // Enqueue the script in the footer.
 		);
+	}
+
+	/**
+	 * Registers block category.
+	 *
+	 * @param array[] $block_categories Array of categories for block types.
+	 */
+	public function block_categories_all( $block_categories ) {
+
+		array_push(
+			$block_categories,
+			array(
+				'slug'  => 'uikit-blocks',
+				'title' => __( 'Uikit Blocks', 'uikit-blocks' ),
+			)
+		);
+
+		return $block_categories;
 	}
 
 	/**
