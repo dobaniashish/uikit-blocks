@@ -55,6 +55,18 @@ const copyConfig = [
 			'block.json'
 		),
 	},
+	{
+		source: path.resolve(
+			process.cwd(),
+			'src/js/blocks/heading/',
+			'block.json'
+		),
+		destination: path.resolve(
+			process.cwd(),
+			'blocks/heading/',
+			'block.json'
+		),
+	},
 ];
 
 run();

@@ -125,6 +125,7 @@ class UIkit_Blocks {
 
 		$blocks = array(
 			'button',
+			'heading',
 		);
 
 		foreach ( $blocks as $block_dir ) {
