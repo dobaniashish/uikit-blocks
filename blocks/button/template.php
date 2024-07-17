@@ -32,6 +32,6 @@ $button = array(
 ?>
 <div <?php echo wp_kses_data( get_block_wrapper_attributes() ); ?><?php Utils::attributes( $div, true ); ?>>
 	<a <?php Utils::attributes( $button ); ?>>
-		<?php echo esc_html( $attributes['text'] ); ?>
+		<?php echo wp_kses_data( $attributes['text'] ); ?>
 	</a>
 </div>
