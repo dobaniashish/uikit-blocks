@@ -12,6 +12,9 @@ Inspired by [liip/bootstrap-blocks-wordpress-plugin](https://github.com/liip/boo
 ## Available blocks
 
 -   Button
+-   Heading
+-   Grid
+-   Grid Cell
 
 ## UIkit library
 
@@ -49,14 +52,7 @@ To overwrite a block template, you can copy the original template from the plugi
 
 1. Clone this repository
 
-1. Install composer dependencies
-
-    ```bash
-    curl -s https://getcomposer.org/installer | php
-    php composer.phar install
-    ```
-
-1. Install Node dependencies
+2. Install Node dependencies
 
     ```bash
     npm install
@@ -66,7 +62,9 @@ To overwrite a block template, you can copy the original template from the plugi
 
 The build process is based on the official [`@wordpress/scripts`](https://developer.wordpress.org/block-editor/packages/packages-scripts/) package but modified to our needs.
 
-The plugin uses Less CSS and it is compiled directly from `build-scripts/less.js` instead of using webpack less-loader. The css for editor.less is prefixed with `.ukb-` from the default `.uk-`. The less build script also creates `asset.php` file and claculates version hash like `@wordpress/dependency-extraction-webpack-plugin`.
+The plugin uses Less CSS and it is compiled directly from `build-scripts/less.js` instead of using webpack less-loader.
+
+The css for editor.less is prefixed with `.ukb-` from the default `.uk-`. The less build script also creates `asset.php` file and claculates version hash like `@wordpress/dependency-extraction-webpack-plugin`.
 
 -   `npm run build:dev`: Compiles the files in development mode with wp-scripts, compiles less and copies assets to proper directories.
 -   `npm run watch`: Watches for any changes in `src` directory and runs `build:dev`.
