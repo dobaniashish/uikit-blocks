@@ -1,3 +1,4 @@
+const fs = require( 'fs-extra' );
 const { copy } = require( './util' );
 const path = require( 'path' );
 
@@ -41,33 +42,27 @@ const copyConfig = [
 			'editor.css.asset.php'
 		),
 	},
-
-	// Blocks Json.
-	{
-		source: path.resolve(
-			process.cwd(),
-			'src/js/blocks/button/',
-			'block.json'
-		),
-		destination: path.resolve(
-			process.cwd(),
-			'blocks/button/',
-			'block.json'
-		),
-	},
-	{
-		source: path.resolve(
-			process.cwd(),
-			'src/js/blocks/heading/',
-			'block.json'
-		),
-		destination: path.resolve(
-			process.cwd(),
-			'blocks/heading/',
-			'block.json'
-		),
-	},
 ];
+
+// Add Blocks Json.
+const blocksDir = path.resolve( process.cwd(), 'src/js/blocks/' );
+
+const blocks = fs.readdirSync( blocksDir, 'utf-8' );
+
+blocks.forEach( ( block ) => {
+	copyConfig.push( {
+		source: path.resolve(
+			process.cwd(),
+			`src/js/blocks/${ block }/`,
+			'block.json'
+		),
+		destination: path.resolve(
+			process.cwd(),
+			`blocks/${ block }/`,
+			'block.json'
+		),
+	} );
+} );
 
 run();
 

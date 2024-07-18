@@ -126,6 +126,8 @@ class UIkit_Blocks {
 		$blocks = array(
 			'button',
 			'heading',
+			'grid',
+			'grid-cell',
 		);
 
 		foreach ( $blocks as $block_dir ) {

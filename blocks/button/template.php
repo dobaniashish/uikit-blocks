@@ -10,7 +10,7 @@ use UIkit_Blocks\Helpers\Utils;
 $attributes = $arguments['attributes'];
 
 $div = array(
-	'uk-lightbox' => 'lightbox' === $attributes['target'],
+	'data-uk-lightbox' => 'lightbox' === $attributes['target'],
 );
 
 $button = array(
