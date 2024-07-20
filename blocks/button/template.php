@@ -25,7 +25,7 @@ $button = array(
 	),
 	'rel'       => $attributes['rel'],
 	'data-type' => array(
-		'iframe' => 'lightbox' === $attributes['target'],
+		$attributes['lightboxType'] => ( 'lightbox' === $attributes['target'] ) && $attributes['lightboxType'],
 	),
 );
 

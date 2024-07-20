@@ -34,6 +34,9 @@
 			"type": "string",
 			"enum": [ "", "_blank", "lightbox" ]
 		},
+		"lightboxType": {
+			"type": "string"
+		},
 		"rel": {
 			"type": "string"
 		}

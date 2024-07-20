@@ -26,17 +26,17 @@ import { link, linkOff } from '@wordpress/icons';
 import { parseAttributes } from '../../helpers/util';
 
 export default function Edit( { attributes, setAttributes, isSelected } ) {
-	const { text, url, style, size, target, rel } = attributes;
-
 	const newTabValue = '_blank';
 	const newTabRel = [ 'noreferrer', 'noopener' ];
 	const nofollowRel = 'nofollow';
 
 	const [ popoverAnchor, setPopoverAnchor ] = useState();
 	const [ isEditingURL, setIsEditingURL ] = useState( false );
-	const isURLSet = !! url;
+	const isURLSet = !! attributes.url;
 
-	const nofollow = rel ? rel.split( ' ' ).includes( nofollowRel ) : false;
+	const nofollow = attributes.rel
+		? attributes.rel.split( ' ' ).includes( nofollowRel )
+		: false;
 
 	function startEditing( event ) {
 		event.preventDefault();
@@ -51,7 +51,7 @@ export default function Edit( { attributes, setAttributes, isSelected } ) {
 	}
 
 	function updateRel( add = [], remove = [] ) {
-		let relParts = rel ? rel.split( ' ' ) : [];
+		let relParts = attributes.rel ? attributes.rel.split( ' ' ) : [];
 
 		relParts.push( ...add );
 		relParts = relParts.filter( ( el ) => ! remove.includes( el ) );
@@ -75,7 +75,7 @@ export default function Edit( { attributes, setAttributes, isSelected } ) {
 				<PanelBody title={ __( 'Settings', 'uikit-blocks' ) }>
 					<SelectControl
 						label={ __( 'Style', 'uikit-blocks' ) }
-						value={ style }
+						value={ attributes.style }
 						options={ [
 							{
 								label: __( 'Default', 'uikit-blocks' ),
@@ -108,7 +108,7 @@ export default function Edit( { attributes, setAttributes, isSelected } ) {
 					/>
 					<SelectControl
 						label={ __( 'Size', 'uikit-blocks' ) }
-						value={ size }
+						value={ attributes.size }
 						options={ [
 							{
 								label: __( 'Default', 'uikit-blocks' ),
@@ -133,7 +133,7 @@ export default function Edit( { attributes, setAttributes, isSelected } ) {
 			<InspectorControls group="advanced">
 				<TextControl
 					label={ __( 'Link rel', 'uikit-blocks' ) }
-					value={ rel || '' }
+					value={ attributes.rel || '' }
 					onChange={ ( value ) => setAttributes( { rel: value } ) }
 				/>
 			</InspectorControls>
@@ -172,7 +172,7 @@ export default function Edit( { attributes, setAttributes, isSelected } ) {
 							<FlexBlock>
 								<URLInput
 									label={ __( 'Url', 'uikit-blocks' ) }
-									value={ url }
+									value={ attributes.url }
 									onChange={ ( value ) => {
 										setAttributes( { url: value } );
 									} }
@@ -185,7 +185,7 @@ export default function Edit( { attributes, setAttributes, isSelected } ) {
 							<FlexBlock>
 								<SelectControl
 									label={ __( 'Target', 'uikit-blocks' ) }
-									value={ target }
+									value={ attributes.target }
 									options={ [
 										{
 											label: __(
@@ -226,6 +226,54 @@ export default function Edit( { attributes, setAttributes, isSelected } ) {
 									} }
 								/>
 							</FlexBlock>
+
+							{ attributes.target === 'lightbox' && (
+								<FlexBlock>
+									<SelectControl
+										label={ __(
+											'Lightbox Type',
+											'uikit-blocks'
+										) }
+										value={ attributes.lightboxType }
+										options={ [
+											{
+												label: __(
+													'Default',
+													'uikit-blocks'
+												),
+												value: '',
+											},
+											{
+												label: __(
+													'Image',
+													'uikit-blocks'
+												),
+												value: 'image',
+											},
+											{
+												label: __(
+													'Video',
+													'uikit-blocks'
+												),
+												value: 'video',
+											},
+											{
+												label: __(
+													'Iframe',
+													'uikit-blocks'
+												),
+												value: 'iframe',
+											},
+										] }
+										onChange={ ( value ) => {
+											setAttributes( {
+												lightboxType: value,
+											} );
+										} }
+									/>
+								</FlexBlock>
+							) }
+
 							<FlexBlock>
 								<CheckboxControl
 									label={ __(
@@ -254,8 +302,10 @@ export default function Edit( { attributes, setAttributes, isSelected } ) {
 					{ ...parseAttributes( {
 						className: {
 							[ `ukb-button` ]: true,
-							[ `ukb-button-${ style }` ]: style,
-							[ `ukb-button-${ size }` ]: size,
+							[ `ukb-button-${ attributes.style }` ]:
+								attributes.style,
+							[ `ukb-button-${ attributes.size }` ]:
+								attributes.size,
 						},
 					} ) }
 					ref={ setPopoverAnchor }
@@ -263,7 +313,7 @@ export default function Edit( { attributes, setAttributes, isSelected } ) {
 					<RichText
 						aria-label={ __( 'Button text', 'uikit-blocks' ) }
 						placeholder={ __( 'Add text…', 'uikit-blocks' ) }
-						value={ text }
+						value={ attributes.text }
 						onChange={ ( value ) =>
 							setAttributes( { text: value } )
 						}
