@@ -127,6 +127,87 @@ export default function Edit( { attributes, setAttributes, isSelected } ) {
 							setAttributes( { size: value } );
 						} }
 					/>
+					<SelectControl
+						label={ __( 'Width', 'uikit-blocks' ) }
+						value={ attributes.width }
+						options={ [
+							{
+								label: __( 'Auto', 'uikit-blocks' ),
+								value: '',
+							},
+							{
+								label: __( '100% (1-1)', 'uikit-blocks' ),
+								value: '1-1',
+							},
+							{
+								label: __( '83% (5-6)', 'uikit-blocks' ),
+								value: '5-6',
+							},
+							{
+								label: __( '80% (4-5)', 'uikit-blocks' ),
+								value: '4-5',
+							},
+							{
+								label: __( '75% (3-4)', 'uikit-blocks' ),
+								value: '3-4',
+							},
+							{
+								label: __( '66% (2-3)', 'uikit-blocks' ),
+								value: '2-3',
+							},
+							{
+								label: __( '60% (3-5)', 'uikit-blocks' ),
+								value: '3-5',
+							},
+							{
+								label: __( '50% (1-2)', 'uikit-blocks' ),
+								value: '1-2',
+							},
+							{
+								label: __( '40% (2-5)', 'uikit-blocks' ),
+								value: '2-5',
+							},
+							{
+								label: __( '33% (1-3)', 'uikit-blocks' ),
+								value: '1-3',
+							},
+							{
+								label: __( '25% (1-4)', 'uikit-blocks' ),
+								value: '1-4',
+							},
+							{
+								label: __( '20% (1-5)', 'uikit-blocks' ),
+								value: '1-5',
+							},
+							{
+								label: __( '16% (1-6)', 'uikit-blocks' ),
+								value: '1-6',
+							},
+							{
+								label: __( 'Small', 'uikit-blocks' ),
+								value: 'small',
+							},
+							{
+								label: __( 'Medium', 'uikit-blocks' ),
+								value: 'medium',
+							},
+							{
+								label: __( 'Large', 'uikit-blocks' ),
+								value: 'large',
+							},
+							{
+								label: __( 'X-Large', 'uikit-blocks' ),
+								value: 'xlarge',
+							},
+							{
+								label: __( '2X-Large', 'uikit-blocks' ),
+								value: '2xlarge',
+							},
+						] }
+						onChange={ ( value ) => {
+							setAttributes( { width: value } );
+						} }
+					/>
 				</PanelBody>
 			</InspectorControls>
 
@@ -304,6 +385,7 @@ export default function Edit( { attributes, setAttributes, isSelected } ) {
 						[ `ukb-button-${ attributes.style }` ]:
 							attributes.style,
 						[ `ukb-button-${ attributes.size }` ]: attributes.size,
+						[ `ukb-width-${ attributes.width }` ]: attributes.width,
 					} ) }
 					ref={ setPopoverAnchor }
 				>

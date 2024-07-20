@@ -18,6 +18,7 @@ $button = array(
 		'uk-button',
 		"uk-button-{$attributes['style']}" => $attributes['style'],
 		"uk-button-{$attributes['size']}"  => $attributes['size'],
+		"uk-width-{$attributes['width']}"  => $attributes['width'],
 	),
 	'href'      => $attributes['url'],
 	'target'    => array(
