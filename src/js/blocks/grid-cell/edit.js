@@ -4,9 +4,12 @@ import {
 	useBlockProps,
 	InnerBlocks,
 	InspectorControls,
+	store as blockEditorStore,
 } from '@wordpress/block-editor';
 
 import { PanelBody, SelectControl } from '@wordpress/components';
+
+import { useSelect } from '@wordpress/data';
 
 import { attributeValue } from '../../helpers/util';
 
@@ -112,7 +115,13 @@ const flexOptions = [
 	},
 ];
 
-export default function Edit( { attributes, setAttributes } ) {
+export default function Edit( { attributes, setAttributes, clientId } ) {
+	const hasInnerBlocks = useSelect(
+		( select ) =>
+			select( blockEditorStore ).getBlocks( clientId ).length > 0,
+		[ clientId ]
+	);
+
 	return (
 		<>
 			<InspectorControls>
@@ -250,7 +259,13 @@ export default function Edit( { attributes, setAttributes } ) {
 					} ),
 				} ) }
 			>
-				<InnerBlocks />
+				<InnerBlocks
+					renderAppender={
+						hasInnerBlocks
+							? undefined
+							: () => <InnerBlocks.ButtonBlockAppender />
+					}
+				/>
 			</div>
 		</>
 	);

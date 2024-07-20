@@ -32,15 +32,13 @@ const headingIcons = {
 };
 
 export default function Edit( { attributes, setAttributes } ) {
-	const { text, tag, style, decoration, color } = attributes;
-
 	return (
 		<>
 			<InspectorControls>
 				<PanelBody title={ __( 'Settings', 'uikit-blocks' ) }>
 					<SelectControl
 						label={ __( 'Style', 'uikit-blocks' ) }
-						value={ style }
+						value={ attributes.style }
 						options={ [
 							{
 								label: __(
@@ -120,7 +118,7 @@ export default function Edit( { attributes, setAttributes } ) {
 					/>
 					<SelectControl
 						label={ __( 'Decoration', 'uikit-blocks' ) }
-						value={ decoration }
+						value={ attributes.decoration }
 						options={ [
 							{
 								label: __( 'None', 'uikit-blocks' ),
@@ -145,7 +143,7 @@ export default function Edit( { attributes, setAttributes } ) {
 					/>
 					<SelectControl
 						label={ __( 'Color', 'uikit-blocks' ) }
-						value={ color }
+						value={ attributes.color }
 						options={ [
 							{
 								label: __( 'None', 'uikit-blocks' ),
@@ -192,7 +190,11 @@ export default function Edit( { attributes, setAttributes } ) {
 			</InspectorControls>
 			<BlockControls group="block">
 				<DropdownMenu
-					icon={ tag in headingIcons ? headingIcons[ tag ] : heading }
+					icon={
+						attributes.tag in headingIcons
+							? headingIcons[ attributes.tag ]
+							: heading
+					}
 					label="Select a direction"
 					controls={ [
 						{
@@ -238,17 +240,20 @@ export default function Edit( { attributes, setAttributes } ) {
 				<div
 					{ ...parseAttributes( {
 						className: {
-							[ `ukb-${ tag }` ]: tag !== 'div' && ! style,
-							[ `ukb-${ style }` ]: style,
-							[ `ukb-heading-${ decoration }` ]: decoration,
-							[ `ukb-text-${ color }` ]: color,
+							[ `ukb-${ attributes.tag }` ]:
+								attributes.tag !== 'div' && ! attributes.style,
+							[ `ukb-${ attributes.style }` ]: attributes.style,
+							[ `ukb-heading-${ attributes.decoration }` ]:
+								attributes.decoration,
+							[ `ukb-text-${ attributes.color }` ]:
+								attributes.color,
 						},
 					} ) }
 				>
 					<RichText
 						aria-label={ __( 'Heading text', 'uikit-blocks' ) }
 						placeholder={ __( 'Heading…', 'uikit-blocks' ) }
-						value={ text }
+						value={ attributes.text }
 						onChange={ ( value ) =>
 							setAttributes( { text: value } )
 						}
