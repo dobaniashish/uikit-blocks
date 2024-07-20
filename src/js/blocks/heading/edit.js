@@ -19,7 +19,7 @@ import {
 	headingLevel6,
 } from '@wordpress/icons';
 
-import { parseAttributes } from '../../helpers/util';
+import clsx from 'clsx';
 
 const headingIcons = {
 	div: heading,
@@ -238,16 +238,13 @@ export default function Edit( { attributes, setAttributes } ) {
 
 			<div { ...useBlockProps() }>
 				<div
-					{ ...parseAttributes( {
-						className: {
-							[ `ukb-${ attributes.tag }` ]:
-								attributes.tag !== 'div' && ! attributes.style,
-							[ `ukb-${ attributes.style }` ]: attributes.style,
-							[ `ukb-heading-${ attributes.decoration }` ]:
-								attributes.decoration,
-							[ `ukb-text-${ attributes.color }` ]:
-								attributes.color,
-						},
+					className={ clsx( {
+						[ `ukb-${ attributes.tag }` ]:
+							attributes.tag !== 'div' && ! attributes.style,
+						[ `ukb-${ attributes.style }` ]: attributes.style,
+						[ `ukb-heading-${ attributes.decoration }` ]:
+							attributes.decoration,
+						[ `ukb-text-${ attributes.color }` ]: attributes.color,
 					} ) }
 				>
 					<RichText

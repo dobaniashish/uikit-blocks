@@ -23,7 +23,7 @@ import {
 
 import { link, linkOff } from '@wordpress/icons';
 
-import { parseAttributes } from '../../helpers/util';
+import clsx from 'clsx';
 
 export default function Edit( { attributes, setAttributes, isSelected } ) {
 	const newTabValue = '_blank';
@@ -299,14 +299,11 @@ export default function Edit( { attributes, setAttributes, isSelected } ) {
 
 			<div { ...useBlockProps() }>
 				<span
-					{ ...parseAttributes( {
-						className: {
-							[ `ukb-button` ]: true,
-							[ `ukb-button-${ attributes.style }` ]:
-								attributes.style,
-							[ `ukb-button-${ attributes.size }` ]:
-								attributes.size,
-						},
+					className={ clsx( {
+						[ `ukb-button` ]: true,
+						[ `ukb-button-${ attributes.style }` ]:
+							attributes.style,
+						[ `ukb-button-${ attributes.size }` ]: attributes.size,
 					} ) }
 					ref={ setPopoverAnchor }
 				>
