@@ -128,6 +128,7 @@ class UIkit_Blocks {
 			'heading',
 			'grid',
 			'grid-cell',
+			'countdown',
 		);
 
 		foreach ( $blocks as $block_dir ) {
