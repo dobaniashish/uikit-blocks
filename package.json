@@ -12,6 +12,12 @@
   "bugs": {
     "url": "https://github.com/dobaniashish/uikit-blocks/issues"
   },
+  "scripts": {
+    "build": "wp-scripts build && node build-scripts/less && node build-scripts/copy",
+    "build:dev": "wp-scripts build --mode development && node build-scripts/less && node build-scripts/copy",
+    "watch": "chokidar \"src\" --initial -c \"npm run build:dev\"",
+    "wp-env": "wp-env"
+  },
   "devDependencies": {
     "@wordpress/eslint-plugin": "^20.0.0",
     "@wordpress/scripts": "^27.9.0",
@@ -21,13 +27,8 @@
     "fs-extra": "^11.2.0",
     "less": "^4.2.0",
     "path": "^0.12.7",
-    "postcss": "^8.4.39"
-  },
-  "scripts": {
-    "build": "wp-scripts build && node build-scripts/less && node build-scripts/copy",
-    "build:dev": "wp-scripts build --mode development && node build-scripts/less && node build-scripts/copy",
-    "watch": "chokidar \"src\" --initial -c \"npm run build:dev\"",
-    "wp-env": "wp-env"
+    "postcss": "^8.4.39",
+	"prettier": "npm:wp-prettier@3.0.3"
   },
   "dependencies": {
     "@wordpress/icons": "^10.3.0",
