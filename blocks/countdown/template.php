@@ -12,12 +12,13 @@ $attributes = $arguments['attributes'];
 $date = isset( $attributes['date'] ) ? $attributes['date'] : '';
 
 $countdown = array(
-	'data-uk-grid' => true,
+	'data-uk-grid'      => true,
 	'data-uk-countdown' => Utils::attribute_value(
 		array(
 			"date: {$date};" => $date,
-		)
-	) ?: true,
+		),
+		true
+	),
 );
 
 $countdown_classes = Utils::attribute_value(
