@@ -8,9 +8,7 @@
 	"textdomain": "uikit-blocks",
 	"version": "1.0",
 	"attributes": {
-		"text": {
-			"type": "string"
-		},
+		"text": { "type": "string" },
 		"tag": {
 			"type": "string",
 			"enum": [ "h1", "h2", "h3", "h4", "h5", "h6", "div" ],

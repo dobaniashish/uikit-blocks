@@ -13,8 +13,8 @@
     "url": "https://github.com/dobaniashish/uikit-blocks/issues"
   },
   "scripts": {
-    "build": "wp-scripts build && node build-scripts/less && node build-scripts/copy",
-    "build:dev": "wp-scripts build --mode development && node build-scripts/less && node build-scripts/copy",
+    "build": "wp-scripts build && node build-scripts/less && node build-scripts/metadata && node build-scripts/copy",
+    "build:dev": "wp-scripts build --mode development && node build-scripts/less && node build-scripts/metadata && node build-scripts/copy",
     "watch": "chokidar \"src\" --initial -c \"npm run build:dev\"",
     "wp-env": "wp-env"
   },

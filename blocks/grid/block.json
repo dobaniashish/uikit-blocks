@@ -112,27 +112,12 @@
 			"type": "string",
 			"enum": [ "", "top", "middle", "bottom" ]
 		},
-		"divider": {
-			"type": "boolean"
-		},
-		"matchHeight": {
-			"type": "boolean"
-		},
-		"masonry": {
-			"type": "string",
-			"enum": [ "", "pack", "next" ]
-		},
-		"parallax": {
-			"type": "string"
-		},
-		"parallaxStart": {
-			"type": "string"
-		},
-		"parallaxEnd": {
-			"type": "string"
-		},
-		"parallaxJustify": {
-			"type": "boolean"
-		}
+		"divider": { "type": "boolean" },
+		"matchHeight": { "type": "boolean" },
+		"masonry": { "type": "string", "enum": [ "", "pack", "next" ] },
+		"parallax": { "type": "string" },
+		"parallaxStart": { "type": "string" },
+		"parallaxEnd": { "type": "string" },
+		"parallaxJustify": { "type": "boolean" }
 	}
 }

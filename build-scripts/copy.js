@@ -1,6 +1,7 @@
 const fs = require( 'fs-extra' );
-const { copy } = require( './util' );
 const path = require( 'path' );
+
+const { copy, getBlocks } = require( './util' );
 
 const copyConfig = [
 	// Editor - All blocks.
@@ -45,15 +46,13 @@ const copyConfig = [
 ];
 
 // Add Blocks Json.
-const blocksDir = path.resolve( process.cwd(), 'src/js/blocks/' );
-
-const blocks = fs.readdirSync( blocksDir, 'utf-8' );
+const blocks = getBlocks();
 
 blocks.forEach( ( block ) => {
 	copyConfig.push( {
 		source: path.resolve(
 			process.cwd(),
-			`src/js/blocks/${ block }/`,
+			`dist/blocks/${ block }/`,
 			'block.json'
 		),
 		destination: path.resolve(

@@ -8,12 +8,8 @@
 	"textdomain": "uikit-blocks",
 	"version": "1.0",
 	"attributes": {
-		"text": {
-			"type": "string"
-		},
-		"url": {
-			"type": "string"
-		},
+		"text": { "type": "string" },
+		"url": { "type": "string" },
 		"style": {
 			"type": "string",
 			"enum": [
@@ -26,10 +22,7 @@
 			],
 			"default": "default"
 		},
-		"size": {
-			"type": "string",
-			"enum": [ "", "small", "large" ]
-		},
+		"size": { "type": "string", "enum": [ "", "small", "large" ] },
 		"width": {
 			"type": "string",
 			"enum": [
@@ -53,15 +46,8 @@
 				"2xlarge"
 			]
 		},
-		"target": {
-			"type": "string",
-			"enum": [ "", "_blank", "lightbox" ]
-		},
-		"lightboxType": {
-			"type": "string"
-		},
-		"rel": {
-			"type": "string"
-		}
+		"target": { "type": "string", "enum": [ "", "_blank", "lightbox" ] },
+		"lightboxType": { "type": "string" },
+		"rel": { "type": "string" }
 	}
 }

@@ -50,6 +50,11 @@ exports.copy = async function ( source, destination, force = false ) {
 	return;
 };
 
+exports.getBlocks = function () {
+	const blocksDir = path.resolve( process.cwd(), 'src/js/blocks/' );
+	return fs.readdirSync( blocksDir, 'utf-8' );
+};
+
 /**
  * Creates asset hash like wp
  *

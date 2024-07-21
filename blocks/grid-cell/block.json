@@ -114,25 +114,10 @@
 				"1-6"
 			]
 		},
-		"flexOrder": {
-			"type": "string",
-			"enum": [ "", "first", "last" ]
-		},
-		"flexOrderS": {
-			"type": "string",
-			"enum": [ "", "first", "last" ]
-		},
-		"flexOrderM": {
-			"type": "string",
-			"enum": [ "", "first", "last" ]
-		},
-		"flexOrderL": {
-			"type": "string",
-			"enum": [ "", "first", "last" ]
-		},
-		"flexOrderXL": {
-			"type": "string",
-			"enum": [ "", "first", "last" ]
-		}
+		"flexOrder": { "type": "string", "enum": [ "", "first", "last" ] },
+		"flexOrderS": { "type": "string", "enum": [ "", "first", "last" ] },
+		"flexOrderM": { "type": "string", "enum": [ "", "first", "last" ] },
+		"flexOrderL": { "type": "string", "enum": [ "", "first", "last" ] },
+		"flexOrderXL": { "type": "string", "enum": [ "", "first", "last" ] }
 	}
 }
