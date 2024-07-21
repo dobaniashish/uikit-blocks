@@ -34,10 +34,12 @@ module.exports = {
 		columnGap: {
 			type: 'string',
 			enum: [ '', 'small', 'medium', 'large', 'collapse' ],
+			default: 'small',
 		},
 		rowGap: {
 			type: 'string',
 			enum: [ '', 'small', 'medium', 'large', 'collapse' ],
+			default: 'small',
 		},
 		showSeparator: {
 			type: 'boolean',
