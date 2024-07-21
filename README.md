@@ -75,6 +75,8 @@ The css for editor.less is prefixed with `.ukb-` from the default `.uk-`. The le
 
 The build process is based on the official [`@wordpress/scripts`](https://developer.wordpress.org/block-editor/packages/packages-scripts/) package but modified to our needs.
 
+The compiled files are built into `dist` directory which are then copied to final location by `build-scripts/copy.js`
+
 -   `npm run build:dev`: Compiles the files in development mode with wp-scripts, compiles metadata, compiles less and copies assets to proper directories.
 -   `npm run watch`: Watches for any changes in `src` directory and runs `build:dev`.
 -   `npm run build`: Same as `build:dev` but in production mode.
