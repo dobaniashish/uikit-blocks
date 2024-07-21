@@ -67,7 +67,7 @@ Metadata build script uses prettier with `.prettierrc.js` to pretty print json i
 
 ### CSS Styles
 
-The plugin uses Less CSS and it is compiled directly from `build-scripts/less.js` instead of using webpack less-loader.
+The plugin uses Less CSS and it is compiled directly from `build-scripts/less.js` instead of using webpack `less-loader`.
 
 The css for editor.less is prefixed with `.ukb-` from the default `.uk-`. The less build script also creates `asset.php` file and claculates version hash like `@wordpress/dependency-extraction-webpack-plugin`.
 
