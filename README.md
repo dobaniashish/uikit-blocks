@@ -15,6 +15,7 @@ Inspired by [liip/bootstrap-blocks-wordpress-plugin](https://github.com/liip/boo
 -   Heading
 -   Grid
 -   Grid Cell
+-   Countdown
 
 ## UIkit library
 
@@ -58,15 +59,23 @@ To overwrite a block template, you can copy the original template from the plugi
     npm install
     ```
 
-### Compile assets
+### Block Metadata (`block.json`)
 
-The build process is based on the official [`@wordpress/scripts`](https://developer.wordpress.org/block-editor/packages/packages-scripts/) package but modified to our needs.
+Block Metadata (`block.json`) file contents are stored in file called `metadata.js` in each block directory in `src`. These files export metadata object which are used by `block.js` for registering block type and `build-scripts/metadata.js` to compile into `block.json` files.
+
+Metadata build script uses prettier with `.prettierrc.js` to pretty print json into `block.js`.
+
+### CSS Styles
 
 The plugin uses Less CSS and it is compiled directly from `build-scripts/less.js` instead of using webpack less-loader.
 
 The css for editor.less is prefixed with `.ukb-` from the default `.uk-`. The less build script also creates `asset.php` file and claculates version hash like `@wordpress/dependency-extraction-webpack-plugin`.
 
--   `npm run build:dev`: Compiles the files in development mode with wp-scripts, compiles less and copies assets to proper directories.
+### Compile assets
+
+The build process is based on the official [`@wordpress/scripts`](https://developer.wordpress.org/block-editor/packages/packages-scripts/) package but modified to our needs.
+
+-   `npm run build:dev`: Compiles the files in development mode with wp-scripts, compiles metadata, compiles less and copies assets to proper directories.
 -   `npm run watch`: Watches for any changes in `src` directory and runs `build:dev`.
 -   `npm run build`: Same as `build:dev` but in production mode.
 
