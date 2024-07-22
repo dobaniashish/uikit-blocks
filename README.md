@@ -87,3 +87,9 @@ The following commands can be used to set up a local dev environment. See the of
 
 -   `npm run wp-env start`: Starts the Docker containers.
 -   `npm run wp-env stop`: Stops the Docker containers.
+
+## Credits
+
+-   [`liip/bootstrap-blocks-wordpress-plugin`](https://github.com/liip/bootstrap-blocks-wordpress-plugin) - Inspiration for creating this plugin.
+-   [`UIkit`](https://github.com/uikit/uikit) - Using UIkit framework.
+-   [`fix-esm`](https://www.npmjs.com/package/fix-esm) - For `build-scripts/helpers/require-esm.js` - Require esm metadata files into cjs build script with `babel`.
