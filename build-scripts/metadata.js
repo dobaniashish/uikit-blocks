@@ -45,14 +45,11 @@ async function run() {
 			throw err;
 		}
 
-		const metadata = requireEsm.require( source );
+		const { default: metadata } = requireEsm.require( source );
 
 		let data = JSON.stringify( metadata );
 
-		data = await prettier.format( data, {
-			...prettierOptions,
-			parser: 'json',
-		} );
+		data = await prettier.format( data, prettierOptions );
 
 		// Make dir if does not exist.
 		await fs.mkdir( path.dirname( destination ), { recursive: true } );
