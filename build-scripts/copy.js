@@ -1,7 +1,7 @@
 const fs = require( 'fs-extra' );
 const path = require( 'path' );
 
-const { copy, getBlocks } = require( './util' );
+const { copy, getBlocks } = require( './helpers/util' );
 
 const copyConfig = [
 	// Editor - All blocks.

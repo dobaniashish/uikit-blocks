@@ -52,7 +52,10 @@ exports.copy = async function ( source, destination, force = false ) {
 
 exports.getBlocks = function () {
 	const blocksDir = path.resolve( process.cwd(), 'src/js/blocks/' );
-	return fs.readdirSync( blocksDir, 'utf-8' );
+	return fs
+		.readdirSync( blocksDir, { encoding: 'utf-8', withFileTypes: true } )
+		.filter( ( dirent ) => dirent.isDirectory() )
+		.map( ( dirent ) => dirent.name );
 };
 
 /**
@@ -64,7 +67,7 @@ exports.getBlocks = function () {
  */
 exports.createHashLikeWP = function ( data ) {
 	// Create a webpack compiler with the our config
-	const config = require( '../webpack.config' );
+	const config = require( '../../webpack.config' );
 	const compiler = webpack( config );
 
 	// Get the compiler output options

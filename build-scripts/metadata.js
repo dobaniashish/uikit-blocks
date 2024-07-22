@@ -2,7 +2,8 @@ const fs = require( 'fs-extra' );
 const path = require( 'path' );
 const prettier = require( 'prettier' );
 
-const { getBlocks } = require( './util' );
+const requireEsm = require( './helpers/require-esm' );
+const { getBlocks } = require( './helpers/util' );
 
 const prettierConfig = path.resolve( process.cwd(), '.prettierrc.js' );
 
@@ -44,7 +45,7 @@ async function run() {
 			throw err;
 		}
 
-		const metadata = require( source );
+		const metadata = requireEsm.require( source );
 
 		let data = JSON.stringify( metadata );
 

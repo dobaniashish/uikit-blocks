@@ -4,7 +4,7 @@ const CleanCSS = require( 'clean-css' );
 const postcss = require( 'postcss' );
 const autoprefixer = require( 'autoprefixer' );
 const path = require( 'path' );
-const { createHashLikeWP } = require( './util' );
+const { createHashLikeWP } = require( './helpers/util' );
 
 const lessConfig = [
 	{
