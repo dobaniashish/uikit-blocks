@@ -1,4 +1,4 @@
-module.exports = {
+export default {
 	$schema: 'https://schemas.wp.org/trunk/block.json',
 	apiVersion: 2,
 	name: 'uikit-blocks/heading',
