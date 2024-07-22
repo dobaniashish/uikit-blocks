@@ -30,8 +30,10 @@ module.exports = {
 				return oldJSLoader( mod, filename );
 			} catch ( error ) {
 				if (
-					error.message ===
-					'Cannot use import statement outside a module'
+					[
+						'Cannot use import statement outside a module',
+						"Unexpected token 'export'",
+					].includes( error.message )
 				) {
 					// NOTE: We completely bypass the default internal loader, as we cannot patch the `type: module` check out of that. Please open a PR if you have a better solution!
 					let code = fs.readFileSync( filename, 'utf8' );
