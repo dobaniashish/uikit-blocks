@@ -8,5 +8,5 @@
 	<exclude-pattern>./*.asset.php$</exclude-pattern>
 	<exclude-pattern>/stubs/*</exclude-pattern>
 
-	<rule ref="WordPress-Extra"></rule>
+	<rule ref="WordPress"></rule>
 </ruleset>
