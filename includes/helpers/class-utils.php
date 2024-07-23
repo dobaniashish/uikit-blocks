@@ -38,13 +38,14 @@ class Utils {
 	 *
 	 * @param array   $attrs_array Attributes array.
 	 * @param boolean $prefix_space Add a space before.
-	 * @return string Generated Attributes string or void.
+	 * @param boolean $return_buffer Return Generated Attributes string.
+	 * @return string|void Generated Attributes string or void.
 	 */
 	public static function attributes( $attrs_array, $prefix_space = false, $return_buffer = false ) {
 
 		$attrs = array();
 
-		// Parse values
+		// Parse values.
 		foreach ( $attrs_array as $name => $value ) {
 
 			if ( is_array( $value ) ) {
@@ -64,7 +65,7 @@ class Utils {
 			}
 		}
 
-		// Return string
+		// Return string.
 		if ( $return_buffer ) {
 
 			$attrs_escaped = array();
@@ -82,7 +83,7 @@ class Utils {
 			return $attributes;
 		}
 
-		// Print
+		// Print.
 		if ( ! empty( $attrs ) && $prefix_space ) {
 			echo ' '; // Space.
 		}
@@ -127,6 +128,63 @@ class Utils {
 		}
 
 		return $v;
+	}
+
+	/**
+	 * Merge attributes array
+	 *
+	 * @param array $array1 Attributes value array.
+	 * @param array $array2 Attributes value array.
+	 * @return array  Merged attributes.
+	 */
+	public static function attributes_merge( array $array1, array $array2 ) {
+
+		$merged = $array1;
+
+		foreach ( $array2 as $key => $value ) {
+			if ( is_numeric( $key ) ) {
+				if ( ! in_array( $value, $merged, true ) ) {
+					$merged[] = $value;
+				}
+			} elseif ( is_array( $value ) && isset( $merged[ $key ] ) && is_array( $merged[ $key ] ) ) {
+				$merged[ $key ] = self::attributes_merge( $merged[ $key ], $value );
+			} else {
+				$merged[ $key ] = $value;
+			}
+		}
+
+		return $merged;
+	}
+
+	/**
+	 * Prepare wrapper attributes so that it can be passed to get_block_wrapper_attributes as well as Utils::attributes.
+	 *
+	 * @param array $attributes Attributes value array.
+	 * @return array  Prepared and saperated attributes.
+	 */
+	public static function prepare_wrapper_attributes( array $attributes ) {
+
+		// Only these attributes can be passed to get_block_wrapper_attributes.
+		$allowed_attributes = array( 'style', 'class', 'id' );
+
+		// Allowed.
+		$wrapper_attributes_allowed = array_intersect_key(
+			$attributes,
+			array_flip( $allowed_attributes )
+		);
+
+		// Parse allowed attributes value so that it can be passed to get_block_wrapper_attributes.
+		foreach ( $wrapper_attributes_allowed as $key => $value ) {
+			$wrapper_attributes_allowed[ $key ] = self::attribute_value( $value );
+		}
+
+		// Other attributes.
+		$wrapper_attributes_extra = array_diff_key(
+			$attributes,
+			array_flip( $allowed_attributes )
+		);
+
+		return array( $wrapper_attributes_allowed, $wrapper_attributes_extra );
 	}
 
 	/**

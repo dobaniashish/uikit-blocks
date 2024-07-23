@@ -95,13 +95,18 @@ class Block_Type {
 	 */
 	public function render( $attributes, $content ) {
 
+		// Block attributes.
 		$attributes = $this->prepare_attributes_for_render( $attributes );
+
+		// General attributes.
+		$general_attributes = $this->get_general_attributes( $attributes );
 
 		$slug = $this->block_dir . '/template';
 
 		$arguments = array(
-			'attributes' => $attributes,
-			'content'    => $content,
+			'attributes'         => $attributes,
+			'general_attributes' => $general_attributes,
+			'content'            => $content,
 		);
 
 		return Utils::view( $slug, null, $arguments, true );
@@ -149,5 +154,78 @@ class Block_Type {
 		}
 
 		return $attributes;
+	}
+
+	/**
+	 * Generate general attributes.
+	 *
+	 * @param array $attributes Block attributes.
+	 * @return array Generated general attributes array.
+	 */
+	public function get_general_attributes( $attributes ) {
+
+		$general_attributes = array();
+
+		// Margin.
+		if ( array_key_exists( 'margin', $attributes ) && $attributes['margin'] ) {
+			$general_attributes = Utils::attributes_merge(
+				$general_attributes,
+				array(
+					'class' => array(
+						'uk-margin'               => $attributes['margin'] && 'default' === $attributes['margin'],
+						"uk-margin-{$attributes['margin']}" => $attributes['margin'] && 'default' !== $attributes['margin'],
+						'uk-margin-remove-top'    => $attributes['marginRemoveTop'],
+						'uk-margin-remove-bottom' => $attributes['marginRemoveBottom'],
+					),
+				)
+			);
+		}
+
+		// Text alignment.
+		if ( array_key_exists( 'textAlign', $attributes ) && $attributes['textAlign'] ) {
+			$general_attributes = Utils::attributes_merge(
+				$general_attributes,
+				array(
+					'class' => array(
+						"uk-text-{$attributes['textAlign']}" => ! $attributes['textAlignBreakpoint'],
+						"uk-text-{$attributes['textAlign']}@{$attributes['textAlignBreakpoint']}" => $attributes['textAlignBreakpoint'],
+						"uk-text-{$attributes['textAlignFallback']}" => $attributes['textAlignBreakpoint'] && $attributes['textAlignFallback'],
+					),
+				)
+			);
+		}
+
+		// Visiblity.
+		if ( array_key_exists( 'visiblity', $attributes ) && $attributes['visiblity'] ) {
+			$general_attributes = Utils::attributes_merge(
+				$general_attributes,
+				array(
+					'class' => array(
+						"uk-{$attributes['visiblity']}",
+					),
+				)
+			);
+		}
+
+		// Position.
+		if ( array_key_exists( 'position', $attributes ) && $attributes['position'] ) {
+			$general_attributes = Utils::attributes_merge(
+				$general_attributes,
+				array(
+					'class' => array(
+						"uk-position-{$attributes['position']}",
+					),
+					'style' => array(
+						"left: {$attributes['positionLeft']};" => $attributes['positionLeft'],
+						"right: {$attributes['positionRight']};" => $attributes['positionRight'],
+						"top: {$attributes['positionTop']};" => $attributes['positionTop'],
+						"bottom: {$attributes['positionBottom']};" => $attributes['positionBottom'],
+						"z-index: {$attributes['positionZIndex']};" => $attributes['positionZIndex'],
+					),
+				)
+			);
+		}
+
+		return $general_attributes;
 	}
 }

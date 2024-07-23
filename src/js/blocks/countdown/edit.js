@@ -17,6 +17,9 @@ import { date } from '@wordpress/date';
 
 import clsx from 'clsx';
 
+import GeneralOptions from '../general-options';
+import generalBlockProps from '../general-block-props';
+
 const gapOptions = [
 	{
 		label: __( 'Default', 'uikit-blocks' ),
@@ -189,7 +192,7 @@ export default function Edit( { attributes, setAttributes } ) {
 				</PanelBody>
 			</InspectorControls>
 
-			<div { ...useBlockProps() }>
+			<div { ...useBlockProps( generalBlockProps( attributes ) ) }>
 				<div
 					className={ clsx( {
 						[ `ukb-grid ukb-child-width-auto` ]: true,
@@ -262,6 +265,8 @@ export default function Edit( { attributes, setAttributes } ) {
 					</div>
 				</div>
 			</div>
+
+			<GeneralOptions { ...arguments[ 0 ] } />
 		</>
 	);
 }

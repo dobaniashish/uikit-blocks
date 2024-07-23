@@ -8,6 +8,55 @@
 	"textdomain": "uikit-blocks",
 	"version": "1.0",
 	"attributes": {
+		"margin": {
+			"type": "string",
+			"enum": [
+				"",
+				"small",
+				"default",
+				"medium",
+				"large",
+				"xlarge",
+				"remove-vertical"
+			]
+		},
+		"marginRemoveTop": { "type": "boolean" },
+		"marginRemoveBottom": { "type": "boolean" },
+		"textAlign": {
+			"type": "string",
+			"enum": [ "", "left", "center", "right", "justify" ]
+		},
+		"textAlignBreakpoint": {
+			"type": "string",
+			"enum": [ "", "s", "m", "l", "xl" ]
+		},
+		"textAlignFallback": {
+			"type": "string",
+			"enum": [ "", "left", "center", "right" ]
+		},
+		"visiblity": {
+			"type": "string",
+			"enum": [
+				"",
+				"s",
+				"m",
+				"l",
+				"xl",
+				"hidden-s",
+				"hidden-m",
+				"hidden-l",
+				"hidden-xl"
+			]
+		},
+		"position": {
+			"type": "string",
+			"enum": [ "", "relative", "absolute" ]
+		},
+		"positionLeft": { "type": "integer" },
+		"positionRight": { "type": "integer" },
+		"positionTop": { "type": "integer" },
+		"positionBottom": { "type": "integer" },
+		"positionZIndex": { "type": "integer" },
 		"text": { "type": "string" },
 		"url": { "type": "string" },
 		"style": {

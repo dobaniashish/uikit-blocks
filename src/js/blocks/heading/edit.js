@@ -31,6 +31,9 @@ const headingIcons = {
 	h6: headingLevel6,
 };
 
+import GeneralOptions from '../general-options';
+import generalBlockProps from '../general-block-props';
+
 export default function Edit( { attributes, setAttributes } ) {
 	return (
 		<>
@@ -236,7 +239,7 @@ export default function Edit( { attributes, setAttributes } ) {
 				/>
 			</BlockControls>
 
-			<div { ...useBlockProps() }>
+			<div { ...useBlockProps( generalBlockProps( attributes ) ) }>
 				<div
 					className={ clsx( {
 						[ `ukb-${ attributes.tag }` ]:
@@ -257,6 +260,8 @@ export default function Edit( { attributes, setAttributes } ) {
 					/>
 				</div>
 			</div>
+
+			<GeneralOptions { ...arguments[ 0 ] } />
 		</>
 	);
 }

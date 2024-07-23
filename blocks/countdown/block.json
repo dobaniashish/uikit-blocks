@@ -8,6 +8,55 @@
 	"textdomain": "uikit-blocks",
 	"version": "1.0",
 	"attributes": {
+		"margin": {
+			"type": "string",
+			"enum": [
+				"",
+				"small",
+				"default",
+				"medium",
+				"large",
+				"xlarge",
+				"remove-vertical"
+			]
+		},
+		"marginRemoveTop": { "type": "boolean" },
+		"marginRemoveBottom": { "type": "boolean" },
+		"textAlign": {
+			"type": "string",
+			"enum": [ "", "left", "center", "right", "justify" ]
+		},
+		"textAlignBreakpoint": {
+			"type": "string",
+			"enum": [ "", "s", "m", "l", "xl" ]
+		},
+		"textAlignFallback": {
+			"type": "string",
+			"enum": [ "", "left", "center", "right" ]
+		},
+		"visiblity": {
+			"type": "string",
+			"enum": [
+				"",
+				"s",
+				"m",
+				"l",
+				"xl",
+				"hidden-s",
+				"hidden-m",
+				"hidden-l",
+				"hidden-xl"
+			]
+		},
+		"position": {
+			"type": "string",
+			"enum": [ "", "relative", "absolute" ]
+		},
+		"positionLeft": { "type": "integer" },
+		"positionRight": { "type": "integer" },
+		"positionTop": { "type": "integer" },
+		"positionBottom": { "type": "integer" },
+		"positionZIndex": { "type": "integer" },
 		"date": { "type": "string" },
 		"showLabel": { "type": "boolean", "default": true },
 		"labelDays": { "type": "string" },
@@ -20,11 +69,13 @@
 		},
 		"columnGap": {
 			"type": "string",
-			"enum": [ "", "small", "medium", "large", "collapse" ]
+			"enum": [ "", "small", "medium", "large", "collapse" ],
+			"default": "small"
 		},
 		"rowGap": {
 			"type": "string",
-			"enum": [ "", "small", "medium", "large", "collapse" ]
+			"enum": [ "", "small", "medium", "large", "collapse" ],
+			"default": "small"
 		},
 		"showSeparator": { "type": "boolean", "default": true }
 	}

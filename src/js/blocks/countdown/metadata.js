@@ -1,3 +1,5 @@
+import generalAttributes from '../general-attributes';
+
 export default {
 	$schema: 'https://schemas.wp.org/trunk/block.json',
 	apiVersion: 2,
@@ -8,6 +10,7 @@ export default {
 	textdomain: 'uikit-blocks',
 	version: '1.0',
 	attributes: {
+		...generalAttributes,
 		date: {
 			type: 'string',
 		},

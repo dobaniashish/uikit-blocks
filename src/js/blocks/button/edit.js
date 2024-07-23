@@ -25,6 +25,9 @@ import { link, linkOff } from '@wordpress/icons';
 
 import clsx from 'clsx';
 
+import GeneralOptions from '../general-options';
+import generalBlockProps from '../general-block-props';
+
 export default function Edit( { attributes, setAttributes, isSelected } ) {
 	const newTabValue = '_blank';
 	const newTabRel = [ 'noreferrer', 'noopener' ];
@@ -222,7 +225,6 @@ export default function Edit( { attributes, setAttributes, isSelected } ) {
 			<BlockControls group="block">
 				{ ! isURLSet && (
 					<ToolbarButton
-						name="link"
 						icon={ link }
 						title={ __( 'Link', 'uikit-blocks' ) }
 						onClick={ startEditing }
@@ -230,7 +232,6 @@ export default function Edit( { attributes, setAttributes, isSelected } ) {
 				) }
 				{ isURLSet && (
 					<ToolbarButton
-						name="link"
 						icon={ linkOff }
 						title={ __( 'Unlink', 'uikit-blocks' ) }
 						onClick={ unlink }
@@ -378,7 +379,7 @@ export default function Edit( { attributes, setAttributes, isSelected } ) {
 				</Popover>
 			) }
 
-			<div { ...useBlockProps() }>
+			<div { ...useBlockProps( generalBlockProps( attributes ) ) }>
 				<span
 					className={ clsx( {
 						[ `ukb-button` ]: true,
@@ -400,6 +401,8 @@ export default function Edit( { attributes, setAttributes, isSelected } ) {
 					/>
 				</span>
 			</div>
+
+			<GeneralOptions { ...arguments[ 0 ] } />
 		</>
 	);
 }

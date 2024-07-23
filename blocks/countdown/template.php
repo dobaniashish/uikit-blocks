@@ -7,35 +7,36 @@
 
 use UIkit_Blocks\Helpers\Utils;
 
-$attributes = $arguments['attributes'];
+$attributes         = $arguments['attributes'];
+$general_attributes = $arguments['general_attributes'];
 
 $date = isset( $attributes['date'] ) ? $attributes['date'] : '';
 
-$countdown = array(
-	'data-uk-grid'      => true,
-	'data-uk-countdown' => Utils::attribute_value(
-		array(
-			"date: {$date};" => $date,
-		),
-		true
-	),
-);
-
-$countdown_classes = Utils::attribute_value(
+$wrapper_attributes = Utils::attributes_merge(
+	$general_attributes,
 	array(
-		'uk-grid',
-		'uk-child-width-auto',
-		'uk-text-center',
-
-		"uk-grid-{$attributes['columnGap']}"        => $attributes['columnGap'] && $attributes['rowGap'] && $attributes['columnGap'] === $attributes['rowGap'],
-		"uk-grid-column-{$attributes['columnGap']}" => $attributes['columnGap'] && $attributes['columnGap'] !== $attributes['rowGap'],
-		"uk-grid-row-{$attributes['rowGap']}"       => $attributes['rowGap'] && $attributes['columnGap'] !== $attributes['rowGap'],
+		'class'             => array(
+			'uk-grid',
+			'uk-child-width-auto',
+			'uk-text-center',
+			"uk-grid-{$attributes['columnGap']}"        => $attributes['columnGap'] && $attributes['rowGap'] && $attributes['columnGap'] === $attributes['rowGap'],
+			"uk-grid-column-{$attributes['columnGap']}" => $attributes['columnGap'] && $attributes['columnGap'] !== $attributes['rowGap'],
+			"uk-grid-row-{$attributes['rowGap']}"       => $attributes['rowGap'] && $attributes['columnGap'] !== $attributes['rowGap'],
+		),
+		'data-uk-grid'      => true,
+		'data-uk-countdown' => Utils::attribute_value(
+			array(
+				"date: {$date};" => $date,
+			),
+			true
+		),
 	)
 );
 
-?>
+$prepared_wrapper_attributes = Utils::prepare_wrapper_attributes( $wrapper_attributes );
 
-<div <?php echo wp_kses_data( get_block_wrapper_attributes( array( 'class' => $countdown_classes ) ) ); ?><?php Utils::attributes( $countdown ); ?>>
+?>
+<div <?php echo wp_kses_data( get_block_wrapper_attributes( $prepared_wrapper_attributes[0] ) ); ?><?php Utils::attributes( $prepared_wrapper_attributes[1], true ); ?>>
 
 	<div>
 		<div class="uk-countdown-number uk-countdown-days"></div>
