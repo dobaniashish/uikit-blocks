@@ -402,24 +402,24 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 			<div { ...useBlockProps() }>
 				{ ! hasInnerBlocks && (
 					<>
-						<div className="ukb-placeholder ukb-padding-small ukb-text-center">
-							<div className="ukb-flex ukb-child-width-auto ukb-text-small">
+						<div className="uk-placeholder uk-padding-small uk-text-center">
+							<div className="uk-flex uk-child-width-auto uk-text-small">
 								{ templates.map( ( template ) => (
 									<button
 										key={ template.name }
 										onClick={ () =>
 											setTemplate( template )
 										}
-										className="ukb-button-clean"
+										className="uk-button-clean"
 									>
 										<div
-											className="ukb-padding-small"
+											className="uk-padding-small"
 											style={ { width: '100px' } }
 										>
 											<Icon
 												icon={ template.icon }
 												size={ 40 }
-												className="ukb-text-muted"
+												className="uk-text-muted"
 											/>
 
 											<div>{ template.title }</div>
@@ -427,7 +427,7 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 									</button>
 								) ) }
 							</div>
-							<div className="ukb-margin-small-top">
+							<div className="uk-margin-small-top">
 								{ __(
 									'Select a layout or add a grid cell block to start custom design.',
 									'uikit-blocks'
@@ -440,28 +440,28 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 					{ ...useInnerBlocksProps(
 						{
 							className: attributeValue( {
-								'ukb-grid ukb-grid-collapse': true,
-								[ `ukb-child-width-${ attributes.childWidth }` ]:
+								'uk-grid uk-grid-collapse': true,
+								[ `uk-child-width-${ attributes.childWidth }` ]:
 									attributes.childWidth,
-								[ `ukb-child-width-${ attributes.childWidthS }@s` ]:
+								[ `uk-child-width-${ attributes.childWidthS }@s` ]:
 									attributes.childWidthS,
-								[ `ukb-child-width-${ attributes.childWidthM }@m` ]:
+								[ `uk-child-width-${ attributes.childWidthM }@m` ]:
 									attributes.childWidthM,
-								[ `ukb-child-width-${ attributes.childWidthL }@l` ]:
+								[ `uk-child-width-${ attributes.childWidthL }@l` ]:
 									attributes.childWidthL,
-								[ `ukb-child-width-${ attributes.childWidthXL }@xl` ]:
+								[ `uk-child-width-${ attributes.childWidthXL }@xl` ]:
 									attributes.childWidthXL,
-								[ `ukb-flex-${ attributes.flexHorizontal }` ]:
+								[ `uk-flex-${ attributes.flexHorizontal }` ]:
 									attributes.flexHorizontal,
-								[ `ukb-flex-${ attributes.flexHorizontalS }@s` ]:
+								[ `uk-flex-${ attributes.flexHorizontalS }@s` ]:
 									attributes.flexHorizontalS,
-								[ `ukb-flex-${ attributes.flexHorizontalM }@m` ]:
+								[ `uk-flex-${ attributes.flexHorizontalM }@m` ]:
 									attributes.flexHorizontalM,
-								[ `ukb-flex-${ attributes.flexHorizontalL }@l` ]:
+								[ `uk-flex-${ attributes.flexHorizontalL }@l` ]:
 									attributes.flexHorizontalL,
-								[ `ukb-flex-${ attributes.flexHorizontalXL }@xl` ]:
+								[ `uk-flex-${ attributes.flexHorizontalXL }@xl` ]:
 									attributes.flexHorizontalXL,
-								[ `ukb-flex-${ attributes.flexVertical }` ]:
+								[ `uk-flex-${ attributes.flexVertical }` ]:
 									attributes.flexVertical,
 							} ),
 						},

@@ -382,11 +382,10 @@ export default function Edit( { attributes, setAttributes, isSelected } ) {
 			<div { ...useBlockProps( generalBlockProps( attributes ) ) }>
 				<span
 					className={ clsx( {
-						[ `ukb-button` ]: true,
-						[ `ukb-button-${ attributes.style }` ]:
-							attributes.style,
-						[ `ukb-button-${ attributes.size }` ]: attributes.size,
-						[ `ukb-width-${ attributes.width }` ]: attributes.width,
+						[ `uk-button` ]: true,
+						[ `uk-button-${ attributes.style }` ]: attributes.style,
+						[ `uk-button-${ attributes.size }` ]: attributes.size,
+						[ `uk-width-${ attributes.width }` ]: attributes.width,
 					} ) }
 					ref={ setPopoverAnchor }
 				>

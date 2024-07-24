@@ -242,12 +242,12 @@ export default function Edit( { attributes, setAttributes } ) {
 			<div { ...useBlockProps( generalBlockProps( attributes ) ) }>
 				<div
 					className={ clsx( {
-						[ `ukb-${ attributes.tag }` ]:
+						[ `uk-${ attributes.tag }` ]:
 							attributes.tag !== 'div' && ! attributes.style,
-						[ `ukb-${ attributes.style }` ]: attributes.style,
-						[ `ukb-heading-${ attributes.decoration }` ]:
+						[ `uk-${ attributes.style }` ]: attributes.style,
+						[ `uk-heading-${ attributes.decoration }` ]:
 							attributes.decoration,
-						[ `ukb-text-${ attributes.color }` ]: attributes.color,
+						[ `uk-text-${ attributes.color }` ]: attributes.color,
 					} ) }
 				>
 					<RichText

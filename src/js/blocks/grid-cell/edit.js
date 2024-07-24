@@ -236,25 +236,25 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 			<div
 				{ ...useBlockProps( {
 					className: attributeValue( {
-						'ukb-border-dotted ukb-padding-xsmall': true,
-						[ `ukb-width-${ attributes.width }` ]: attributes.width,
-						[ `ukb-width-${ attributes.widthS }@s` ]:
+						'uk-border-dotted uk-padding-xsmall': true,
+						[ `uk-width-${ attributes.width }` ]: attributes.width,
+						[ `uk-width-${ attributes.widthS }@s` ]:
 							attributes.widthS,
-						[ `ukb-width-${ attributes.widthM }@m` ]:
+						[ `uk-width-${ attributes.widthM }@m` ]:
 							attributes.widthM,
-						[ `ukb-width-${ attributes.widthL }@l` ]:
+						[ `uk-width-${ attributes.widthL }@l` ]:
 							attributes.widthL,
-						[ `ukb-width-${ attributes.widthXL }@xl` ]:
+						[ `uk-width-${ attributes.widthXL }@xl` ]:
 							attributes.widthXL,
-						[ `ukb-flex-${ attributes.flexOrder }` ]:
+						[ `uk-flex-${ attributes.flexOrder }` ]:
 							attributes.flexOrder,
-						[ `ukb-flex-${ attributes.flexOrderS }@s` ]:
+						[ `uk-flex-${ attributes.flexOrderS }@s` ]:
 							attributes.flexOrderS,
-						[ `ukb-flex-${ attributes.flexOrderM }@m` ]:
+						[ `uk-flex-${ attributes.flexOrderM }@m` ]:
 							attributes.flexOrderM,
-						[ `ukb-flex-${ attributes.flexOrderL }@l` ]:
+						[ `uk-flex-${ attributes.flexOrderL }@l` ]:
 							attributes.flexOrderL,
-						[ `ukb-flex-${ attributes.flexOrderXL }@xl` ]:
+						[ `uk-flex-${ attributes.flexOrderXL }@xl` ]:
 							attributes.flexOrderXL,
 					} ),
 				} ) }

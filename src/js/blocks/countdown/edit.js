@@ -41,9 +41,9 @@ const gapOptions = [
 
 export default function Edit( { attributes, setAttributes } ) {
 	const labelClassName = clsx( {
-		[ `ukb-countdown-label ukb-text-center` ]: true,
-		[ `ukb-margin-${ attributes.labelMargin }` ]: attributes.labelMargin,
-		[ `ukb-margin` ]: ! attributes.labelMargin,
+		[ `uk-countdown-label uk-text-center` ]: true,
+		[ `uk-margin-${ attributes.labelMargin }` ]: attributes.labelMargin,
+		[ `uk-margin` ]: ! attributes.labelMargin,
 	} );
 
 	return (
@@ -195,21 +195,21 @@ export default function Edit( { attributes, setAttributes } ) {
 			<div { ...useBlockProps( generalBlockProps( attributes ) ) }>
 				<div
 					className={ clsx( {
-						[ `ukb-grid ukb-child-width-auto` ]: true,
-						[ `ukb-grid-${ attributes.columnGap }` ]:
+						[ `uk-grid uk-child-width-auto` ]: true,
+						[ `uk-grid-${ attributes.columnGap }` ]:
 							attributes.columnGap &&
 							attributes.rowGap &&
 							attributes.columnGap === attributes.rowGap,
-						[ `ukb-grid-column-${ attributes.columnGap }` ]:
+						[ `uk-grid-column-${ attributes.columnGap }` ]:
 							attributes.columnGap &&
 							attributes.columnGap !== attributes.rowGap,
-						[ `ukb-grid-row-${ attributes.rowGap }` ]:
+						[ `uk-grid-row-${ attributes.rowGap }` ]:
 							attributes.rowGap &&
 							attributes.rowGap !== attributes.columnGap,
 					} ) }
 				>
 					<div>
-						<div className="ukb-countdown-number ukb-countdown-days">
+						<div className="uk-countdown-number uk-countdown-days">
 							00
 						</div>
 						{ attributes.showLabel && (
@@ -220,11 +220,11 @@ export default function Edit( { attributes, setAttributes } ) {
 					</div>
 
 					{ attributes.showSeparator && (
-						<div className="ukb-countdown-separator">:</div>
+						<div className="uk-countdown-separator">:</div>
 					) }
 
 					<div>
-						<div className="ukb-countdown-number ukb-countdown-hours">
+						<div className="uk-countdown-number uk-countdown-hours">
 							00
 						</div>
 						{ attributes.showLabel && (
@@ -235,11 +235,11 @@ export default function Edit( { attributes, setAttributes } ) {
 					</div>
 
 					{ attributes.showSeparator && (
-						<div className="ukb-countdown-separator">:</div>
+						<div className="uk-countdown-separator">:</div>
 					) }
 
 					<div>
-						<div className="ukb-countdown-number ukb-countdown-minutes">
+						<div className="uk-countdown-number uk-countdown-minutes">
 							00
 						</div>
 						{ attributes.showLabel && (
@@ -250,11 +250,11 @@ export default function Edit( { attributes, setAttributes } ) {
 					</div>
 
 					{ attributes.showSeparator && (
-						<div className="ukb-countdown-separator">:</div>
+						<div className="uk-countdown-separator">:</div>
 					) }
 
 					<div>
-						<div className="ukb-countdown-number ukb-countdown-seconds">
+						<div className="uk-countdown-number uk-countdown-seconds">
 							00
 						</div>
 						{ attributes.showLabel && (

@@ -15,10 +15,6 @@ const lessConfig = [
 			'dist/css/',
 			'editor.css.asset.php'
 		),
-		prefix: {
-			from: 'uk',
-			to: 'ukb',
-		},
 	},
 ];
 
