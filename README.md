@@ -47,7 +47,7 @@ To overwrite a block template, you can copy the original template from the plugi
 ### Requirements
 
 -   Node.js version with long-term support status
--   Docker
+-   Docker (Required only if using `wp-env`)
 
 ### Installation
 
