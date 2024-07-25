@@ -4,6 +4,20 @@ UIkit Gutenberg Blocks for WordPress.
 
 Inspired by [liip/bootstrap-blocks-wordpress-plugin](https://github.com/liip/bootstrap-blocks-wordpress-plugin) and [UIkit](https://github.com/uikit/uikit).
 
+## TODO
+
+This project is a Work In Progress.
+
+-   [ ] Add all basic UIkit components
+-   [ ] Add general dynamic block options/attributes
+    -   [x] Margin
+    -   [x] Text Alignment
+    -   [x] Visiblity
+    -   [x] Position
+    -   [ ] Animation/Paralax
+-   [ ] Tests
+-   [ ] Plugin zip (Use `wp-scripts plugin-zip` or write custom build script)
+
 ## Features
 
 -   Supports UIkit 3
