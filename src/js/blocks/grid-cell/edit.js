@@ -11,7 +11,7 @@ import { PanelBody, SelectControl } from '@wordpress/components';
 
 import { useSelect } from '@wordpress/data';
 
-import { attributeValue } from '../../helpers/util';
+import clsx from 'clsx';
 
 const widthResponsiveOptions = [
 	{
@@ -235,7 +235,7 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 
 			<div
 				{ ...useBlockProps( {
-					className: attributeValue( {
+					className: clsx( {
 						'uk-border-dotted uk-padding-xsmall': true,
 						[ `uk-width-${ attributes.width }` ]: attributes.width,
 						[ `uk-width-${ attributes.widthS }@s` ]:

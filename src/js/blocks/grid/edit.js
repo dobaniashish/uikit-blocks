@@ -20,7 +20,7 @@ import { Icon } from '@wordpress/icons';
 
 import { useDispatch, useSelect } from '@wordpress/data';
 
-import { attributeValue } from '../../helpers/util';
+import clsx from 'clsx';
 
 import templates from './templates';
 
@@ -439,7 +439,7 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 				<div
 					{ ...useInnerBlocksProps(
 						{
-							className: attributeValue( {
+							className: clsx( {
 								'uk-grid uk-grid-collapse': true,
 								[ `uk-child-width-${ attributes.childWidth }` ]:
 									attributes.childWidth,
