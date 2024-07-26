@@ -1,0 +1,29 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/theme.json",
+	"version": 3,
+	"templateParts": [
+		{
+			"area": "header",
+			"name": "header",
+			"title": "Header"
+		},
+		{
+			"area": "footer",
+			"name": "footer",
+			"title": "Footer"
+		}
+	],
+	"customTemplates": [
+		{
+			"name": "page-empty",
+			"title": "Empty page",
+			"postTypes": [ "page", "post" ]
+		}
+	],
+	"settings": {
+		"layout": {
+			"contentSize": "900px",
+			"wideSize": "1200px"
+		}
+	}
+}
