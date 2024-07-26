@@ -17,6 +17,7 @@ This project is a Work In Progress.
     -   [ ] Animation/Paralax
 -   [ ] Tests
 -   [ ] Plugin zip (Use `wp-scripts plugin-zip` or write custom build script)
+-   [ ] Publish v1.0.0
 
 ## Features
 
