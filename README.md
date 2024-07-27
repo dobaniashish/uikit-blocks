@@ -39,7 +39,7 @@ This project is a Work In Progress.
 -   Button
 -   Heading
 -   Grid
--   Grid Cell
+	-   Grid Cell
 -   Countdown
 -   Section
 -   Container
