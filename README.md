@@ -13,7 +13,6 @@ This project is a Work In Progress.
     -   [ ] Card
     -   [ ] Text
     -   [ ] Cover
-    -   [ ] Divider
     -   [ ] Icon
     -   [ ] Image/Media
     -   [ ] ...more
@@ -39,12 +38,13 @@ This project is a Work In Progress.
 -   Button
 -   Heading
 -   Grid
-	-   Grid Cell
+    -   Grid Cell
 -   Countdown
 -   Section
 -   Container
 -   Accordion
     -   Accordion Item
+-   Divider
 
 ## UIkit library
 
