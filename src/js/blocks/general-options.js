@@ -38,7 +38,7 @@ export default function ( { attributes, setAttributes } ) {
 							"Set the vertical margin. The first element's top margin and last element's bottom margin are always removed by UIkit.",
 							'uikit-blocks'
 						) }
-						value={ attributes.margin }
+						value={ attributes.generalMargin }
 						options={ [
 							{
 								label: __( 'Keep Defaults', 'uikit-blocks' ),
@@ -70,21 +70,23 @@ export default function ( { attributes, setAttributes } ) {
 							},
 						] }
 						onChange={ ( value ) => {
-							setAttributes( { margin: value } );
+							setAttributes( { generalMargin: value } );
 						} }
 					/>
 					<CheckboxControl
 						label={ __( 'Remove top margin', 'uikit-blocks' ) }
-						checked={ attributes.marginRemoveTop }
+						checked={ attributes.generalMarginRemoveTop }
 						onChange={ ( value ) => {
-							setAttributes( { marginRemoveTop: value } );
+							setAttributes( { generalMarginRemoveTop: value } );
 						} }
 					/>
 					<CheckboxControl
 						label={ __( 'Remove bottom margin', 'uikit-blocks' ) }
-						checked={ attributes.marginRemoveBottom }
+						checked={ attributes.generalMarginRemoveBottom }
 						onChange={ ( value ) => {
-							setAttributes( { marginRemoveBottom: value } );
+							setAttributes( {
+								generalMarginRemoveBottom: value,
+							} );
 						} }
 					/>
 
@@ -95,7 +97,7 @@ export default function ( { attributes, setAttributes } ) {
 							'Show or hide the element on this device width and larger. Note: Visiblity is not previewed in editor.',
 							'uikit-blocks'
 						) }
-						value={ attributes.visiblity }
+						value={ attributes.generalVisiblity }
 						options={ [
 							{
 								label: __( 'Always', 'uikit-blocks' ),
@@ -159,7 +161,7 @@ export default function ( { attributes, setAttributes } ) {
 							},
 						] }
 						onChange={ ( value ) => {
-							setAttributes( { visiblity: value } );
+							setAttributes( { generalVisiblity: value } );
 						} }
 					/>
 
@@ -170,7 +172,7 @@ export default function ( { attributes, setAttributes } ) {
 							'Select element position. Note: Position is not previewed in editor.',
 							'uikit-blocks'
 						) }
-						value={ attributes.position }
+						value={ attributes.generalPosition }
 						options={ [
 							{
 								label: __( 'Static', 'uikit-blocks' ),
@@ -186,11 +188,11 @@ export default function ( { attributes, setAttributes } ) {
 							},
 						] }
 						onChange={ ( value ) => {
-							setAttributes( { position: value } );
+							setAttributes( { generalPosition: value } );
 						} }
 					/>
 
-					{ attributes.position && (
+					{ attributes.generalPosition && (
 						<>
 							<TextControl
 								label={ __( 'Position Left', 'uikit-blocks' ) }
@@ -198,9 +200,11 @@ export default function ( { attributes, setAttributes } ) {
 									'Enter value for CSS left property.',
 									'uikit-blocks'
 								) }
-								value={ attributes.positionLeft || '' }
+								value={ attributes.generalPositionLeft || '' }
 								onChange={ ( value ) =>
-									setAttributes( { positionLeft: value } )
+									setAttributes( {
+										generalPositionLeft: value,
+									} )
 								}
 							/>
 							<TextControl
@@ -209,9 +213,11 @@ export default function ( { attributes, setAttributes } ) {
 									'Enter value for CSS right property.',
 									'uikit-blocks'
 								) }
-								value={ attributes.positionRight || '' }
+								value={ attributes.generalPositionRight || '' }
 								onChange={ ( value ) =>
-									setAttributes( { positionRight: value } )
+									setAttributes( {
+										generalPositionRight: value,
+									} )
 								}
 							/>
 							<TextControl
@@ -220,9 +226,11 @@ export default function ( { attributes, setAttributes } ) {
 									'Enter value for CSS top property.',
 									'uikit-blocks'
 								) }
-								value={ attributes.positionTop || '' }
+								value={ attributes.generalPositionTop || '' }
 								onChange={ ( value ) =>
-									setAttributes( { positionTop: value } )
+									setAttributes( {
+										generalPositionTop: value,
+									} )
 								}
 							/>
 							<TextControl
@@ -234,9 +242,11 @@ export default function ( { attributes, setAttributes } ) {
 									'Enter value for CSS bottom property.',
 									'uikit-blocks'
 								) }
-								value={ attributes.positionBottom || '' }
+								value={ attributes.generalPositionBottom || '' }
 								onChange={ ( value ) =>
-									setAttributes( { positionBottom: value } )
+									setAttributes( {
+										generalPositionBottom: value,
+									} )
 								}
 							/>
 							<TextControl
@@ -245,9 +255,11 @@ export default function ( { attributes, setAttributes } ) {
 									'Enter value for CSS z-index property.',
 									'uikit-blocks'
 								) }
-								value={ attributes.positionZIndex || '' }
+								value={ attributes.generalPositionZIndex || '' }
 								onChange={ ( value ) =>
-									setAttributes( { positionZIndex: value } )
+									setAttributes( {
+										generalPositionZIndex: value,
+									} )
 								}
 							/>
 						</>
@@ -261,8 +273,10 @@ export default function ( { attributes, setAttributes } ) {
 					renderToggle={ ( { isOpen, onToggle } ) => (
 						<ToolbarButton
 							icon={
-								attributes.textAlign in alignmentIcons
-									? alignmentIcons[ attributes.textAlign ]
+								attributes.generalTextAlign in alignmentIcons
+									? alignmentIcons[
+											attributes.generalTextAlign
+									  ]
 									: alignNone
 							}
 							title={ __( 'Text Alignment', 'uikit-blocks' ) }
@@ -274,7 +288,7 @@ export default function ( { attributes, setAttributes } ) {
 						<div style={ { width: '300px' } }>
 							<SelectControl
 								label={ __( 'Text Alignment', 'uikit-blocks' ) }
-								value={ attributes.textAlign }
+								value={ attributes.generalTextAlign }
 								options={ [
 									{
 										label: __( 'Inherit', 'uikit-blocks' ),
@@ -298,12 +312,14 @@ export default function ( { attributes, setAttributes } ) {
 									},
 								] }
 								onChange={ ( value ) => {
-									setAttributes( { textAlign: value } );
+									setAttributes( {
+										generalTextAlign: value,
+									} );
 								} }
 							/>
 
 							{ [ 'left', 'center', 'right' ].includes(
-								attributes.textAlign
+								attributes.generalTextAlign
 							) && (
 								<>
 									<SelectControl
@@ -311,7 +327,9 @@ export default function ( { attributes, setAttributes } ) {
 											'Text Alignment Breakpoint',
 											'uikit-blocks'
 										) }
-										value={ attributes.textAlignBreakpoint }
+										value={
+											attributes.generalTextAlignBreakpoint
+										}
 										options={ [
 											{
 												label: __(
@@ -351,19 +369,20 @@ export default function ( { attributes, setAttributes } ) {
 										] }
 										onChange={ ( value ) => {
 											setAttributes( {
-												textAlignBreakpoint: value,
+												generalTextAlignBreakpoint:
+													value,
 											} );
 										} }
 									/>
 
-									{ attributes.textAlignBreakpoint && (
+									{ attributes.generalTextAlignBreakpoint && (
 										<SelectControl
 											label={ __(
 												'Text Alignment Fallback',
 												'uikit-blocks'
 											) }
 											value={
-												attributes.textAlignFallback
+												attributes.generalTextAlignFallback
 											}
 											options={ [
 												{
@@ -398,7 +417,8 @@ export default function ( { attributes, setAttributes } ) {
 											] }
 											onChange={ ( value ) => {
 												setAttributes( {
-													textAlignFallback: value,
+													generalTextAlignFallback:
+														value,
 												} );
 											} }
 										/>

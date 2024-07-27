@@ -167,60 +167,60 @@ class Block_Type {
 		$general_attributes = array();
 
 		// Margin.
-		if ( array_key_exists( 'margin', $attributes ) && $attributes['margin'] ) {
+		if ( array_key_exists( 'generalMargin', $attributes ) && $attributes['generalMargin'] ) {
 			$general_attributes = Utils::attributes_merge(
 				$general_attributes,
 				array(
 					'class' => array(
-						'uk-margin'               => $attributes['margin'] && 'default' === $attributes['margin'],
-						"uk-margin-{$attributes['margin']}" => $attributes['margin'] && 'default' !== $attributes['margin'],
-						'uk-margin-remove-top'    => $attributes['marginRemoveTop'],
-						'uk-margin-remove-bottom' => $attributes['marginRemoveBottom'],
+						'uk-margin'               => $attributes['generalMargin'] && 'default' === $attributes['generalMargin'],
+						"uk-margin-{$attributes['generalMargin']}" => $attributes['generalMargin'] && 'default' !== $attributes['generalMargin'],
+						'uk-margin-remove-top'    => $attributes['generalMarginRemoveTop'],
+						'uk-margin-remove-bottom' => $attributes['generalMarginRemoveBottom'],
 					),
 				)
 			);
 		}
 
 		// Text alignment.
-		if ( array_key_exists( 'textAlign', $attributes ) && $attributes['textAlign'] ) {
+		if ( array_key_exists( 'generalTextAlign', $attributes ) && $attributes['generalTextAlign'] ) {
 			$general_attributes = Utils::attributes_merge(
 				$general_attributes,
 				array(
 					'class' => array(
-						"uk-text-{$attributes['textAlign']}" => ! $attributes['textAlignBreakpoint'],
-						"uk-text-{$attributes['textAlign']}@{$attributes['textAlignBreakpoint']}" => $attributes['textAlignBreakpoint'],
-						"uk-text-{$attributes['textAlignFallback']}" => $attributes['textAlignBreakpoint'] && $attributes['textAlignFallback'],
+						"uk-text-{$attributes['generalTextAlign']}" => ! $attributes['generalTextAlignBreakpoint'],
+						"uk-text-{$attributes['generalTextAlign']}@{$attributes['generalTextAlignBreakpoint']}" => $attributes['generalTextAlignBreakpoint'],
+						"uk-text-{$attributes['generalTextAlignFallback']}" => $attributes['generalTextAlignBreakpoint'] && $attributes['generalTextAlignFallback'],
 					),
 				)
 			);
 		}
 
 		// Visiblity.
-		if ( array_key_exists( 'visiblity', $attributes ) && $attributes['visiblity'] ) {
+		if ( array_key_exists( 'generalVisiblity', $attributes ) && $attributes['generalVisiblity'] ) {
 			$general_attributes = Utils::attributes_merge(
 				$general_attributes,
 				array(
 					'class' => array(
-						"uk-{$attributes['visiblity']}",
+						"uk-{$attributes['generalVisiblity']}",
 					),
 				)
 			);
 		}
 
 		// Position.
-		if ( array_key_exists( 'position', $attributes ) && $attributes['position'] ) {
+		if ( array_key_exists( 'generalPosition', $attributes ) && $attributes['generalPosition'] ) {
 			$general_attributes = Utils::attributes_merge(
 				$general_attributes,
 				array(
 					'class' => array(
-						"uk-position-{$attributes['position']}",
+						"uk-position-{$attributes['generalPosition']}",
 					),
 					'style' => array(
-						"left: {$attributes['positionLeft']};" => $attributes['positionLeft'],
-						"right: {$attributes['positionRight']};" => $attributes['positionRight'],
-						"top: {$attributes['positionTop']};" => $attributes['positionTop'],
-						"bottom: {$attributes['positionBottom']};" => $attributes['positionBottom'],
-						"z-index: {$attributes['positionZIndex']};" => $attributes['positionZIndex'],
+						"left: {$attributes['generalPositionLeft']};" => $attributes['generalPositionLeft'],
+						"right: {$attributes['generalPositionRight']};" => $attributes['generalPositionRight'],
+						"top: {$attributes['generalPositionTop']};" => $attributes['generalPositionTop'],
+						"bottom: {$attributes['generalPositionBottom']};" => $attributes['generalPositionBottom'],
+						"z-index: {$attributes['generalPositionZIndex']};" => $attributes['generalPositionZIndex'],
 					),
 				)
 			);

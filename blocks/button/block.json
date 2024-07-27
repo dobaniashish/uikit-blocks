@@ -8,7 +8,7 @@
 	"textdomain": "uikit-blocks",
 	"version": "1.0",
 	"attributes": {
-		"margin": {
+		"generalMargin": {
 			"type": "string",
 			"enum": [
 				"",
@@ -20,43 +20,43 @@
 				"remove-vertical"
 			]
 		},
-		"marginRemoveTop": { "type": "boolean" },
-		"marginRemoveBottom": { "type": "boolean" },
-		"textAlign": {
+		"generalMarginRemoveTop": { "type": "boolean" },
+		"generalMarginRemoveBottom": { "type": "boolean" },
+		"generalTextAlign": {
 			"type": "string",
 			"enum": [ "", "left", "center", "right", "justify" ]
 		},
-		"textAlignBreakpoint": {
+		"generalTextAlignBreakpoint": {
 			"type": "string",
 			"enum": [ "", "s", "m", "l", "xl" ]
 		},
-		"textAlignFallback": {
+		"generalTextAlignFallback": {
 			"type": "string",
 			"enum": [ "", "left", "center", "right" ]
 		},
-		"visiblity": {
+		"generalVisiblity": {
 			"type": "string",
 			"enum": [
 				"",
-				"s",
-				"m",
-				"l",
-				"xl",
-				"hidden-s",
-				"hidden-m",
-				"hidden-l",
-				"hidden-xl"
+				"visible@s",
+				"visible@m",
+				"visible@l",
+				"visible@xl",
+				"hidden@s",
+				"hidden@m",
+				"hidden@l",
+				"hidden@xl"
 			]
 		},
-		"position": {
+		"generalPosition": {
 			"type": "string",
 			"enum": [ "", "relative", "absolute" ]
 		},
-		"positionLeft": { "type": "integer" },
-		"positionRight": { "type": "integer" },
-		"positionTop": { "type": "integer" },
-		"positionBottom": { "type": "integer" },
-		"positionZIndex": { "type": "integer" },
+		"generalPositionLeft": { "type": "integer" },
+		"generalPositionRight": { "type": "integer" },
+		"generalPositionTop": { "type": "integer" },
+		"generalPositionBottom": { "type": "integer" },
+		"generalPositionZIndex": { "type": "integer" },
 		"text": { "type": "string" },
 		"url": { "type": "string" },
 		"style": {

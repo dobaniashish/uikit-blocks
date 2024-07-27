@@ -4,21 +4,26 @@ export default function ( attributes ) {
 	return {
 		className: clsx( {
 			// Text alignment
-			[ `uk-text-${ attributes.textAlign }` ]:
-				attributes.textAlign && ! attributes.textAlignBreakpoint,
-			[ `uk-text-${ attributes.textAlign }@${ attributes.textAlignBreakpoint }` ]:
-				attributes.textAlign && attributes.textAlignBreakpoint,
-			[ `uk-text-${ attributes.textAlignFallback }` ]:
-				attributes.textAlign &&
-				attributes.textAlignBreakpoint &&
-				attributes.textAlignFallback,
+			[ `uk-text-${ attributes.generalTextAlign }` ]:
+				attributes.generalTextAlign &&
+				! attributes.generalTextAlignBreakpoint,
+			[ `uk-text-${ attributes.generalTextAlign }@${ attributes.generalTextAlignBreakpoint }` ]:
+				attributes.generalTextAlign &&
+				attributes.generalTextAlignBreakpoint,
+			[ `uk-text-${ attributes.generalTextAlignFallback }` ]:
+				attributes.generalTextAlign &&
+				attributes.generalTextAlignBreakpoint &&
+				attributes.generalTextAlignFallback,
 
 			// Margin
-			'uk-margin': attributes.margin && attributes.margin === 'default',
-			[ `uk-margin-${ attributes.margin }` ]:
-				attributes.margin && attributes.margin !== 'default',
-			'uk-margin-remove-top': attributes.marginRemoveTop,
-			'uk-margin-remove-bottom': attributes.marginRemoveBottom,
+			'uk-margin':
+				attributes.generalMargin &&
+				attributes.generalMargin === 'default',
+			[ `uk-margin-${ attributes.generalMargin }` ]:
+				attributes.generalMargin &&
+				attributes.generalMargin !== 'default',
+			'uk-margin-remove-top': attributes.generalMarginRemoveTop,
+			'uk-margin-remove-bottom': attributes.generalMarginRemoveTop,
 		} ),
 
 		style: {},

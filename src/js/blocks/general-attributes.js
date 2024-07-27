@@ -7,7 +7,7 @@ const breakpointOptions = [
 ];
 
 export const margin = {
-	margin: {
+	generalMargin: {
 		type: 'string',
 		enum: [
 			'', // Keep defaults
@@ -19,16 +19,16 @@ export const margin = {
 			'remove-vertical',
 		],
 	},
-	marginRemoveTop: {
+	generalMarginRemoveTop: {
 		type: 'boolean',
 	},
-	marginRemoveBottom: {
+	generalMarginRemoveBottom: {
 		type: 'boolean',
 	},
 };
 
 export const textAlign = {
-	textAlign: {
+	generalTextAlign: {
 		type: 'string',
 		enum: [
 			'', // Inherit
@@ -38,11 +38,11 @@ export const textAlign = {
 			'justify',
 		],
 	},
-	textAlignBreakpoint: {
+	generalTextAlignBreakpoint: {
 		type: 'string',
 		enum: breakpointOptions,
 	},
-	textAlignFallback: {
+	generalTextAlignFallback: {
 		type: 'string',
 		enum: [
 			'', // Inherit
@@ -55,24 +55,24 @@ export const textAlign = {
 };
 
 export const visiblity = {
-	visiblity: {
+	generalVisiblity: {
 		type: 'string',
 		enum: [
 			'', // Always
-			's',
-			'm',
-			'l',
-			'xl',
-			'hidden-s',
-			'hidden-m',
-			'hidden-l',
-			'hidden-xl',
+			'visible@s',
+			'visible@m',
+			'visible@l',
+			'visible@xl',
+			'hidden@s',
+			'hidden@m',
+			'hidden@l',
+			'hidden@xl',
 		],
 	},
 };
 
 export const position = {
-	position: {
+	generalPosition: {
 		type: 'string',
 		enum: [
 			'', // Static
@@ -80,19 +80,19 @@ export const position = {
 			'absolute',
 		],
 	},
-	positionLeft: {
+	generalPositionLeft: {
 		type: 'integer',
 	},
-	positionRight: {
+	generalPositionRight: {
 		type: 'integer',
 	},
-	positionTop: {
+	generalPositionTop: {
 		type: 'integer',
 	},
-	positionBottom: {
+	generalPositionBottom: {
 		type: 'integer',
 	},
-	positionZIndex: {
+	generalPositionZIndex: {
 		type: 'integer',
 	},
 };
