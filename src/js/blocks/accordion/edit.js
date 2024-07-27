@@ -17,6 +17,9 @@ import {
 
 import { useSelect } from '@wordpress/data';
 
+import GeneralOptions from '../general-options';
+import generalBlockProps from '../general-block-props';
+
 export default function Edit( { attributes, setAttributes, clientId } ) {
 	const hasInnerBlocks = useSelect(
 		( select ) =>
@@ -25,6 +28,7 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 	);
 
 	const blockProps = useBlockProps( {
+		...generalBlockProps( attributes ),
 		className: 'uk-accordion',
 	} );
 
@@ -106,6 +110,8 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 					/>
 				</ul>
 			) }
+
+			<GeneralOptions { ...arguments[ 0 ] } />
 		</>
 	);
 }
