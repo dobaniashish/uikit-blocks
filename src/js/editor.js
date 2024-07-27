@@ -5,3 +5,5 @@ import './blocks/grid-cell/block';
 import './blocks/countdown/block';
 import './blocks/section/block';
 import './blocks/container/block';
+import './blocks/accordion/block';
+import './blocks/accordion-item/block';

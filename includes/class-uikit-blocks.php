@@ -131,6 +131,8 @@ class UIkit_Blocks {
 			'countdown',
 			'section',
 			'container',
+			'accordion',
+			'accordion-item',
 		);
 
 		foreach ( $blocks as $block_dir ) {

@@ -1,0 +1,76 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "uikit-blocks/accordion",
+	"title": "Accordion (UIkit)",
+	"category": "uikit-blocks",
+	"keywords": [ "Accordion", "UIkit Accordion", "UIkit" ],
+	"textdomain": "uikit-blocks",
+	"version": "1.0",
+	"allowedBlocks": [ "uikit-blocks/accordion-item" ],
+	"attributes": {
+		"generalMargin": {
+			"type": "string",
+			"enum": [
+				"",
+				"small",
+				"default",
+				"medium",
+				"large",
+				"xlarge",
+				"remove-vertical"
+			]
+		},
+		"generalMarginRemoveTop": { "type": "boolean" },
+		"generalMarginRemoveBottom": { "type": "boolean" },
+		"generalTextAlign": {
+			"type": "string",
+			"enum": [ "", "left", "center", "right", "justify" ]
+		},
+		"generalTextAlignBreakpoint": {
+			"type": "string",
+			"enum": [ "", "s", "m", "l", "xl" ]
+		},
+		"generalTextAlignFallback": {
+			"type": "string",
+			"enum": [ "", "left", "center", "right" ]
+		},
+		"generalVisiblity": {
+			"type": "string",
+			"enum": [
+				"",
+				"visible@s",
+				"visible@m",
+				"visible@l",
+				"visible@xl",
+				"hidden@s",
+				"hidden@m",
+				"hidden@l",
+				"hidden@xl"
+			]
+		},
+		"generalPosition": {
+			"type": "string",
+			"enum": [ "", "relative", "absolute" ]
+		},
+		"generalPositionLeft": { "type": "integer" },
+		"generalPositionRight": { "type": "integer" },
+		"generalPositionTop": { "type": "integer" },
+		"generalPositionBottom": { "type": "integer" },
+		"generalPositionZIndex": { "type": "integer" },
+		"collapsible": { "type": "boolean", "default": true },
+		"multiple": { "type": "boolean" },
+		"transition": {
+			"type": "string",
+			"enum": [
+				"",
+				"linear",
+				"ease",
+				"ease-in",
+				"ease-in-out",
+				"ease-out"
+			]
+		},
+		"duration": { "type": "string" }
+	}
+}
