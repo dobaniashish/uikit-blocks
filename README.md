@@ -9,8 +9,6 @@ Inspired by [liip/bootstrap-blocks-wordpress-plugin](https://github.com/liip/boo
 This project is a Work In Progress.
 
 -   [ ] Add all basic UIkit components
-    -   [x] Section
-    -   [x] Container
     -   [ ] Accordion
     -   [ ] Breadcrumb (dynamic)
     -   [ ] Card
@@ -44,6 +42,8 @@ This project is a Work In Progress.
 -   Grid
 -   Grid Cell
 -   Countdown
+-   Section
+-   Container
 
 ## UIkit library
 
