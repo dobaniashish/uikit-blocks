@@ -70,6 +70,7 @@ export default function Edit( { attributes, setAttributes } ) {
 						'uk-hr': ! attributes.style,
 						[ `uk-divider-${ attributes.style }` ]:
 							attributes.style,
+						'uk-margin-remove': true,
 					} ) }
 				></div>
 			</div>
