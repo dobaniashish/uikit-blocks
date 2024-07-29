@@ -440,7 +440,19 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 					{ ...useInnerBlocksProps(
 						{
 							className: clsx( {
-								'uk-grid uk-grid-collapse': true,
+								'uk-grid': true,
+
+								[ `uk-grid-${ attributes.columnGap }` ]:
+									attributes.columnGap &&
+									attributes.rowGap &&
+									attributes.columnGap === attributes.rowGap,
+								[ `uk-grid-column-${ attributes.columnGap }` ]:
+									attributes.columnGap &&
+									attributes.columnGap !== attributes.rowGap,
+								[ `uk-grid-row-${ attributes.rowGap }` ]:
+									attributes.rowGap &&
+									attributes.columnGap !== attributes.rowGap,
+
 								[ `uk-child-width-${ attributes.childWidth }` ]:
 									attributes.childWidth,
 								[ `uk-child-width-${ attributes.childWidthS }@s` ]:
@@ -451,6 +463,7 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 									attributes.childWidthL,
 								[ `uk-child-width-${ attributes.childWidthXL }@xl` ]:
 									attributes.childWidthXL,
+
 								[ `uk-flex-${ attributes.flexHorizontal }` ]:
 									attributes.flexHorizontal,
 								[ `uk-flex-${ attributes.flexHorizontalS }@s` ]:
@@ -463,7 +476,11 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 									attributes.flexHorizontalXL,
 								[ `uk-flex-${ attributes.flexVertical }` ]:
 									attributes.flexVertical,
+
+								'uk-grid-divider': attributes.divider,
+								'uk-grid-match': attributes.matchHeight,
 							} ),
+							'data-uk-grid': '',
 						},
 
 						/*

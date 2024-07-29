@@ -207,6 +207,10 @@ export default function Edit( { attributes, setAttributes } ) {
 							attributes.rowGap &&
 							attributes.rowGap !== attributes.columnGap,
 					} ) }
+					data-uk-grid=""
+					data-uk-countdown={ clsx( {
+						[ `date: ${ attributes.date }` ]: attributes.date,
+					} ) }
 				>
 					<div>
 						<div className="uk-countdown-number uk-countdown-days">
