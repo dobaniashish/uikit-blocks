@@ -20,7 +20,7 @@ $wrapper_attributes = Utils::attributes_merge(
 	)
 );
 
-$tag_name = ! empty( $attributes['tag'] ) ? $attributes['tag'] : 'h1';
+$tag_name = ! empty( $attributes['tag'] ) ? $attributes['tag'] : 'hr';
 
 $prepared_wrapper_attributes = Utils::prepare_wrapper_attributes( $wrapper_attributes );
 
