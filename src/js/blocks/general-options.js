@@ -285,7 +285,13 @@ export default function ( { attributes, setAttributes } ) {
 						/>
 					) }
 					renderContent={ () => (
-						<div style={ { width: '300px' } }>
+						<div
+							style={ {
+								maxWidth: '200px',
+								minWidth: 'auto',
+								width: '90vw',
+							} }
+						>
 							<SelectControl
 								label={ __( 'Text Alignment', 'uikit-blocks' ) }
 								value={ attributes.generalTextAlign }
