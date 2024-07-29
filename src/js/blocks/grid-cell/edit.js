@@ -236,7 +236,6 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 			<div
 				{ ...useBlockProps( {
 					className: clsx( {
-						'uk-border-dotted uk-padding-xsmall': true,
 						[ `uk-width-${ attributes.width }` ]: attributes.width,
 						[ `uk-width-${ attributes.widthS }@s` ]:
 							attributes.widthS,
