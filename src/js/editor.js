@@ -1,3 +1,11 @@
+// UIkit.
+import UIkit from 'uikit';
+import Icons from 'uikit/dist/js/uikit-icons';
+
+// loads the Icon plugin
+UIkit.use( Icons );
+
+// Blocks.
 import './blocks/button/block';
 import './blocks/heading/block';
 import './blocks/grid/block';
