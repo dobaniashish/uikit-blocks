@@ -107,6 +107,16 @@ export default function Edit( { attributes, setAttributes } ) {
 							setAttributes( { rowGap: value } );
 						} }
 					/>
+					<CheckboxControl
+						label={ __( 'Show separator', 'uikit-blocks' ) }
+						checked={ attributes.showSeparator }
+						onChange={ ( value ) => {
+							setAttributes( {
+								showSeparator: value,
+							} );
+						} }
+						__nextHasNoMarginBottom
+					/>
 				</PanelBody>
 				<PanelBody title={ __( 'Label Settings', 'uikit-blocks' ) }>
 					<CheckboxControl
