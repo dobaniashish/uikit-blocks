@@ -24,8 +24,8 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 			<InspectorControls>
 				<PanelBody title={ __( 'Settings', 'uikit-blocks' ) }>
 					<CheckboxControl
-						label={ __( 'Keep open', 'uikit-blocks' ) }
-						checked={ attributes.open }
+						label={ __( 'Keep open initially', 'uikit-blocks' ) }
+						checked={ attributes.open || false }
 						onChange={ ( value ) => {
 							setAttributes( { open: value } );
 						} }
