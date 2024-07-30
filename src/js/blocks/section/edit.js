@@ -18,10 +18,9 @@ import {
 } from '@wordpress/components';
 
 import { useDispatch, useSelect } from '@wordpress/data';
+import { store as noticesStore } from '@wordpress/notices';
 
 import clsx from 'clsx';
-
-import { store as noticesStore } from '@wordpress/notices';
 
 export default function Edit( { attributes, setAttributes, clientId } ) {
 	const hasInnerBlocks = useSelect(
@@ -70,7 +69,12 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 		},
 	} );
 
-	const innerBlocksProps = useInnerBlocksProps( blockProps );
+	const innerBlocksProps = useInnerBlocksProps( blockProps, {
+		template: [ [ 'uikit-blocks/container' ] ],
+		renderAppender: hasInnerBlocks
+			? undefined
+			: InnerBlocks.ButtonBlockAppender,
+	} );
 
 	return (
 		<>
@@ -415,20 +419,7 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 				</PanelBody>
 			</InspectorControls>
 
-			{ hasInnerBlocks && <div { ...innerBlocksProps }></div> }
-
-			{ ! hasInnerBlocks && (
-				<div { ...blockProps }>
-					<InnerBlocks
-						template={ [ [ 'uikit-blocks/container' ] ] }
-						renderAppender={
-							hasInnerBlocks
-								? undefined
-								: () => <InnerBlocks.ButtonBlockAppender />
-						}
-					/>
-				</div>
-			) }
+			<div { ...innerBlocksProps }></div>
 		</>
 	);
 }
