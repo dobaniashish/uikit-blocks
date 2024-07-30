@@ -62,6 +62,7 @@ class UIkit_Blocks {
 
 		// Hook: Editor assets.
 		add_action( 'enqueue_block_editor_assets', array( $this, 'enqueue_block_editor_assets' ), 99 );
+		add_action( 'enqueue_block_assets', array( $this, 'enqueue_block_editor_assets' ), 99 );
 
 		// Register block category.
 		add_filter( 'block_categories_all', array( $this, 'block_categories_all' ), 10, 2 );
@@ -79,25 +80,27 @@ class UIkit_Blocks {
 	 * Acts on enqueue_block_editor_assets.
 	 */
 	public function enqueue_block_editor_assets() {
-		// Editor css.
-		$css_asset_file = include UIKIT_BLOCKS_PATH . '/assets/admin/css/editor.css.asset.php';
-		wp_enqueue_style(
-			'uikit-blocks-editor-style',
-			UIKIT_BLOCKS_URL . '/assets/admin/css/editor.css',
-			$css_asset_file['dependencies'],
-			$css_asset_file['version'],
-		);
+		if ( is_admin() ) {
+			// Editor css.
+			$css_asset_file = include UIKIT_BLOCKS_PATH . '/assets/admin/css/editor.css.asset.php';
+			wp_enqueue_style(
+				'uikit-blocks-editor-style',
+				UIKIT_BLOCKS_URL . '/assets/admin/css/editor.css',
+				$css_asset_file['dependencies'],
+				$css_asset_file['version'],
+			);
 
-		// Editor js.
-		$js_asset_file = include UIKIT_BLOCKS_PATH . '/assets/admin/js/editor.asset.php';
+			// Editor js.
+			$js_asset_file = include UIKIT_BLOCKS_PATH . '/assets/admin/js/editor.asset.php';
 
-		wp_enqueue_script(
-			'uikit-blocks-editor-js',
-			UIKIT_BLOCKS_URL . '/assets/admin/js/editor.js',
-			$js_asset_file['dependencies'],
-			$js_asset_file['version'],
-			false // Enqueue the script in the footer.
-		);
+			wp_enqueue_script(
+				'uikit-blocks-editor-js',
+				UIKIT_BLOCKS_URL . '/assets/admin/js/editor.js',
+				$js_asset_file['dependencies'],
+				$js_asset_file['version'],
+				false // Enqueue the script in the footer.
+			);
+		}
 	}
 
 	/**

@@ -2,7 +2,7 @@ import generalAttributes from '../general-attributes';
 
 export default {
 	$schema: 'https://schemas.wp.org/trunk/block.json',
-	apiVersion: 2,
+	apiVersion: 3,
 	name: 'uikit-blocks/button',
 	title: 'Button (UIkit)',
 	category: 'uikit-blocks',

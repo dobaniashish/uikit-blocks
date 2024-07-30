@@ -1,6 +1,6 @@
 export default {
 	$schema: 'https://schemas.wp.org/trunk/block.json',
-	apiVersion: 2,
+	apiVersion: 3,
 	name: 'uikit-blocks/grid',
 	title: 'Grid (UIkit)',
 	category: 'uikit-blocks',
