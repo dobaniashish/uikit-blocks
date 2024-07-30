@@ -30,7 +30,10 @@ export default function ( { attributes, setAttributes } ) {
 	return (
 		<>
 			<InspectorControls>
-				<PanelBody title={ __( 'General Settings', 'uikit-blocks' ) }>
+				<PanelBody
+					title={ __( 'General Settings', 'uikit-blocks' ) }
+					initialOpen={ false }
+				>
 					{ /* Margin */ }
 					<SelectControl
 						label={ __( 'Margin', 'uikit-blocks' ) }
