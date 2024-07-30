@@ -1,0 +1,93 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "uikit-blocks/icon",
+	"title": "Icon (UIkit)",
+	"category": "uikit-blocks",
+	"keywords": [ "Icon", "UIkit Icon", "UIkit" ],
+	"textdomain": "uikit-blocks",
+	"version": "1.0",
+	"attributes": {
+		"generalMargin": {
+			"type": "string",
+			"enum": [
+				"",
+				"small",
+				"default",
+				"medium",
+				"large",
+				"xlarge",
+				"remove-vertical"
+			]
+		},
+		"generalMarginRemoveTop": { "type": "boolean" },
+		"generalMarginRemoveBottom": { "type": "boolean" },
+		"generalTextAlign": {
+			"type": "string",
+			"enum": [ "", "left", "center", "right", "justify" ]
+		},
+		"generalTextAlignBreakpoint": {
+			"type": "string",
+			"enum": [ "", "s", "m", "l", "xl" ]
+		},
+		"generalTextAlignFallback": {
+			"type": "string",
+			"enum": [ "", "left", "center", "right" ]
+		},
+		"generalVisiblity": {
+			"type": "string",
+			"enum": [
+				"",
+				"visible@s",
+				"visible@m",
+				"visible@l",
+				"visible@xl",
+				"hidden@s",
+				"hidden@m",
+				"hidden@l",
+				"hidden@xl"
+			]
+		},
+		"generalPosition": {
+			"type": "string",
+			"enum": [ "", "relative", "absolute" ]
+		},
+		"generalPositionLeft": { "type": "integer" },
+		"generalPositionRight": { "type": "integer" },
+		"generalPositionTop": { "type": "integer" },
+		"generalPositionBottom": { "type": "integer" },
+		"generalPositionZIndex": { "type": "integer" },
+		"icon": { "type": "string" },
+		"url": { "type": "string" },
+		"size": { "type": "integer", "default": 60 },
+		"color": {
+			"type": "string",
+			"enum": [
+				"",
+				"muted",
+				"emphasis",
+				"primary",
+				"secondary",
+				"success",
+				"warning",
+				"danger"
+			],
+			"default": ""
+		},
+		"target": { "type": "string", "enum": [ "", "_blank", "lightbox" ] },
+		"lightboxType": { "type": "string" },
+		"rel": { "type": "string" },
+		"linkStyle": {
+			"type": "string",
+			"enum": [
+				"",
+				"icon-link",
+				"icon-button",
+				"link-muted",
+				"link-text",
+				"link-reset"
+			],
+			"default": "icon-link"
+		}
+	}
+}

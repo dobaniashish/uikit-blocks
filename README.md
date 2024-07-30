@@ -13,7 +13,6 @@ This project is a Work In Progress.
     -   [ ] Card
     -   [ ] Text
     -   [ ] Cover
-    -   [ ] Icon
     -   [ ] Image/Media
     -   [ ] ...more
 -   [ ] Add general dynamic block options/attributes
@@ -45,6 +44,7 @@ This project is a Work In Progress.
 -   Accordion
     -   Accordion Item
 -   Divider
+-   Icon
 
 ## UIkit library
 
