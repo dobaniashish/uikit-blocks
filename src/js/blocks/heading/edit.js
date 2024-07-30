@@ -35,6 +35,17 @@ import GeneralOptions from '../general-options';
 import generalBlockProps from '../general-block-props';
 
 export default function Edit( { attributes, setAttributes } ) {
+	const blockProps = useBlockProps( {
+		...generalBlockProps( attributes ),
+		className: clsx( {
+			[ `uk-${ attributes.tag }` ]:
+				attributes.tag !== 'div' && ! attributes.style,
+			[ `uk-${ attributes.style }` ]: attributes.style,
+			[ `uk-heading-${ attributes.decoration }` ]: attributes.decoration,
+			[ `uk-text-${ attributes.color }` ]: attributes.color,
+		} ),
+	} );
+
 	return (
 		<>
 			<InspectorControls>
@@ -239,29 +250,16 @@ export default function Edit( { attributes, setAttributes } ) {
 				/>
 			</BlockControls>
 
-			<div { ...useBlockProps( generalBlockProps( attributes ) ) }>
-				<div
-					className={ clsx( {
-						[ `uk-${ attributes.tag }` ]:
-							attributes.tag !== 'div' && ! attributes.style,
-						[ `uk-${ attributes.style }` ]: attributes.style,
-						[ `uk-heading-${ attributes.decoration }` ]:
-							attributes.decoration,
-						[ `uk-text-${ attributes.color }` ]: attributes.color,
-					} ) }
-				>
-					<RichText
-						aria-label={ __( 'Heading text', 'uikit-blocks' ) }
-						placeholder={ __( 'Heading…', 'uikit-blocks' ) }
-						value={ attributes.text }
-						onChange={ ( value ) =>
-							setAttributes( { text: value } )
-						}
-					/>
-				</div>
-			</div>
-
 			<GeneralOptions { ...arguments[ 0 ] } />
+
+			<div { ...blockProps }>
+				<RichText
+					aria-label={ __( 'Heading text', 'uikit-blocks' ) }
+					placeholder={ __( 'Heading…', 'uikit-blocks' ) }
+					value={ attributes.text }
+					onChange={ ( value ) => setAttributes( { text: value } ) }
+				/>
+			</div>
 		</>
 	);
 }

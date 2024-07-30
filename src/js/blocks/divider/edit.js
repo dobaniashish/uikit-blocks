@@ -10,6 +10,11 @@ import GeneralOptions from '../general-options';
 import generalBlockProps from '../general-block-props';
 
 export default function Edit( { attributes, setAttributes } ) {
+	const blockProps = useBlockProps( {
+		...generalBlockProps( attributes ),
+		className: 'uk-padding-small', // For editor selection.
+	} );
+
 	return (
 		<>
 			<InspectorControls>
@@ -59,12 +64,9 @@ export default function Edit( { attributes, setAttributes } ) {
 				</PanelBody>
 			</InspectorControls>
 
-			<div
-				{ ...useBlockProps( {
-					...generalBlockProps( attributes ),
-					className: 'uk-padding-small', // For editor selection.
-				} ) }
-			>
+			<GeneralOptions { ...arguments[ 0 ] } />
+
+			<div { ...blockProps }>
 				<div
 					className={ clsx( {
 						'uk-hr': ! attributes.style,
@@ -74,8 +76,6 @@ export default function Edit( { attributes, setAttributes } ) {
 					} ) }
 				></div>
 			</div>
-
-			<GeneralOptions { ...arguments[ 0 ] } />
 		</>
 	);
 }

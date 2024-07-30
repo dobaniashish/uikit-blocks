@@ -46,6 +46,10 @@ export default function Edit( { attributes, setAttributes } ) {
 		[ `uk-margin` ]: ! attributes.labelMargin,
 	} );
 
+	const blockProps = useBlockProps( {
+		...generalBlockProps( attributes ),
+	} );
+
 	return (
 		<>
 			<InspectorControls>
@@ -202,7 +206,9 @@ export default function Edit( { attributes, setAttributes } ) {
 				</PanelBody>
 			</InspectorControls>
 
-			<div { ...useBlockProps( generalBlockProps( attributes ) ) }>
+			<GeneralOptions { ...arguments[ 0 ] } />
+
+			<div { ...blockProps }>
 				<div
 					className={ clsx( {
 						[ `uk-grid uk-child-width-auto` ]: true,
@@ -279,8 +285,6 @@ export default function Edit( { attributes, setAttributes } ) {
 					</div>
 				</div>
 			</div>
-
-			<GeneralOptions { ...arguments[ 0 ] } />
 		</>
 	);
 }

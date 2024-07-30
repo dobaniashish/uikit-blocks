@@ -2,6 +2,7 @@ import { __ } from '@wordpress/i18n';
 
 import {
 	useBlockProps,
+	useInnerBlocksProps,
 	RichText,
 	InnerBlocks,
 	InspectorControls,
@@ -19,6 +20,21 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 		[ clientId ]
 	);
 
+	const blockProps = useBlockProps( {
+		className: 'uk-open',
+	} );
+
+	const innerBlocksProps = useInnerBlocksProps(
+		{
+			className: 'uk-open',
+		},
+		{
+			renderAppender: hasInnerBlocks
+				? undefined
+				: InnerBlocks.ButtonBlockAppender,
+		}
+	);
+
 	return (
 		<>
 			<InspectorControls>
@@ -33,11 +49,7 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 				</PanelBody>
 			</InspectorControls>
 
-			<li
-				{ ...useBlockProps( {
-					className: 'uk-open',
-				} ) }
-			>
+			<li { ...blockProps }>
 				<span className="uk-accordion-title">
 					<RichText
 						aria-label={ __( 'Accordion title', 'uikit-blocks' ) }
@@ -52,15 +64,7 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 						withoutInteractiveFormatting
 					/>
 				</span>
-				<div className="uk-accordion-content">
-					<InnerBlocks
-						renderAppender={
-							hasInnerBlocks
-								? undefined
-								: () => <InnerBlocks.ButtonBlockAppender />
-						}
-					/>
-				</div>
+				<div { ...innerBlocksProps }></div>
 			</li>
 		</>
 	);

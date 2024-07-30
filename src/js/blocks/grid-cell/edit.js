@@ -2,6 +2,7 @@ import { __ } from '@wordpress/i18n';
 
 import {
 	useBlockProps,
+	useInnerBlocksProps,
 	InnerBlocks,
 	InspectorControls,
 	store as blockEditorStore,
@@ -122,6 +123,28 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 		[ clientId ]
 	);
 
+	const blockProps = useBlockProps( {
+		className: clsx( {
+			[ `uk-width-${ attributes.width }` ]: attributes.width,
+			[ `uk-width-${ attributes.widthS }@s` ]: attributes.widthS,
+			[ `uk-width-${ attributes.widthM }@m` ]: attributes.widthM,
+			[ `uk-width-${ attributes.widthL }@l` ]: attributes.widthL,
+			[ `uk-width-${ attributes.widthXL }@xl` ]: attributes.widthXL,
+			[ `uk-flex-${ attributes.flexOrder }` ]: attributes.flexOrder,
+			[ `uk-flex-${ attributes.flexOrderS }@s` ]: attributes.flexOrderS,
+			[ `uk-flex-${ attributes.flexOrderM }@m` ]: attributes.flexOrderM,
+			[ `uk-flex-${ attributes.flexOrderL }@l` ]: attributes.flexOrderL,
+			[ `uk-flex-${ attributes.flexOrderXL }@xl` ]:
+				attributes.flexOrderXL,
+		} ),
+	} );
+
+	const innerBlocksProps = useInnerBlocksProps( blockProps, {
+		renderAppender: hasInnerBlocks
+			? undefined
+			: InnerBlocks.ButtonBlockAppender,
+	} );
+
 	return (
 		<>
 			<InspectorControls>
@@ -233,39 +256,7 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 				</PanelBody>
 			</InspectorControls>
 
-			<div
-				{ ...useBlockProps( {
-					className: clsx( {
-						[ `uk-width-${ attributes.width }` ]: attributes.width,
-						[ `uk-width-${ attributes.widthS }@s` ]:
-							attributes.widthS,
-						[ `uk-width-${ attributes.widthM }@m` ]:
-							attributes.widthM,
-						[ `uk-width-${ attributes.widthL }@l` ]:
-							attributes.widthL,
-						[ `uk-width-${ attributes.widthXL }@xl` ]:
-							attributes.widthXL,
-						[ `uk-flex-${ attributes.flexOrder }` ]:
-							attributes.flexOrder,
-						[ `uk-flex-${ attributes.flexOrderS }@s` ]:
-							attributes.flexOrderS,
-						[ `uk-flex-${ attributes.flexOrderM }@m` ]:
-							attributes.flexOrderM,
-						[ `uk-flex-${ attributes.flexOrderL }@l` ]:
-							attributes.flexOrderL,
-						[ `uk-flex-${ attributes.flexOrderXL }@xl` ]:
-							attributes.flexOrderXL,
-					} ),
-				} ) }
-			>
-				<InnerBlocks
-					renderAppender={
-						hasInnerBlocks
-							? undefined
-							: () => <InnerBlocks.ButtonBlockAppender />
-					}
-				/>
-			</div>
+			<div { ...innerBlocksProps }></div>
 		</>
 	);
 }

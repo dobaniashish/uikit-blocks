@@ -48,6 +48,10 @@ export default function Edit( { attributes, setAttributes } ) {
 		} );
 	}
 
+	const blockProps = useBlockProps( {
+		...generalBlockProps( attributes ),
+	} );
+
 	return (
 		<>
 			<InspectorControls>
@@ -345,7 +349,9 @@ export default function Edit( { attributes, setAttributes } ) {
 				></Dropdown>
 			</BlockControls>
 
-			<div { ...useBlockProps( generalBlockProps( attributes ) ) }>
+			<GeneralOptions { ...arguments[ 0 ] } />
+
+			<div { ...blockProps }>
 				<span
 					className={ clsx( {
 						[ `uk-button` ]: true,
@@ -365,8 +371,6 @@ export default function Edit( { attributes, setAttributes } ) {
 					/>
 				</span>
 			</div>
-
-			<GeneralOptions { ...arguments[ 0 ] } />
 		</>
 	);
 }

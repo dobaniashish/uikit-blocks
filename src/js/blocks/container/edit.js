@@ -2,6 +2,7 @@ import { __ } from '@wordpress/i18n';
 
 import {
 	useBlockProps,
+	useInnerBlocksProps,
 	InnerBlocks,
 	InspectorControls,
 	store as blockEditorStore,
@@ -23,6 +24,24 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 			select( blockEditorStore ).getBlocks( clientId ).length > 0,
 		[ clientId ]
 	);
+
+	const blockProps = useBlockProps( {
+		className: clsx( {
+			'uk-container': attributes.width !== 'none',
+			[ `uk-container-${ attributes.width }` ]:
+				attributes.width && attributes.width !== 'none',
+			'uk-container-expand-left':
+				attributes.width !== 'none' && attributes.expandLeft,
+			'uk-container-expand-right':
+				attributes.width !== 'none' && attributes.expandRight,
+		} ),
+	} );
+
+	const innerBlocksProps = useInnerBlocksProps( blockProps, {
+		renderAppender: hasInnerBlocks
+			? undefined
+			: InnerBlocks.ButtonBlockAppender,
+	} );
 
 	return (
 		<>
@@ -90,29 +109,7 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 				</PanelBody>
 			</InspectorControls>
 
-			<div
-				{ ...useBlockProps( {
-					className: clsx( {
-						'uk-container': attributes.width !== 'none',
-						[ `uk-container-${ attributes.width }` ]:
-							attributes.width && attributes.width !== 'none',
-						'uk-container-expand-left':
-							attributes.width !== 'none' &&
-							attributes.expandLeft,
-						'uk-container-expand-right':
-							attributes.width !== 'none' &&
-							attributes.expandRight,
-					} ),
-				} ) }
-			>
-				<InnerBlocks
-					renderAppender={
-						hasInnerBlocks
-							? undefined
-							: () => <InnerBlocks.ButtonBlockAppender />
-					}
-				/>
-			</div>
+			<div { ...innerBlocksProps }></div>
 		</>
 	);
 }

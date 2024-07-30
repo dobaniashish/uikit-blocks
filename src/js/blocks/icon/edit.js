@@ -67,6 +67,10 @@ export default function Edit( { attributes, setAttributes } ) {
 		} ),
 	};
 
+	const blockProps = useBlockProps( {
+		...generalBlockProps( attributes ),
+	} );
+
 	return (
 		<>
 			<InspectorControls>
@@ -328,15 +332,15 @@ export default function Edit( { attributes, setAttributes } ) {
 				></Dropdown>
 			</BlockControls>
 
-			<div { ...useBlockProps( generalBlockProps( attributes ) ) }>
+			<GeneralOptions { ...arguments[ 0 ] } />
+
+			<div { ...blockProps }>
 				{ !! attributes.url && (
 					// eslint-disable-next-line jsx-a11y/anchor-is-valid
 					<a href="#" { ...iconAttributes } aria-label="icon"></a>
 				) }
 				{ ! attributes.url && <span { ...iconAttributes }></span> }
 			</div>
-
-			<GeneralOptions { ...arguments[ 0 ] } />
 		</>
 	);
 }

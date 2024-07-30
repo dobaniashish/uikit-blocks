@@ -32,7 +32,16 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 		className: 'uk-accordion',
 	} );
 
-	const innerBlocksProps = useInnerBlocksProps( blockProps );
+	const innerBlocksProps = useInnerBlocksProps( blockProps, {
+		template: [
+			[ 'uikit-blocks/accordion-item', { title: 'Item 1' } ],
+			[ 'uikit-blocks/accordion-item', { title: 'Item 2' } ],
+			[ 'uikit-blocks/accordion-item', { title: 'Item 3' } ],
+		],
+		renderAppender: hasInnerBlocks
+			? undefined
+			: InnerBlocks.ButtonBlockAppender,
+	} );
 
 	return (
 		<>
@@ -97,35 +106,9 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 				</PanelBody>
 			</InspectorControls>
 
-			{ hasInnerBlocks && <ul { ...innerBlocksProps }></ul> }
-
-			{ ! hasInnerBlocks && (
-				<ul { ...blockProps }>
-					<InnerBlocks
-						template={ [
-							[
-								'uikit-blocks/accordion-item',
-								{ title: 'Item 1' },
-							],
-							[
-								'uikit-blocks/accordion-item',
-								{ title: 'Item 2' },
-							],
-							[
-								'uikit-blocks/accordion-item',
-								{ title: 'Item 3' },
-							],
-						] }
-						renderAppender={
-							hasInnerBlocks
-								? undefined
-								: () => <InnerBlocks.ButtonBlockAppender />
-						}
-					/>
-				</ul>
-			) }
-
 			<GeneralOptions { ...arguments[ 0 ] } />
+
+			<ul { ...innerBlocksProps }></ul>
 		</>
 	);
 }

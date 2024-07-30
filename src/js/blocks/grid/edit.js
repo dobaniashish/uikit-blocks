@@ -3,6 +3,7 @@ import { __ } from '@wordpress/i18n';
 import {
 	useBlockProps,
 	useInnerBlocksProps,
+	InnerBlocks,
 	InspectorControls,
 	store as blockEditorStore,
 } from '@wordpress/block-editor';
@@ -135,6 +136,65 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 			);
 		}
 	}
+
+	const blockProps = useBlockProps( {
+		className: clsx( {
+			'uk-grid': true,
+
+			[ `uk-grid-${ attributes.columnGap }` ]:
+				attributes.columnGap &&
+				attributes.rowGap &&
+				attributes.columnGap === attributes.rowGap,
+			[ `uk-grid-column-${ attributes.columnGap }` ]:
+				attributes.columnGap &&
+				attributes.columnGap !== attributes.rowGap,
+			[ `uk-grid-row-${ attributes.rowGap }` ]:
+				attributes.rowGap && attributes.columnGap !== attributes.rowGap,
+
+			[ `uk-child-width-${ attributes.childWidth }` ]:
+				attributes.childWidth,
+			[ `uk-child-width-${ attributes.childWidthS }@s` ]:
+				attributes.childWidthS,
+			[ `uk-child-width-${ attributes.childWidthM }@m` ]:
+				attributes.childWidthM,
+			[ `uk-child-width-${ attributes.childWidthL }@l` ]:
+				attributes.childWidthL,
+			[ `uk-child-width-${ attributes.childWidthXL }@xl` ]:
+				attributes.childWidthXL,
+
+			[ `uk-flex-${ attributes.flexHorizontal }` ]:
+				attributes.flexHorizontal,
+			[ `uk-flex-${ attributes.flexHorizontalS }@s` ]:
+				attributes.flexHorizontalS,
+			[ `uk-flex-${ attributes.flexHorizontalM }@m` ]:
+				attributes.flexHorizontalM,
+			[ `uk-flex-${ attributes.flexHorizontalL }@l` ]:
+				attributes.flexHorizontalL,
+			[ `uk-flex-${ attributes.flexHorizontalXL }@xl` ]:
+				attributes.flexHorizontalXL,
+			[ `uk-flex-${ attributes.flexVertical }` ]: attributes.flexVertical,
+
+			'uk-grid-divider': attributes.divider,
+			'uk-grid-match': attributes.matchHeight,
+		} ),
+		'data-uk-grid': '',
+	} );
+
+	const innerBlocksProps = useInnerBlocksProps( blockProps, {
+		// renderAppender: hasInnerBlocks
+		// 	? undefined
+		// 	: InnerBlocks.ButtonBlockAppender,
+		renderAppender: hasInnerBlocks
+			? undefined
+			: InnerBlocks.DefaultBlockAppender,
+		/*
+		 * Orientation is required to fix 'Warning: Encountered two children with the same key' error because we use grid and it probably messes with useBlockDropZone hook which is used by InnerBlocks
+		 *
+		 * @see https://github.com/WordPress/gutenberg/blob/0a7e10db2037cb80e4ab8cda4363ba18d6a3a83f/packages/block-editor/src/components/use-block-drop-zone/index.js#L397
+		 *
+		 */
+		orientation: 'horizontal',
+	} );
 
 	return (
 		<>
@@ -399,11 +459,11 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 				</PanelBody>
 			</InspectorControls>
 
-			<div { ...useBlockProps() }>
+			<div { ...innerBlocksProps }>
 				{ ! hasInnerBlocks && (
-					<>
+					<div className="uk-width-1-1">
 						<div className="uk-placeholder uk-padding-small uk-text-center">
-							<div className="uk-flex uk-child-width-auto uk-text-small">
+							<div className="uk-flex uk-flex-center uk-flex-wrap uk-child-width-auto uk-text-small">
 								{ templates.map( ( template ) => (
 									<button
 										key={ template.name }
@@ -434,64 +494,10 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 								) }
 							</div>
 						</div>
-					</>
+					</div>
 				) }
-				<div
-					{ ...useInnerBlocksProps(
-						{
-							className: clsx( {
-								'uk-grid': true,
 
-								[ `uk-grid-${ attributes.columnGap }` ]:
-									attributes.columnGap &&
-									attributes.rowGap &&
-									attributes.columnGap === attributes.rowGap,
-								[ `uk-grid-column-${ attributes.columnGap }` ]:
-									attributes.columnGap &&
-									attributes.columnGap !== attributes.rowGap,
-								[ `uk-grid-row-${ attributes.rowGap }` ]:
-									attributes.rowGap &&
-									attributes.columnGap !== attributes.rowGap,
-
-								[ `uk-child-width-${ attributes.childWidth }` ]:
-									attributes.childWidth,
-								[ `uk-child-width-${ attributes.childWidthS }@s` ]:
-									attributes.childWidthS,
-								[ `uk-child-width-${ attributes.childWidthM }@m` ]:
-									attributes.childWidthM,
-								[ `uk-child-width-${ attributes.childWidthL }@l` ]:
-									attributes.childWidthL,
-								[ `uk-child-width-${ attributes.childWidthXL }@xl` ]:
-									attributes.childWidthXL,
-
-								[ `uk-flex-${ attributes.flexHorizontal }` ]:
-									attributes.flexHorizontal,
-								[ `uk-flex-${ attributes.flexHorizontalS }@s` ]:
-									attributes.flexHorizontalS,
-								[ `uk-flex-${ attributes.flexHorizontalM }@m` ]:
-									attributes.flexHorizontalM,
-								[ `uk-flex-${ attributes.flexHorizontalL }@l` ]:
-									attributes.flexHorizontalL,
-								[ `uk-flex-${ attributes.flexHorizontalXL }@xl` ]:
-									attributes.flexHorizontalXL,
-								[ `uk-flex-${ attributes.flexVertical }` ]:
-									attributes.flexVertical,
-
-								'uk-grid-divider': attributes.divider,
-								'uk-grid-match': attributes.matchHeight,
-							} ),
-							'data-uk-grid': '',
-						},
-
-						/*
-						 * Orientation is required to fix 'Warning: Encountered two children with the same key' error because we use grid and it probably messes with useBlockDropZone hook which is used by InnerBlocks
-						 *
-						 * @see https://github.com/WordPress/gutenberg/blob/0a7e10db2037cb80e4ab8cda4363ba18d6a3a83f/packages/block-editor/src/components/use-block-drop-zone/index.js#L397
-						 *
-						 */
-						{ orientation: 'horizontal' }
-					) }
-				/>
+				{ innerBlocksProps.children }
 			</div>
 		</>
 	);
