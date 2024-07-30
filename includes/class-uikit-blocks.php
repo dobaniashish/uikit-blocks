@@ -138,6 +138,7 @@ class UIkit_Blocks {
 			'accordion-item',
 			'divider',
 			'icon',
+			'card',
 		);
 
 		foreach ( $blocks as $block_dir ) {

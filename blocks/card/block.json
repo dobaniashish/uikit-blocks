@@ -1,0 +1,70 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "uikit-blocks/card",
+	"title": "Card (UIkit)",
+	"category": "uikit-blocks",
+	"keywords": [ "Card", "UIkit Card", "UIkit" ],
+	"textdomain": "uikit-blocks",
+	"version": "1.0",
+	"attributes": {
+		"generalMargin": {
+			"type": "string",
+			"enum": [
+				"",
+				"small",
+				"default",
+				"medium",
+				"large",
+				"xlarge",
+				"remove-vertical"
+			]
+		},
+		"generalMarginRemoveTop": { "type": "boolean" },
+		"generalMarginRemoveBottom": { "type": "boolean" },
+		"generalTextAlign": {
+			"type": "string",
+			"enum": [ "", "left", "center", "right", "justify" ]
+		},
+		"generalTextAlignBreakpoint": {
+			"type": "string",
+			"enum": [ "", "s", "m", "l", "xl" ]
+		},
+		"generalTextAlignFallback": {
+			"type": "string",
+			"enum": [ "", "left", "center", "right" ]
+		},
+		"generalVisiblity": {
+			"type": "string",
+			"enum": [
+				"",
+				"visible@s",
+				"visible@m",
+				"visible@l",
+				"visible@xl",
+				"hidden@s",
+				"hidden@m",
+				"hidden@l",
+				"hidden@xl"
+			]
+		},
+		"generalPosition": {
+			"type": "string",
+			"enum": [ "", "relative", "absolute" ]
+		},
+		"generalPositionLeft": { "type": "integer" },
+		"generalPositionRight": { "type": "integer" },
+		"generalPositionTop": { "type": "integer" },
+		"generalPositionBottom": { "type": "integer" },
+		"generalPositionZIndex": { "type": "integer" },
+		"style": {
+			"type": "string",
+			"enum": [ "default", "primary", "secondary", "" ],
+			"default": "default"
+		},
+		"hover": { "type": "boolean" },
+		"padding": { "type": "string", "enum": [ "", "small", "large" ] },
+		"image": { "type": "string" },
+		"imageAlt": { "type": "string" }
+	}
+}

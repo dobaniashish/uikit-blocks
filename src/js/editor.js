@@ -17,3 +17,4 @@ import './blocks/accordion/block';
 import './blocks/accordion-item/block';
 import './blocks/divider/block';
 import './blocks/icon/block';
+import './blocks/card/block';
