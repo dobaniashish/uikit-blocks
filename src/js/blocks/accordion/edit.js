@@ -102,6 +102,20 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 			{ ! hasInnerBlocks && (
 				<ul { ...blockProps }>
 					<InnerBlocks
+						template={ [
+							[
+								'uikit-blocks/accordion-item',
+								{ title: 'Item 1' },
+							],
+							[
+								'uikit-blocks/accordion-item',
+								{ title: 'Item 2' },
+							],
+							[
+								'uikit-blocks/accordion-item',
+								{ title: 'Item 3' },
+							],
+						] }
 						renderAppender={
 							hasInnerBlocks
 								? undefined

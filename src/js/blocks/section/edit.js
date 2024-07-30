@@ -420,6 +420,7 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 			{ ! hasInnerBlocks && (
 				<div { ...blockProps }>
 					<InnerBlocks
+						template={ [ [ 'uikit-blocks/container' ] ] }
 						renderAppender={
 							hasInnerBlocks
 								? undefined
