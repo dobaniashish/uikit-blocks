@@ -10,7 +10,6 @@ This project is a Work In Progress.
 
 -   [ ] Add all basic UIkit components
     -   [ ] Breadcrumb (dynamic)
-    -   [ ] Card
     -   [ ] Text
     -   [ ] Cover
     -   [ ] Image/Media
@@ -23,7 +22,7 @@ This project is a Work In Progress.
     -   [ ] Animation/Paralax
 -   [ ] Option to include UIkit assets on frontend
 -   [ ] Filters
--   [ ] Tests
+-   [ ] Tests and Backward compatibility
 -   [ ] Plugin zip (Use `wp-scripts plugin-zip` or write custom build script)
 -   [ ] Publish v1.0.0
 
@@ -45,6 +44,7 @@ This project is a Work In Progress.
     -   Accordion Item
 -   Divider
 -   Icon
+-   Card
 
 ## UIkit library
 
