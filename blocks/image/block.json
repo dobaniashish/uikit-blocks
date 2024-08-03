@@ -1,0 +1,94 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "uikit-blocks/image",
+	"title": "Image (UIkit)",
+	"category": "uikit-blocks",
+	"keywords": [ "Image", "UIkit Image", "UIkit" ],
+	"textdomain": "uikit-blocks",
+	"version": "1.0",
+	"attributes": {
+		"generalMargin": {
+			"type": "string",
+			"enum": [
+				"",
+				"small",
+				"default",
+				"medium",
+				"large",
+				"xlarge",
+				"remove-vertical"
+			]
+		},
+		"generalMarginRemoveTop": { "type": "boolean" },
+		"generalMarginRemoveBottom": { "type": "boolean" },
+		"generalTextAlign": {
+			"type": "string",
+			"enum": [ "", "left", "center", "right", "justify" ]
+		},
+		"generalTextAlignBreakpoint": {
+			"type": "string",
+			"enum": [ "", "s", "m", "l", "xl" ]
+		},
+		"generalTextAlignFallback": {
+			"type": "string",
+			"enum": [ "", "left", "center", "right" ]
+		},
+		"generalVisiblity": {
+			"type": "string",
+			"enum": [
+				"",
+				"visible@s",
+				"visible@m",
+				"visible@l",
+				"visible@xl",
+				"hidden@s",
+				"hidden@m",
+				"hidden@l",
+				"hidden@xl"
+			]
+		},
+		"generalPosition": {
+			"type": "string",
+			"enum": [ "", "relative", "absolute" ]
+		},
+		"generalPositionLeft": { "type": "integer" },
+		"generalPositionRight": { "type": "integer" },
+		"generalPositionTop": { "type": "integer" },
+		"generalPositionBottom": { "type": "integer" },
+		"generalPositionZIndex": { "type": "integer" },
+		"image": { "type": "string" },
+		"imageId": { "type": "integer" },
+		"width": { "type": "integer" },
+		"height": { "type": "integer" },
+		"loading": { "type": "string" },
+		"focalPoint": {
+			"type": "string",
+			"enum": [
+				"",
+				"top-left",
+				"top-center",
+				"top-right",
+				"center-left",
+				"center-right",
+				"bottom-left",
+				"bottom-center",
+				"bottom-right"
+			]
+		},
+		"sizeSlug": { "type": "string" },
+		"imageAlt": { "type": "string" },
+		"url": { "type": "string" },
+		"target": { "type": "string", "enum": [ "", "_blank", "lightbox" ] },
+		"lightboxType": { "type": "string" },
+		"rel": { "type": "string" },
+		"imageBoxShadow": {
+			"type": "string",
+			"enum": [ "", "small", "medium", "large", "xlarge" ]
+		},
+		"imageHoverBoxShadow": {
+			"type": "string",
+			"enum": [ "", "small", "medium", "large", "xlarge" ]
+		}
+	}
+}

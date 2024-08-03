@@ -18,3 +18,4 @@ import './blocks/accordion-item/block';
 import './blocks/divider/block';
 import './blocks/icon/block';
 import './blocks/card/block';
+import './blocks/image/block';

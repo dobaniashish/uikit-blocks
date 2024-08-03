@@ -12,7 +12,6 @@ This project is a Work In Progress.
     -   [ ] Breadcrumb (dynamic)
     -   [ ] Text
     -   [ ] Cover
-    -   [ ] Image/Media
     -   [ ] ...more
 -   [ ] Add general dynamic block options/attributes
     -   [x] Margin
@@ -45,6 +44,7 @@ This project is a Work In Progress.
 -   Divider
 -   Icon
 -   Card
+-   Image
 
 ## UIkit library
 

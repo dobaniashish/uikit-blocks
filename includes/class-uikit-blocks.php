@@ -139,6 +139,7 @@ class UIkit_Blocks {
 			'divider',
 			'icon',
 			'card',
+			'image',
 		);
 
 		foreach ( $blocks as $block_dir ) {

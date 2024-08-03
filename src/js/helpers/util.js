@@ -57,3 +57,18 @@ export function attributeValue( valueObject ) {
 export function isPlainObject( obj ) {
 	return toString.call( obj ) === '[object Object]';
 }
+
+export const humanize = memoize( ( str ) => {
+	return str
+		.replace( /^[\s_]+|[\s_]+$/g, '' )
+		.replace( /[_\s]+/g, ' ' )
+		.replace( /^[a-z]/, function ( m ) {
+			return m.toUpperCase();
+		} );
+} );
+
+export function memoize( fn ) {
+	const cache = Object.create( null );
+	return ( key, ...args ) =>
+		cache[ key ] || ( cache[ key ] = fn( key, ...args ) );
+}
