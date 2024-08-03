@@ -1,4 +1,5 @@
 import generalAttributes from '../general-attributes';
+import urlAttributes from '../../components/url-control/attributes';
 
 export default {
 	$schema: 'https://schemas.wp.org/trunk/block.json',
@@ -11,20 +12,8 @@ export default {
 	version: '1.0',
 	attributes: {
 		...generalAttributes,
+		...urlAttributes,
 		icon: {
-			type: 'string',
-		},
-		url: {
-			type: 'string',
-		},
-		target: {
-			type: 'string',
-			enum: [ '', '_blank', 'lightbox' ],
-		},
-		lightboxType: {
-			type: 'string',
-		},
-		rel: {
 			type: 'string',
 		},
 		size: {

@@ -57,11 +57,11 @@
 		"generalPositionTop": { "type": "integer" },
 		"generalPositionBottom": { "type": "integer" },
 		"generalPositionZIndex": { "type": "integer" },
-		"text": { "type": "string" },
 		"url": { "type": "string" },
 		"target": { "type": "string", "enum": [ "", "_blank", "lightbox" ] },
-		"lightboxType": { "type": "string" },
 		"rel": { "type": "string" },
+		"lightboxType": { "type": "string" },
+		"text": { "type": "string" },
 		"style": {
 			"type": "string",
 			"enum": [

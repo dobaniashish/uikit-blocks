@@ -57,6 +57,10 @@
 		"generalPositionTop": { "type": "integer" },
 		"generalPositionBottom": { "type": "integer" },
 		"generalPositionZIndex": { "type": "integer" },
+		"url": { "type": "string" },
+		"target": { "type": "string", "enum": [ "", "_blank", "lightbox" ] },
+		"rel": { "type": "string" },
+		"lightboxType": { "type": "string" },
 		"image": { "type": "string" },
 		"imageId": { "type": "integer" },
 		"width": { "type": "integer" },
@@ -78,10 +82,6 @@
 		},
 		"sizeSlug": { "type": "string" },
 		"imageAlt": { "type": "string" },
-		"url": { "type": "string" },
-		"target": { "type": "string", "enum": [ "", "_blank", "lightbox" ] },
-		"lightboxType": { "type": "string" },
-		"rel": { "type": "string" },
 		"imageBoxShadow": {
 			"type": "string",
 			"enum": [ "", "small", "medium", "large", "xlarge" ]

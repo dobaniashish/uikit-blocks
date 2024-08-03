@@ -4,50 +4,18 @@ import {
 	useBlockProps,
 	RichText,
 	InspectorControls,
-	URLInput,
-	BlockControls,
 } from '@wordpress/block-editor';
 
-import {
-	PanelBody,
-	SelectControl,
-	ToolbarButton,
-	CheckboxControl,
-	TextControl,
-	Flex,
-	FlexBlock,
-	Dropdown,
-} from '@wordpress/components';
-
-import { link } from '@wordpress/icons';
+import { PanelBody, SelectControl } from '@wordpress/components';
 
 import clsx from 'clsx';
+
+import URLControl from '../../components/url-control';
 
 import GeneralOptions from '../general-options';
 import generalBlockProps from '../general-block-props';
 
 export default function Edit( { attributes, setAttributes } ) {
-	const newTabValue = '_blank';
-	const newTabRel = [ 'noreferrer', 'noopener' ];
-	const nofollowRel = 'nofollow';
-
-	const nofollow = attributes.rel
-		? attributes.rel.split( ' ' ).includes( nofollowRel )
-		: false;
-
-	function updateRel( add = [], remove = [] ) {
-		let relParts = attributes.rel ? attributes.rel.split( ' ' ) : [];
-
-		relParts.push( ...add );
-		relParts = relParts.filter( ( el ) => ! remove.includes( el ) );
-		relParts = relParts.filter( ( el ) => el );
-		relParts = [ ...new Set( relParts ) ];
-
-		setAttributes( {
-			rel: relParts.join( ' ' ),
-		} );
-	}
-
 	const blockProps = useBlockProps( {
 		...generalBlockProps( attributes ),
 	} );
@@ -194,160 +162,16 @@ export default function Edit( { attributes, setAttributes } ) {
 				</PanelBody>
 			</InspectorControls>
 
-			<InspectorControls group="advanced">
-				<TextControl
-					label={ __( 'Link rel', 'uikit-blocks' ) }
-					value={ attributes.rel || '' }
-					onChange={ ( value ) => setAttributes( { rel: value } ) }
-				/>
-			</InspectorControls>
-
-			<BlockControls group="block">
-				<Dropdown
-					renderToggle={ ( { isOpen, onToggle } ) => (
-						<ToolbarButton
-							icon={ link }
-							title={ __( 'Link', 'uikit-blocks' ) }
-							onClick={ onToggle }
-							aria-expanded={ isOpen }
-							isActive={ !! attributes.url }
-						/>
-					) }
-					renderContent={ () => (
-						<div
-							style={ {
-								maxWidth: '100%',
-								minWidth: 'auto',
-								width: '250px',
-							} }
-						>
-							<Flex direction="column">
-								<FlexBlock>
-									<URLInput
-										label={ __( 'Url', 'uikit-blocks' ) }
-										className="ukb-block-editor-url-input"
-										value={ attributes.url }
-										onChange={ ( value ) => {
-											setAttributes( { url: value } );
-										} }
-										__nextHasNoMarginBottom
-									/>
-								</FlexBlock>
-								<FlexBlock>
-									<SelectControl
-										label={ __( 'Target', 'uikit-blocks' ) }
-										value={ attributes.target }
-										options={ [
-											{
-												label: __(
-													'Same Window',
-													'uikit-blocks'
-												),
-												value: '',
-											},
-											{
-												label: __(
-													'New Window',
-													'uikit-blocks'
-												),
-												value: newTabValue,
-											},
-											{
-												label: __(
-													'Lightbox',
-													'uikit-blocks'
-												),
-												value: 'lightbox',
-											},
-										] }
-										onChange={ ( value ) => {
-											const add =
-												value === newTabValue
-													? newTabRel
-													: [];
-											const remove =
-												value === newTabValue
-													? []
-													: newTabRel;
-											updateRel( add, remove );
-
-											setAttributes( {
-												target: value,
-											} );
-										} }
-									/>
-								</FlexBlock>
-
-								{ attributes.target === 'lightbox' && (
-									<FlexBlock>
-										<SelectControl
-											label={ __(
-												'Lightbox Type',
-												'uikit-blocks'
-											) }
-											value={ attributes.lightboxType }
-											options={ [
-												{
-													label: __(
-														'Default',
-														'uikit-blocks'
-													),
-													value: '',
-												},
-												{
-													label: __(
-														'Image',
-														'uikit-blocks'
-													),
-													value: 'image',
-												},
-												{
-													label: __(
-														'Video',
-														'uikit-blocks'
-													),
-													value: 'video',
-												},
-												{
-													label: __(
-														'Iframe',
-														'uikit-blocks'
-													),
-													value: 'iframe',
-												},
-											] }
-											onChange={ ( value ) => {
-												setAttributes( {
-													lightboxType: value,
-												} );
-											} }
-										/>
-									</FlexBlock>
-								) }
-
-								<FlexBlock>
-									<CheckboxControl
-										label={ __(
-											'Mark as nofollow',
-											'uikit-blocks'
-										) }
-										checked={ nofollow }
-										onChange={ ( value ) => {
-											const add = value
-												? [ nofollowRel ]
-												: [];
-											const remove = value
-												? []
-												: [ nofollowRel ];
-											updateRel( add, remove );
-										} }
-									/>
-								</FlexBlock>
-							</Flex>
-						</div>
-					) }
-				></Dropdown>
-			</BlockControls>
+			<URLControl
+				attributes={ {
+					url: attributes.url,
+					target: attributes.target,
+					lightboxType: attributes.lightboxType,
+					rel: attributes.rel,
+				} }
+				onChange={ ( value ) => setAttributes( { ...value } ) }
+				lightbox={ true }
+			/>
 
 			<GeneralOptions { ...arguments[ 0 ] } />
 
