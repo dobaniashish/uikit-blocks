@@ -17,6 +17,16 @@ export default {
 		url: {
 			type: 'string',
 		},
+		target: {
+			type: 'string',
+			enum: [ '', '_blank', 'lightbox' ],
+		},
+		lightboxType: {
+			type: 'string',
+		},
+		rel: {
+			type: 'string',
+		},
 		style: {
 			type: 'string',
 			enum: [
@@ -55,16 +65,6 @@ export default {
 				'xlarge',
 				'2xlarge',
 			],
-		},
-		target: {
-			type: 'string',
-			enum: [ '', '_blank', 'lightbox' ],
-		},
-		lightboxType: {
-			type: 'string',
-		},
-		rel: {
-			type: 'string',
 		},
 	},
 };

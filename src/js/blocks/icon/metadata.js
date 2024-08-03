@@ -17,6 +17,16 @@ export default {
 		url: {
 			type: 'string',
 		},
+		target: {
+			type: 'string',
+			enum: [ '', '_blank', 'lightbox' ],
+		},
+		lightboxType: {
+			type: 'string',
+		},
+		rel: {
+			type: 'string',
+		},
 		size: {
 			type: 'integer',
 			default: 60,
@@ -34,16 +44,6 @@ export default {
 				'danger',
 			],
 			default: '',
-		},
-		target: {
-			type: 'string',
-			enum: [ '', '_blank', 'lightbox' ],
-		},
-		lightboxType: {
-			type: 'string',
-		},
-		rel: {
-			type: 'string',
 		},
 		linkStyle: {
 			type: 'string',

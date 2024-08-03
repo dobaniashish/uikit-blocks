@@ -59,6 +59,9 @@
 		"generalPositionZIndex": { "type": "integer" },
 		"icon": { "type": "string" },
 		"url": { "type": "string" },
+		"target": { "type": "string", "enum": [ "", "_blank", "lightbox" ] },
+		"lightboxType": { "type": "string" },
+		"rel": { "type": "string" },
 		"size": { "type": "integer", "default": 60 },
 		"color": {
 			"type": "string",
@@ -74,9 +77,6 @@
 			],
 			"default": ""
 		},
-		"target": { "type": "string", "enum": [ "", "_blank", "lightbox" ] },
-		"lightboxType": { "type": "string" },
-		"rel": { "type": "string" },
 		"linkStyle": {
 			"type": "string",
 			"enum": [
