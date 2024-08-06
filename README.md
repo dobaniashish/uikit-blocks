@@ -11,7 +11,12 @@ This project is a Work In Progress.
 -   [ ] Add all basic UIkit components
     -   [ ] Breadcrumb (dynamic)
     -   [ ] Text
-    -   [ ] Cover
+    -   [ ] List
+    -   [ ] Slider
+    -   [ ] Subnav
+    -   [ ] Subnav
+    -   [ ] Tabs
+    -   [ ] Tabs
     -   [ ] ...more
 -   [ ] Add general dynamic block options/attributes
     -   [x] Margin
@@ -22,6 +27,7 @@ This project is a Work In Progress.
 -   [ ] Option to include UIkit assets on frontend
 -   [ ] Filters
 -   [ ] Tests and Backward compatibility
+-   [ ] Translations
 -   [ ] Plugin zip (Use `wp-scripts plugin-zip` or write custom build script)
 -   [ ] Publish v1.0.0
 
@@ -45,6 +51,7 @@ This project is a Work In Progress.
 -   Icon
 -   Card
 -   Image
+-   Overlay (Cover)
 
 ## UIkit library
 
