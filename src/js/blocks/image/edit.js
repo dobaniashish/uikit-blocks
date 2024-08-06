@@ -14,6 +14,9 @@ import {
 	ToolbarGroup,
 	CheckboxControl,
 	TextControl,
+	Flex,
+	FlexBlock,
+	BaseControl,
 } from '@wordpress/components';
 
 import { useSelect, useDispatch } from '@wordpress/data';
@@ -79,22 +82,31 @@ export default function Edit( { attributes, setAttributes } ) {
 							setAttributes( { imageAlt: value } )
 						}
 					/>
-					<TextControl
-						label={ __( 'Width', 'uikit-blocks' ) }
-						value={ attributes.width }
-						type="number"
-						onChange={ ( value ) =>
-							setAttributes( { width: value } )
-						}
-					/>
-					<TextControl
-						label={ __( 'Height', 'uikit-blocks' ) }
-						value={ attributes.height }
-						type="number"
-						onChange={ ( value ) =>
-							setAttributes( { height: value } )
-						}
-					/>
+
+					<BaseControl>
+						<Flex>
+							<FlexBlock>
+								<TextControl
+									label={ __( 'Width', 'uikit-blocks' ) }
+									value={ attributes.width }
+									type="number"
+									onChange={ ( value ) =>
+										setAttributes( { width: value } )
+									}
+								/>
+							</FlexBlock>
+							<FlexBlock>
+								<TextControl
+									label={ __( 'Height', 'uikit-blocks' ) }
+									value={ attributes.height }
+									type="number"
+									onChange={ ( value ) =>
+										setAttributes( { height: value } )
+									}
+								/>
+							</FlexBlock>
+						</Flex>
+					</BaseControl>
 					<CheckboxControl
 						label={ __( 'Load image eagerly', 'uikit-blocks' ) }
 						help={ __(
@@ -109,7 +121,7 @@ export default function Edit( { attributes, setAttributes } ) {
 					{ imageMedia && imageSizeOptions && (
 						<SelectControl
 							label={ __( 'Resolution', 'uikit-blocks' ) }
-							lahelpel={ __(
+							help={ __(
 								'Select the size of the source image.',
 								'uikit-blocks'
 							) }
@@ -123,7 +135,7 @@ export default function Edit( { attributes, setAttributes } ) {
 					{ attributes.width && attributes.height && (
 						<SelectControl
 							label={ __( 'Focal Point', 'uikit-blocks' ) }
-							value={ attributes.focalPoint }
+							value={ attributes.focalPoint || '' }
 							options={ [
 								{
 									label: __( 'Top Left', 'uikit-blocks' ),

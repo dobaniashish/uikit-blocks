@@ -17,7 +17,7 @@ $wrapper_attributes = Utils::attributes_merge(
 	)
 );
 
-$image = $attributes['image'];
+$image = array( $attributes['image'] );
 if ( $attributes['imageId'] ) {
 	$image = wp_get_attachment_image_src( $attributes['imageId'], $attributes['sizeSlug'] );
 }

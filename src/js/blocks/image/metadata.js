@@ -20,10 +20,10 @@ export default {
 			type: 'integer',
 		},
 		width: {
-			type: 'integer',
+			type: 'string',
 		},
 		height: {
-			type: 'integer',
+			type: 'string',
 		},
 		loading: {
 			type: 'string',
