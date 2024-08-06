@@ -25,9 +25,7 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 	} );
 
 	const innerBlocksProps = useInnerBlocksProps(
-		{
-			className: 'uk-open',
-		},
+		{},
 		{
 			renderAppender: hasInnerBlocks
 				? undefined
