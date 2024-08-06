@@ -29,7 +29,8 @@
 	width: auto;
 }
 
-.wp-block[data-type="uikit-blocks/image"] img {
+.wp-block[data-type="uikit-blocks/image"] img,
+.wp-block[data-type="uikit-blocks/overlay"] > div > img:first-child:not([data-uk-cover]) {
 	vertical-align: middle;
 	max-width: 100%;
 	height: auto;

@@ -1,0 +1,167 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "uikit-blocks/overlay",
+	"title": "Overlay (UIkit)",
+	"category": "uikit-blocks",
+	"keywords": [ "Overlay", "UIkit Overlay", "UIkit", "Cover" ],
+	"textdomain": "uikit-blocks",
+	"version": "1.0",
+	"attributes": {
+		"generalMargin": {
+			"type": "string",
+			"enum": [
+				"",
+				"small",
+				"default",
+				"medium",
+				"large",
+				"xlarge",
+				"remove-vertical"
+			]
+		},
+		"generalMarginRemoveTop": { "type": "boolean" },
+		"generalMarginRemoveBottom": { "type": "boolean" },
+		"generalTextAlign": {
+			"type": "string",
+			"enum": [ "", "left", "center", "right", "justify" ]
+		},
+		"generalTextAlignBreakpoint": {
+			"type": "string",
+			"enum": [ "", "s", "m", "l", "xl" ]
+		},
+		"generalTextAlignFallback": {
+			"type": "string",
+			"enum": [ "", "left", "center", "right" ]
+		},
+		"generalVisiblity": {
+			"type": "string",
+			"enum": [
+				"",
+				"visible@s",
+				"visible@m",
+				"visible@l",
+				"visible@xl",
+				"hidden@s",
+				"hidden@m",
+				"hidden@l",
+				"hidden@xl"
+			]
+		},
+		"generalPosition": {
+			"type": "string",
+			"enum": [ "", "relative", "absolute" ]
+		},
+		"generalPositionLeft": { "type": "integer" },
+		"generalPositionRight": { "type": "integer" },
+		"generalPositionTop": { "type": "integer" },
+		"generalPositionBottom": { "type": "integer" },
+		"generalPositionZIndex": { "type": "integer" },
+		"url": { "type": "string" },
+		"target": { "type": "string", "enum": [ "", "_blank", "lightbox" ] },
+		"rel": { "type": "string" },
+		"image": { "type": "string" },
+		"imageId": { "type": "integer" },
+		"width": { "type": "string" },
+		"height": { "type": "string" },
+		"loading": { "type": "string" },
+		"focalPoint": {
+			"type": "string",
+			"enum": [
+				"",
+				"top-left",
+				"top-center",
+				"top-right",
+				"center-left",
+				"center-right",
+				"bottom-left",
+				"bottom-center",
+				"bottom-right"
+			]
+		},
+		"sizeSlug": { "type": "string" },
+		"imageAlt": { "type": "string" },
+		"hoverImage": { "type": "string" },
+		"hoverImageId": { "type": "integer" },
+		"hoverSizeSlug": { "type": "string" },
+		"overlayMode": {
+			"type": "string",
+			"enum": [ "", "cover" ],
+			"default": "cover"
+		},
+		"overlayHover": { "type": "boolean" },
+		"overlayStyle": {
+			"type": "string",
+			"enum": [
+				"",
+				"overlay-default",
+				"overlay-primary",
+				"tile-default",
+				"tile-muted",
+				"tile-primary",
+				"tile-secondary"
+			],
+			"default": "overlay-default"
+		},
+		"overlayMargin": {
+			"type": "string",
+			"enum": [ "", "small", "medium", "large" ]
+		},
+		"overlayPadding": {
+			"type": "string",
+			"enum": [ "", "small", "large", "remove" ]
+		},
+		"overlayPosition": {
+			"type": "string",
+			"enum": [
+				"top",
+				"left",
+				"right",
+				"bottom",
+				"center",
+				"top-left",
+				"top-center",
+				"top-right",
+				"center-left",
+				"center-right",
+				"bottom-left",
+				"bottom-center",
+				"bottom-right"
+			],
+			"default": "center"
+		},
+		"overlayWidth": {
+			"type": "string",
+			"enum": [ "", "small", "medium", "large", "xlarge" ]
+		},
+		"overlayColorMode": {
+			"type": "string",
+			"enum": [ "", "light", "dark" ]
+		},
+		"overlayTransition": {
+			"type": "string",
+			"enum": [
+				"fade",
+				"scale-up",
+				"scale-down",
+				"slide-top",
+				"slide-bottom",
+				"slide-left",
+				"slide-right",
+				"slide-top-small",
+				"slide-bottom-small",
+				"slide-left-small",
+				"slide-right-small",
+				"slide-top-medium",
+				"slide-bottom-medium",
+				"slide-left-medium",
+				"slide-right-medium"
+			],
+			"default": "fade"
+		},
+		"overlayImageTransition": {
+			"type": "string",
+			"enum": [ "", "scale-up", "scale-down" ]
+		}
+	}
+}

@@ -140,6 +140,7 @@ class UIkit_Blocks {
 			'icon',
 			'card',
 			'image',
+			'overlay',
 		);
 
 		foreach ( $blocks as $block_dir ) {
