@@ -20,3 +20,5 @@ import './blocks/icon/block';
 import './blocks/card/block';
 import './blocks/image/block';
 import './blocks/overlay/block';
+import './blocks/list/block';
+import './blocks/list-item/block';

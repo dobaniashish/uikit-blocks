@@ -11,11 +11,9 @@ This project is a Work In Progress.
 -   [ ] Add all basic UIkit components
     -   [ ] Breadcrumb (dynamic)
     -   [ ] Text
-    -   [ ] List
     -   [ ] Slider
     -   [ ] Subnav
     -   [ ] Subnav
-    -   [ ] Tabs
     -   [ ] Tabs
     -   [ ] ...more
 -   [ ] Add general dynamic block options/attributes
@@ -52,6 +50,8 @@ This project is a Work In Progress.
 -   Card
 -   Image
 -   Overlay (Cover)
+-   List
+    -   List Item
 
 ## UIkit library
 

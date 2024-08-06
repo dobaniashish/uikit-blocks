@@ -1,0 +1,80 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "uikit-blocks/list",
+	"title": "List (UIkit)",
+	"category": "uikit-blocks",
+	"keywords": [ "List", "UIkit List", "UIkit" ],
+	"textdomain": "uikit-blocks",
+	"version": "1.0",
+	"allowedBlocks": [ "uikit-blocks/list-item" ],
+	"attributes": {
+		"generalMargin": {
+			"type": "string",
+			"enum": [
+				"",
+				"small",
+				"default",
+				"medium",
+				"large",
+				"xlarge",
+				"remove-vertical"
+			]
+		},
+		"generalMarginRemoveTop": { "type": "boolean" },
+		"generalMarginRemoveBottom": { "type": "boolean" },
+		"generalTextAlign": {
+			"type": "string",
+			"enum": [ "", "left", "center", "right", "justify" ]
+		},
+		"generalTextAlignBreakpoint": {
+			"type": "string",
+			"enum": [ "", "s", "m", "l", "xl" ]
+		},
+		"generalTextAlignFallback": {
+			"type": "string",
+			"enum": [ "", "left", "center", "right" ]
+		},
+		"generalVisiblity": {
+			"type": "string",
+			"enum": [
+				"",
+				"visible@s",
+				"visible@m",
+				"visible@l",
+				"visible@xl",
+				"hidden@s",
+				"hidden@m",
+				"hidden@l",
+				"hidden@xl"
+			]
+		},
+		"generalPosition": {
+			"type": "string",
+			"enum": [ "", "relative", "absolute" ]
+		},
+		"generalPositionLeft": { "type": "integer" },
+		"generalPositionRight": { "type": "integer" },
+		"generalPositionTop": { "type": "integer" },
+		"generalPositionBottom": { "type": "integer" },
+		"generalPositionZIndex": { "type": "integer" },
+		"marker": {
+			"type": "string",
+			"enum": [
+				"",
+				"disc",
+				"circle",
+				"square",
+				"decimal",
+				"hyphen",
+				"bullet"
+			]
+		},
+		"markerColor": {
+			"type": "string",
+			"enum": [ "", "muted", "emphasis", "primary", "secondary" ]
+		},
+		"style": { "type": "string", "enum": [ "", "divider", "striped" ] },
+		"size": { "type": "string", "enum": [ "", "large", "collapse" ] }
+	}
+}
