@@ -13,8 +13,8 @@ This project is a Work In Progress.
     -   [ ] Text
     -   [ ] Slider
     -   [ ] Subnav
-    -   [ ] Subnav
     -   [ ] Tabs
+    -   [ ] Alert
     -   [ ] ...more
 -   [ ] Add general dynamic block options/attributes
     -   [x] Margin
@@ -24,8 +24,8 @@ This project is a Work In Progress.
     -   [ ] Animation/Paralax
 -   [ ] Option to include UIkit assets on frontend
 -   [ ] Filters
--   [ ] Tests and Backward compatibility
 -   [ ] Translations
+-   [ ] Tests and Backward compatibility
 -   [ ] Plugin zip (Use `wp-scripts plugin-zip` or write custom build script)
 -   [ ] Publish v1.0.0
 
