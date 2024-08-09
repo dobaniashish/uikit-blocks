@@ -167,7 +167,7 @@ class Block_Type {
 		$general_attributes = array();
 
 		// Margin.
-		if ( array_key_exists( 'generalMargin', $attributes ) && $attributes['generalMargin'] ) {
+		if ( array_key_exists( 'generalMargin', $this->block['attributes'] ) && array_key_exists( 'generalMargin', $attributes ) && $attributes['generalMargin'] ) {
 			$general_attributes = Utils::attributes_merge(
 				$general_attributes,
 				array(
@@ -182,7 +182,7 @@ class Block_Type {
 		}
 
 		// Text alignment.
-		if ( array_key_exists( 'generalTextAlign', $attributes ) && $attributes['generalTextAlign'] ) {
+		if ( array_key_exists( 'generalTextAlign', $this->block['attributes'] ) && array_key_exists( 'generalTextAlign', $attributes ) && $attributes['generalTextAlign'] ) {
 			$general_attributes = Utils::attributes_merge(
 				$general_attributes,
 				array(
@@ -196,7 +196,7 @@ class Block_Type {
 		}
 
 		// Visiblity.
-		if ( array_key_exists( 'generalVisiblity', $attributes ) && $attributes['generalVisiblity'] ) {
+		if ( array_key_exists( 'generalVisiblity', $this->block['attributes'] ) && array_key_exists( 'generalVisiblity', $attributes ) && $attributes['generalVisiblity'] ) {
 			$general_attributes = Utils::attributes_merge(
 				$general_attributes,
 				array(
@@ -208,7 +208,7 @@ class Block_Type {
 		}
 
 		// Position.
-		if ( array_key_exists( 'generalPosition', $attributes ) && $attributes['generalPosition'] ) {
+		if ( array_key_exists( 'generalPosition', $this->block['attributes'] ) && array_key_exists( 'generalPosition', $attributes ) && $attributes['generalPosition'] ) {
 			$general_attributes = Utils::attributes_merge(
 				$general_attributes,
 				array(
