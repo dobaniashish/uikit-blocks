@@ -6,7 +6,7 @@ Inspired by [liip/bootstrap-blocks-wordpress-plugin](https://github.com/liip/boo
 
 ## TODO
 
-This project is a Work In Progress.
+This project is a Work In Progress. Commits can have breaking changes to plugin architecture.
 
 -   [ ] Add all basic UIkit components
     -   [ ] Breadcrumb (dynamic)
