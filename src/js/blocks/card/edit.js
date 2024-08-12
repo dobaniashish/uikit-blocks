@@ -23,7 +23,9 @@ import { store as noticesStore } from '@wordpress/notices';
 import clsx from 'clsx';
 
 import GeneralOptions from '../general-options';
-import generalBlockProps from '../general-block-props';
+import useGeneralBlockProps from '../use-general-block-props';
+
+import metadata from './metadata';
 
 export default function Edit( { attributes, setAttributes, clientId } ) {
 	const hasInnerBlocks = useSelect(
@@ -40,10 +42,11 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 		} );
 	}
 
+	const generalBlockProps = useGeneralBlockProps( attributes, metadata );
+
 	const blockProps = useBlockProps( {
-		...generalBlockProps( attributes ),
-		className: clsx( {
-			'uk-card': true,
+		...generalBlockProps,
+		className: clsx( generalBlockProps.className, 'uk-card', {
 			[ `uk-card-${ attributes.style }` ]: attributes.style,
 			[ `uk-card-${ attributes.padding }` ]: attributes.padding,
 			'uk-card-hover': attributes.hover,
@@ -174,7 +177,7 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 				</PanelBody>
 			</InspectorControls>
 
-			<GeneralOptions { ...arguments[ 0 ] } />
+			<GeneralOptions { ...arguments[ 0 ] } metadata={ metadata } />
 
 			<div { ...blockProps }>
 				{ attributes.image && (

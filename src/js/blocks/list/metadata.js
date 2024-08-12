@@ -1,4 +1,8 @@
-import generalAttributes from '../general-attributes';
+import generalAttributes, {
+	scrollspy,
+	transition,
+	effect,
+} from '../general-attributes';
 
 export default {
 	$schema: 'https://schemas.wp.org/trunk/block.json',
@@ -12,6 +16,9 @@ export default {
 	allowedBlocks: [ 'uikit-blocks/list-item' ],
 	attributes: {
 		...generalAttributes,
+		...scrollspy,
+		...transition,
+		...effect,
 		marker: {
 			type: 'string',
 			enum: [

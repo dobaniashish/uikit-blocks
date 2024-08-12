@@ -226,6 +226,86 @@ class Block_Type {
 			);
 		}
 
+		// Scrollspy parent.
+		if ( array_key_exists( 'generalScrollspy', $this->block['attributes'] ) && array_key_exists( 'generalScrollspy', $attributes ) && $attributes['generalScrollspy'] ) {
+			$general_attributes = Utils::attributes_merge(
+				$general_attributes,
+				array(
+					'data-uk-scrollspy' => array(
+						'target: [data-uk-scrollspy-class];',
+						"cls: uk-animation-{$attributes['generalScrollspy']};" => $attributes['generalScrollspy'],
+						"delay: {$attributes['generalScrollspyDelay']};" => $attributes['generalScrollspyDelay'],
+					),
+				)
+			);
+		}
+
+		// Transition toggle parent.
+		if ( array_key_exists( 'generalTransitionHover', $this->block['attributes'] ) && array_key_exists( 'generalTransitionHover', $attributes ) && $attributes['generalTransitionHover'] ) {
+			$general_attributes = Utils::attributes_merge(
+				$general_attributes,
+				array(
+					'class' => array(
+						'uk-transition-toggle' => $attributes['generalTransitionHover'],
+					),
+				)
+			);
+		}
+
+		// Effect.
+		if ( array_key_exists( 'generalEffect', $this->block['attributes'] ) && array_key_exists( 'generalEffect', $attributes ) && $attributes['generalEffect'] ) {
+
+			// Animation child.
+			if ( 'animation' === $attributes['generalEffect'] && $attributes['generalAnimation'] ) {
+				$general_attributes = Utils::attributes_merge(
+					$general_attributes,
+					array(
+						'data-uk-scrollspy-class' => Utils::attribute_value(
+							array(
+								"uk-animation-{$attributes['generalAnimation']}" => 'inherit' !== $attributes['generalAnimation'],
+							),
+							true
+						),
+					)
+				);
+			}
+
+			// Transition child.
+			if ( 'transition' === $attributes['generalEffect'] ) {
+				$general_attributes = Utils::attributes_merge(
+					$general_attributes,
+					array(
+						'class' => array(
+							"uk-transition-{$attributes['generalTransition']}" => $attributes['generalTransition'],
+						),
+					)
+				);
+			}
+
+			// Parallax.
+			if ( 'parallax' === $attributes['generalEffect'] ) {
+				$general_attributes = Utils::attributes_merge(
+					$general_attributes,
+					array(
+						'class'            => array(
+							"uk-transform-origin-{$attributes['generalParallaxOrigin']}" => $attributes['generalParallaxOrigin'],
+						),
+						'data-uk-parallax' => array(
+							"x: {$attributes['generalParallaxX']};" => $attributes['generalParallaxX'],
+							"y: {$attributes['generalParallaxY']};" => $attributes['generalParallaxY'],
+							"scale: {$attributes['generalParallaxScale']};" => $attributes['generalParallaxScale'],
+							"rotate: {$attributes['generalParallaxRotate']};" => $attributes['generalParallaxRotate'],
+							"opacity: {$attributes['generalParallaxOpacity']};" => $attributes['generalParallaxOpacity'],
+							"blur: {$attributes['generalParallaxBlur']};" => $attributes['generalParallaxBlur'],
+							"easing: {$attributes['generalParallaxEasing']};" => $attributes['generalParallaxEasing'],
+							"media: {$attributes['generalParallaxBreakpoint']};" => $attributes['generalParallaxBreakpoint'],
+							$attributes['generalParallaxCustom'] => $attributes['generalParallaxCustom'],
+						),
+					)
+				);
+			}
+		}
+
 		return $general_attributes;
 	}
 }

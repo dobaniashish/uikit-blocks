@@ -1,3 +1,9 @@
+import generalAttributes, {
+	scrollspy,
+	transition,
+	effect,
+} from '../general-attributes';
+
 export default {
 	$schema: 'https://schemas.wp.org/trunk/block.json',
 	apiVersion: 3,
@@ -9,6 +15,10 @@ export default {
 	version: '1.0',
 	allowedBlocks: [ 'uikit-blocks/grid-cell' ],
 	attributes: {
+		...generalAttributes,
+		...scrollspy,
+		...transition,
+		...effect,
 		columnGap: {
 			type: 'string',
 			enum: [ '', 'small', 'medium', 'large', 'collapse' ],

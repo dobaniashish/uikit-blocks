@@ -1,4 +1,8 @@
-import generalAttributes from '../general-attributes';
+import generalAttributes, {
+	scrollspy,
+	transition,
+	effect,
+} from '../general-attributes';
 
 export default {
 	$schema: 'https://schemas.wp.org/trunk/block.json',
@@ -11,6 +15,9 @@ export default {
 	version: '1.0',
 	attributes: {
 		...generalAttributes,
+		...scrollspy,
+		...transition,
+		...effect,
 		style: {
 			type: 'string',
 			enum: [ 'default', 'primary', 'secondary', '' ],

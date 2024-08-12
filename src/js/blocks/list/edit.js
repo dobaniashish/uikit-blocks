@@ -15,7 +15,9 @@ import { useSelect } from '@wordpress/data';
 import clsx from 'clsx';
 
 import GeneralOptions from '../general-options';
-import generalBlockProps from '../general-block-props';
+import useGeneralBlockProps from '../use-general-block-props';
+
+import metadata from './metadata';
 
 export default function Edit( { attributes, setAttributes, clientId } ) {
 	const hasInnerBlocks = useSelect(
@@ -24,10 +26,11 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 		[ clientId ]
 	);
 
+	const generalBlockProps = useGeneralBlockProps( attributes, metadata );
+
 	const blockProps = useBlockProps( {
-		...generalBlockProps( attributes ),
-		className: clsx( {
-			'uk-list': true,
+		...generalBlockProps,
+		className: clsx( generalBlockProps.className, 'uk-list', {
 			[ `uk-list-${ attributes.marker }` ]: attributes.marker,
 			[ `uk-list-${ attributes.markerColor }` ]:
 				attributes.marker !== 'bullet' && attributes.markerColor,
@@ -164,7 +167,7 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 				</PanelBody>
 			</InspectorControls>
 
-			<GeneralOptions { ...arguments[ 0 ] } />
+			<GeneralOptions { ...arguments[ 0 ] } metadata={ metadata } />
 
 			<ul { ...innerBlocksProps }></ul>
 		</>

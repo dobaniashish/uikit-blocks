@@ -17,8 +17,12 @@ import {
 
 import { useSelect } from '@wordpress/data';
 
+import clsx from 'clsx';
+
 import GeneralOptions from '../general-options';
-import generalBlockProps from '../general-block-props';
+import useGeneralBlockProps from '../use-general-block-props';
+
+import metadata from './metadata';
 
 export default function Edit( { attributes, setAttributes, clientId } ) {
 	const hasInnerBlocks = useSelect(
@@ -27,9 +31,11 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 		[ clientId ]
 	);
 
+	const generalBlockProps = useGeneralBlockProps( attributes, metadata );
+
 	const blockProps = useBlockProps( {
-		...generalBlockProps( attributes ),
-		className: 'uk-accordion',
+		...generalBlockProps,
+		className: clsx( generalBlockProps.className, 'uk-accordion' ),
 	} );
 
 	const innerBlocksProps = useInnerBlocksProps( blockProps, {
@@ -106,7 +112,7 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 				</PanelBody>
 			</InspectorControls>
 
-			<GeneralOptions { ...arguments[ 0 ] } />
+			<GeneralOptions { ...arguments[ 0 ] } metadata={ metadata } />
 
 			<ul { ...innerBlocksProps }></ul>
 		</>

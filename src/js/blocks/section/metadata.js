@@ -1,3 +1,5 @@
+import { scrollspy, transition } from '../general-attributes';
+
 export default {
 	$schema: 'https://schemas.wp.org/trunk/block.json',
 	apiVersion: 3,
@@ -9,6 +11,8 @@ export default {
 	version: '1.0',
 	allowedBlocks: [ 'uikit-blocks/container' ],
 	attributes: {
+		...scrollspy,
+		...transition,
 		style: {
 			type: 'string',
 			enum: [ 'default', 'muted', 'primary', 'secondary', '' ],

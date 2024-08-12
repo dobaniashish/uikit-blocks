@@ -18,7 +18,9 @@ import { date } from '@wordpress/date';
 import clsx from 'clsx';
 
 import GeneralOptions from '../general-options';
-import generalBlockProps from '../general-block-props';
+import useGeneralBlockProps from '../use-general-block-props';
+
+import metadata from './metadata';
 
 const gapOptions = [
 	{
@@ -47,7 +49,7 @@ export default function Edit( { attributes, setAttributes } ) {
 	} );
 
 	const blockProps = useBlockProps( {
-		...generalBlockProps( attributes ),
+		...useGeneralBlockProps( attributes, metadata ),
 	} );
 
 	return (
@@ -206,7 +208,7 @@ export default function Edit( { attributes, setAttributes } ) {
 				</PanelBody>
 			</InspectorControls>
 
-			<GeneralOptions { ...arguments[ 0 ] } />
+			<GeneralOptions { ...arguments[ 0 ] } metadata={ metadata } />
 
 			<div { ...blockProps }>
 				<div

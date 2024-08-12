@@ -104,8 +104,6 @@ $overlay_attributes = array(
 	),
 );
 
-$a = array();
-
 $prepared_wrapper_attributes = Utils::prepare_wrapper_attributes( $wrapper_attributes );
 
 ?>
@@ -125,9 +123,9 @@ $prepared_wrapper_attributes = Utils::prepare_wrapper_attributes( $wrapper_attri
 
 		<div <?php Utils::attributes( $position_attributes ); ?>>
 			<div <?php Utils::attributes( $overlay_attributes ); ?>>
-					<?php
-					echo $arguments['content']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
-					?>
+				<?php
+				echo $arguments['content']; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
+				?>
 			</div>
 		</div>
 

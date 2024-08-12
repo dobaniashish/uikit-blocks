@@ -21,6 +21,11 @@ import {
 
 import clsx from 'clsx';
 
+import GeneralOptions from '../general-options';
+import useGeneralBlockProps from '../use-general-block-props';
+
+import metadata from './metadata';
+
 const headingIcons = {
 	div: heading,
 	h1: headingLevel1,
@@ -31,13 +36,12 @@ const headingIcons = {
 	h6: headingLevel6,
 };
 
-import GeneralOptions from '../general-options';
-import generalBlockProps from '../general-block-props';
-
 export default function Edit( { attributes, setAttributes } ) {
+	const generalBlockProps = useGeneralBlockProps( attributes, metadata );
+
 	const blockProps = useBlockProps( {
-		...generalBlockProps( attributes ),
-		className: clsx( {
+		...generalBlockProps,
+		className: clsx( generalBlockProps.className, {
 			[ `uk-${ attributes.tag }` ]:
 				attributes.tag !== 'div' && ! attributes.style,
 			[ `uk-${ attributes.style }` ]: attributes.style,
@@ -250,7 +254,7 @@ export default function Edit( { attributes, setAttributes } ) {
 				/>
 			</BlockControls>
 
-			<GeneralOptions { ...arguments[ 0 ] } />
+			<GeneralOptions { ...arguments[ 0 ] } metadata={ metadata } />
 
 			<div { ...blockProps }>
 				<RichText

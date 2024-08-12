@@ -1,4 +1,8 @@
-import generalAttributes from '../general-attributes';
+import generalAttributes, {
+	scrollspy,
+	transition,
+	effect,
+} from '../general-attributes';
 import { basic as urlAttributes } from '../../components/url-control/attributes';
 
 export default {
@@ -12,6 +16,9 @@ export default {
 	version: '1.0',
 	attributes: {
 		...generalAttributes,
+		...scrollspy,
+		...transition,
+		...effect,
 		...urlAttributes,
 
 		// Main image.

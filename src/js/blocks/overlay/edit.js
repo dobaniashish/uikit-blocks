@@ -33,7 +33,9 @@ import { humanize } from '../../helpers/util';
 import URLControl from '../../components/url-control';
 
 import GeneralOptions from '../general-options';
-import generalBlockProps from '../general-block-props';
+import useGeneralBlockProps from '../use-general-block-props';
+
+import metadata from './metadata';
 
 const defaultSizeSlug = 'full';
 
@@ -105,7 +107,7 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 	}
 
 	const blockProps = useBlockProps( {
-		...generalBlockProps( attributes ),
+		...useGeneralBlockProps( attributes, metadata ),
 	} );
 
 	const innerBlocksProps = useInnerBlocksProps(
@@ -786,7 +788,7 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 				lightbox={ false }
 			/>
 
-			<GeneralOptions { ...arguments[ 0 ] } />
+			<GeneralOptions { ...arguments[ 0 ] } metadata={ metadata } />
 
 			<div { ...blockProps }>
 				<div className="uk-inline-clip uk-transition-toggle">

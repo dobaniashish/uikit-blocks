@@ -1,4 +1,4 @@
-import generalAttributes from '../general-attributes';
+import generalAttributes, { effect } from '../general-attributes';
 import urlAttributes from '../../components/url-control/attributes';
 
 export default {
@@ -12,6 +12,7 @@ export default {
 	version: '1.0',
 	attributes: {
 		...generalAttributes,
+		...effect,
 		...urlAttributes,
 		icon: {
 			type: 'string',

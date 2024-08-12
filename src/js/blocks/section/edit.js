@@ -22,6 +22,11 @@ import { store as noticesStore } from '@wordpress/notices';
 
 import clsx from 'clsx';
 
+import GeneralOptions from '../general-options';
+import useGeneralBlockProps from '../use-general-block-props';
+
+import metadata from './metadata';
+
 export default function Edit( { attributes, setAttributes, clientId } ) {
 	const hasInnerBlocks = useSelect(
 		( select ) =>
@@ -37,9 +42,11 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 		} );
 	}
 
+	const generalBlockProps = useGeneralBlockProps( attributes, metadata );
+
 	const blockProps = useBlockProps( {
-		className: clsx( {
-			'uk-section': true,
+		...generalBlockProps,
+		className: clsx( generalBlockProps.className, 'uk-section', {
 			[ `uk-section-${ attributes.style }` ]: attributes.style,
 			[ `uk-${ attributes.colorMode }` ]: attributes.colorMode,
 			[ `uk-section-${ attributes.padding }` ]:
@@ -63,6 +70,7 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 				attributes.backgroundEffect === 'fixed',
 		} ),
 		style: {
+			...generalBlockProps.style,
 			backgroundImage: attributes.background
 				? `url(${ attributes.background })`
 				: null,
@@ -418,6 +426,8 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 					) }
 				</PanelBody>
 			</InspectorControls>
+
+			<GeneralOptions { ...arguments[ 0 ] } metadata={ metadata } />
 
 			<div { ...innerBlocksProps }></div>
 		</>

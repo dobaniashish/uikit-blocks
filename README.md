@@ -16,12 +16,12 @@ This project is a Work In Progress. Commits can have breaking changes to plugin 
     -   [ ] Tabs
     -   [ ] Alert
     -   [ ] ...more
--   [ ] Add general dynamic block options/attributes
+-   [x] Add general dynamic block options/attributes
     -   [x] Margin
     -   [x] Text Alignment
     -   [x] Visiblity
     -   [x] Position
-    -   [ ] Animation/Paralax
+    -   [x] Transition/Animation/Paralax
 -   [ ] Option to include UIkit assets on frontend
 -   [ ] Filters
 -   [ ] Translations

@@ -1,4 +1,4 @@
-import generalAttributes from '../general-attributes';
+import generalAttributes, { effect } from '../general-attributes';
 
 export default {
 	$schema: 'https://schemas.wp.org/trunk/block.json',
@@ -11,6 +11,7 @@ export default {
 	version: '1.0',
 	attributes: {
 		...generalAttributes,
+		...effect,
 		style: {
 			type: 'string',
 			enum: [ '', 'icon', 'small', 'vertical' ],

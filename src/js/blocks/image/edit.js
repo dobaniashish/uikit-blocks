@@ -30,7 +30,9 @@ import { humanize } from '../../helpers/util';
 import URLControl from '../../components/url-control';
 
 import GeneralOptions from '../general-options';
-import generalBlockProps from '../general-block-props';
+import useGeneralBlockProps from '../use-general-block-props';
+
+import metadata from './metadata';
 
 const defaultSizeSlug = 'full';
 
@@ -68,7 +70,7 @@ export default function Edit( { attributes, setAttributes } ) {
 	}
 
 	const blockProps = useBlockProps( {
-		...generalBlockProps( attributes ),
+		...useGeneralBlockProps( attributes, metadata ),
 	} );
 
 	return (
@@ -275,7 +277,7 @@ export default function Edit( { attributes, setAttributes } ) {
 				lightbox={ true }
 			/>
 
-			<GeneralOptions { ...arguments[ 0 ] } />
+			<GeneralOptions { ...arguments[ 0 ] } metadata={ metadata } />
 
 			<div { ...blockProps }>
 				{ ! hasImage && (

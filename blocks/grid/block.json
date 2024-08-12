@@ -9,6 +9,156 @@
 	"version": "1.0",
 	"allowedBlocks": [ "uikit-blocks/grid-cell" ],
 	"attributes": {
+		"generalMargin": {
+			"type": "string",
+			"enum": [
+				"",
+				"small",
+				"default",
+				"medium",
+				"large",
+				"xlarge",
+				"remove-vertical"
+			]
+		},
+		"generalMarginRemoveTop": { "type": "boolean" },
+		"generalMarginRemoveBottom": { "type": "boolean" },
+		"generalTextAlign": {
+			"type": "string",
+			"enum": [ "", "left", "center", "right", "justify" ]
+		},
+		"generalTextAlignBreakpoint": {
+			"type": "string",
+			"enum": [ "", "s", "m", "l", "xl" ]
+		},
+		"generalTextAlignFallback": {
+			"type": "string",
+			"enum": [ "", "left", "center", "right" ]
+		},
+		"generalVisiblity": {
+			"type": "string",
+			"enum": [
+				"",
+				"visible@s",
+				"visible@m",
+				"visible@l",
+				"visible@xl",
+				"hidden@s",
+				"hidden@m",
+				"hidden@l",
+				"hidden@xl"
+			]
+		},
+		"generalPosition": {
+			"type": "string",
+			"enum": [ "", "relative", "absolute" ]
+		},
+		"generalPositionLeft": { "type": "integer" },
+		"generalPositionRight": { "type": "integer" },
+		"generalPositionTop": { "type": "integer" },
+		"generalPositionBottom": { "type": "integer" },
+		"generalPositionZIndex": { "type": "integer" },
+		"generalScrollspy": {
+			"type": "string",
+			"enum": [
+				"",
+				"fade",
+				"scale-up",
+				"scale-down",
+				"slide-top",
+				"slide-bottom",
+				"slide-left",
+				"slide-right",
+				"slide-top-small",
+				"slide-bottom-small",
+				"slide-left-small",
+				"slide-right-small",
+				"slide-top-medium",
+				"slide-bottom-medium",
+				"slide-left-medium",
+				"slide-right-medium",
+				"kenburns",
+				"shake"
+			]
+		},
+		"generalScrollspyDelay": { "type": "string" },
+		"generalTransitionHover": { "type": "boolean" },
+		"generalEffect": {
+			"type": "string",
+			"enum": [ "", "animation", "transition", "parallax" ]
+		},
+		"generalAnimation": {
+			"type": "string",
+			"enum": [
+				"",
+				"inherit",
+				"fade",
+				"scale-up",
+				"scale-down",
+				"slide-top",
+				"slide-bottom",
+				"slide-left",
+				"slide-right",
+				"slide-top-small",
+				"slide-bottom-small",
+				"slide-left-small",
+				"slide-right-small",
+				"slide-top-medium",
+				"slide-bottom-medium",
+				"slide-left-medium",
+				"slide-right-medium"
+			],
+			"default": ""
+		},
+		"generalTransition": {
+			"type": "string",
+			"enum": [
+				"",
+				"fade",
+				"scale-up",
+				"scale-down",
+				"slide-top",
+				"slide-bottom",
+				"slide-left",
+				"slide-right",
+				"slide-top-small",
+				"slide-bottom-small",
+				"slide-left-small",
+				"slide-right-small",
+				"slide-top-medium",
+				"slide-bottom-medium",
+				"slide-left-medium",
+				"slide-right-medium"
+			],
+			"default": ""
+		},
+		"generalParallaxX": { "type": "string" },
+		"generalParallaxY": { "type": "string" },
+		"generalParallaxScale": { "type": "string" },
+		"generalParallaxRotate": { "type": "string" },
+		"generalParallaxOpacity": { "type": "string" },
+		"generalParallaxBlur": { "type": "string" },
+		"generalParallaxOrigin": {
+			"type": "string",
+			"enum": [
+				"top-left",
+				"top-center",
+				"top-right",
+				"center-left",
+				"",
+				"center-right",
+				"bottom-left",
+				"bottom-center",
+				"bottom-right"
+			],
+			"default": ""
+		},
+		"generalParallaxEasing": { "type": "string" },
+		"generalParallaxBreakpoint": {
+			"type": "string",
+			"enum": [ "", "s", "m", "l", "xl" ]
+		},
+		"generalParallaxCustom": { "type": "string" },
 		"columnGap": {
 			"type": "string",
 			"enum": [ "", "small", "medium", "large", "collapse" ]

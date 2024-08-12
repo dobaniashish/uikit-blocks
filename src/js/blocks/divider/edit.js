@@ -7,12 +7,19 @@ import { PanelBody, SelectControl } from '@wordpress/components';
 import clsx from 'clsx';
 
 import GeneralOptions from '../general-options';
-import generalBlockProps from '../general-block-props';
+import useGeneralBlockProps from '../use-general-block-props';
+
+import metadata from './metadata';
 
 export default function Edit( { attributes, setAttributes } ) {
+	const generalBlockProps = useGeneralBlockProps( attributes, metadata );
+
 	const blockProps = useBlockProps( {
-		...generalBlockProps( attributes ),
-		className: 'uk-padding-small', // For editor selection.
+		...generalBlockProps,
+		className: clsx(
+			generalBlockProps.className,
+			'uk-padding-small' // For editor selection.
+		),
 	} );
 
 	return (
@@ -64,7 +71,7 @@ export default function Edit( { attributes, setAttributes } ) {
 				</PanelBody>
 			</InspectorControls>
 
-			<GeneralOptions { ...arguments[ 0 ] } />
+			<GeneralOptions { ...arguments[ 0 ] } metadata={ metadata } />
 
 			<div { ...blockProps }>
 				<div
