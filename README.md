@@ -9,6 +9,22 @@ Inspired by [liip/bootstrap-blocks-wordpress-plugin](https://github.com/liip/boo
 This project is a Work In Progress. Commits can have breaking changes to plugin architecture.
 
 -   [ ] Add all basic UIkit components
+    -   [x] Button
+    -   [x] Heading
+    -   [x] Grid
+        -   [x] Grid Cell
+    -   [x] Countdown
+    -   [x] Section
+    -   [x] Container
+    -   [x] Accordion
+        -   [x] Accordion Item
+    -   [x] Divider
+    -   [x] Icon
+    -   [x] Card
+    -   [x] Image
+    -   [x] Overlay (Cover)
+    -   [x] List
+        -   [x] List Item
     -   [ ] Breadcrumb (dynamic)
     -   [ ] Text
     -   [ ] Slider
@@ -25,6 +41,9 @@ This project is a Work In Progress. Commits can have breaking changes to plugin 
 -   [ ] Option to include UIkit assets on frontend
 -   [ ] Filters
 -   [ ] Translations
+-   [ ] Documentation for contributers
+-   [ ] Documentation for users
+-   [ ] Documentation for theme developers
 -   [ ] Tests and Backward compatibility
 -   [ ] Plugin zip (Use `wp-scripts plugin-zip` or write custom build script)
 -   [ ] Publish v1.0.0
