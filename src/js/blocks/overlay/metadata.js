@@ -1,8 +1,4 @@
-import generalAttributes, {
-	scrollspy,
-	transition,
-	effect,
-} from '../general-attributes';
+import generalAttributes, { scrollspy, effect } from '../general-attributes';
 import { basic as urlAttributes } from '../../components/url-control/attributes';
 
 export default {
@@ -17,7 +13,6 @@ export default {
 	attributes: {
 		...generalAttributes,
 		...scrollspy,
-		...transition,
 		...effect,
 		...urlAttributes,
 
