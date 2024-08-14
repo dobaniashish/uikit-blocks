@@ -52,7 +52,7 @@ class Utils {
 				$value = self::attribute_value( $value );
 			}
 
-			// if we dont add true value.
+			// If we dont add true value.
 			if ( is_numeric( $name ) ) {
 				$name  = $value;
 				$value = true;
