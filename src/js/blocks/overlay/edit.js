@@ -18,6 +18,7 @@ import {
 	TextControl,
 	Flex,
 	FlexBlock,
+	Placeholder,
 } from '@wordpress/components';
 
 import { trash } from '@wordpress/icons';
@@ -792,7 +793,7 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 
 			<div { ...blockProps }>
 				<div className="uk-inline-clip uk-transition-toggle">
-					{ hasImage && (
+					{ hasImage ? (
 						<img
 							className={ clsx( {
 								'uk-object-cover':
@@ -811,6 +812,15 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 									attributes.width && attributes.height
 										? `${ attributes.width } / ${ attributes.height }`
 										: null,
+							} }
+						/>
+					) : (
+						<Placeholder
+							withIllustration
+							style={ {
+								width: attributes.width || '2000px',
+								height: attributes.height || '400px',
+								maxWidth: '100%',
 							} }
 						/>
 					) }

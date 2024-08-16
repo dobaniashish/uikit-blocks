@@ -81,7 +81,6 @@
 			]
 		},
 		"generalScrollspyDelay": { "type": "string" },
-		"generalTransitionHover": { "type": "boolean" },
 		"generalEffect": {
 			"type": "string",
 			"enum": [ "", "animation", "transition", "parallax" ]
