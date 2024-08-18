@@ -45,7 +45,7 @@ This project is a Work In Progress. Commits can have breaking changes to plugin 
 -   [ ] Documentation for users
 -   [ ] Documentation for theme developers
 -   [ ] Tests and Backward compatibility
--   [ ] Plugin zip (Use `wp-scripts plugin-zip` or write custom build script)
+-   [x] Plugin zip (Use `wp-scripts plugin-zip` or write custom build script)
 -   [ ] Publish v1.0.0
 
 ## Features
@@ -135,6 +135,7 @@ The compiled files are built into `dist` directory which are then copied to fina
 -   `npm run build:dev`: Compiles the files in development mode with wp-scripts, compiles metadata, compiles less and copies assets to proper directories.
 -   `npm run watch`: Watches for any changes in `src` directory and runs `build:dev`.
 -   `npm run build`: Same as `build:dev` but in production mode.
+-   `npm run plugin-zip`: Runs `build` and creates a zip file for the plugin in `dist` directory exactly like `wp-scripts plugin-zip`.
 
 ### Setup local dev environment
 
