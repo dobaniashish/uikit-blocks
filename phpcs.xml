@@ -4,6 +4,10 @@
 
 	<arg name="extensions" value="php"/>
 
+	<file>./uikit-blocks.php</file>
+	<file>./blocks</file>
+	<file>./includes</file>
+
 	<exclude-pattern>*/node_modules/*</exclude-pattern>
 	<exclude-pattern>./*.asset.php$</exclude-pattern>
 	<exclude-pattern>/stubs/*</exclude-pattern>

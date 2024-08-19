@@ -54,6 +54,7 @@
 		"lint:pkg-json": "wp-scripts lint-pkg-json",
 		"lint:js": "wp-scripts lint-js",
 		"lint:js-fix": "wp-scripts lint-js --fix",
-		"lint:md-docs": "wp-scripts lint-md-docs"
+		"lint:md-docs": "wp-scripts lint-md-docs",
+		"lint:php": "wp-env run --env-cwd='wp-content/plugins/uikit-blocks' cli composer run-script lint"
 	}
 }
