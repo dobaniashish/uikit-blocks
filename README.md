@@ -1,5 +1,7 @@
 # UIkit Blocks
 
+[![](https://github.com/dobaniashish/uikit-blocks/workflows/Lint/badge.svg)](https://github.com/dobaniashish/uikit-blocks/actions/workflows/lint.yml)
+
 UIkit Gutenberg Blocks for WordPress.
 
 Inspired by [liip/bootstrap-blocks-wordpress-plugin](https://github.com/liip/bootstrap-blocks-wordpress-plugin) and [UIkit](https://github.com/uikit/uikit).
