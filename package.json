@@ -4,6 +4,13 @@
 	"description": "UIkit Gutenberg Blocks for WordPress",
 	"author": "dobaniashish",
 	"license": "GPL-2.0-or-later",
+	"keywords": [
+		"WordPress",
+		"editor",
+		"Gutenberg",
+		"UIkit",
+		"Blocks"
+	],
 	"homepage": "https://github.com/dobaniashish/uikit-blocks",
 	"repository": {
 		"type": "git",
@@ -12,12 +19,10 @@
 	"bugs": {
 		"url": "https://github.com/dobaniashish/uikit-blocks/issues"
 	},
-	"scripts": {
-		"build": "wp-scripts build && node build-scripts/less && node build-scripts/metadata && node build-scripts/copy",
-		"build:dev": "wp-scripts build --mode development && node build-scripts/less && node build-scripts/metadata && node build-scripts/copy",
-		"watch": "chokidar \"src\" --initial -c \"npm run build:dev\"",
-		"plugin-zip": "npm run build && node build-scripts/plugin-zip",
-		"wp-env": "wp-env"
+	"dependencies": {
+		"@wordpress/icons": "^10.3.0",
+		"clsx": "^2.1.1",
+		"uikit": "^3.21.6"
 	},
 	"devDependencies": {
 		"@babel/core": "^7.24.9",
@@ -36,9 +41,19 @@
 		"postcss": "^8.4.39",
 		"prettier": "npm:wp-prettier@3.0.3"
 	},
-	"dependencies": {
-		"@wordpress/icons": "^10.3.0",
-		"clsx": "^2.1.1",
-		"uikit": "^3.21.6"
+	"scripts": {
+		"build": "wp-scripts build && node build-scripts/less && node build-scripts/metadata && node build-scripts/copy",
+		"build:dev": "wp-scripts build --mode development && node build-scripts/less && node build-scripts/metadata && node build-scripts/copy",
+		"watch": "chokidar \"src\" --initial -c \"npm run build:dev\"",
+		"plugin-zip": "npm run build && node build-scripts/plugin-zip",
+		"prebuild": "npm run check-engines && npm run check-licenses",
+		"check-engines": "wp-scripts check-engines",
+		"check-licenses": "wp-scripts check-licenses --prod --gpl2",
+		"wp-env": "wp-env",
+		"lint": "npm run lint:pkg-json && npm run lint:js && npm run lint:md-docs",
+		"lint:pkg-json": "wp-scripts lint-pkg-json",
+		"lint:js": "wp-scripts lint-js",
+		"lint:js-fix": "wp-scripts lint-js --fix",
+		"lint:md-docs": "wp-scripts lint-md-docs"
 	}
 }
