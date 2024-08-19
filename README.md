@@ -45,6 +45,7 @@ This project is a Work In Progress. Commits can have breaking changes to plugin 
 -   [ ] Documentation for users
 -   [ ] Documentation for theme developers
 -   [ ] Tests and Backward compatibility
+-   [ ] Lint
 -   [x] Plugin zip (Use `wp-scripts plugin-zip` or write custom build script)
 -   [ ] Publish v1.0.0
 
@@ -107,8 +108,7 @@ To overwrite a block template, you can copy the original template from the plugi
 ### Installation
 
 1. Clone this repository
-
-2. Install Node dependencies
+1. Install Node dependencies
 
     ```bash
     npm install
