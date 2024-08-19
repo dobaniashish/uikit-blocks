@@ -1,6 +1,6 @@
 # UIkit Blocks
 
-[![](https://github.com/dobaniashish/uikit-blocks/workflows/Lint/badge.svg)](https://github.com/dobaniashish/uikit-blocks/actions/workflows/lint.yml)
+[![Lint Status](https://github.com/dobaniashish/uikit-blocks/workflows/Lint/badge.svg)](https://github.com/dobaniashish/uikit-blocks/actions/workflows/lint.yml)
 
 UIkit Gutenberg Blocks for WordPress.
 
