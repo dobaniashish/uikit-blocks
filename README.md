@@ -48,6 +48,7 @@ This project is a Work In Progress. Commits can have breaking changes to plugin 
 -   [ ] Documentation for users
 -   [ ] Documentation for theme developers
 -   [ ] Tests and Backward compatibility
+-   [ ] Playground
 -   [x] Lint
 -   [x] Plugin zip (Use `wp-scripts plugin-zip` or write custom build script)
 -   [ ] Publish v1.0.0
