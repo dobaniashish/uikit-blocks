@@ -1,0 +1,2270 @@
+# Copyright (C) 2024 dobaniashish
+# This file is distributed under the GPLv2.
+msgid ""
+msgstr ""
+"Project-Id-Version: UIkit Blocks 1.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/uikit-blocks\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2024-08-31T07:45:41+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.11.0\n"
+"X-Domain: uikit-blocks\n"
+
+#. Plugin Name of the plugin
+#: uikit-blocks.php
+msgid "UIkit Blocks"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: uikit-blocks.php
+msgid "https://github.com/dobaniashish/uikit-blocks"
+msgstr ""
+
+#. Description of the plugin
+#: uikit-blocks.php
+msgid "UIkit Gutenberg Blocks for WordPress."
+msgstr ""
+
+#. Author of the plugin
+#: uikit-blocks.php
+msgid "dobaniashish"
+msgstr ""
+
+#. Author URI of the plugin
+#: uikit-blocks.php
+msgid "https://github.com/dobaniashish"
+msgstr ""
+
+#: includes/class-uikit-blocks.php:118
+msgid "Uikit Blocks"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/components/url-control/index.js:54
+msgid "Same Window"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/components/url-control/index.js:58
+msgid "New Window"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/components/url-control/index.js:65
+msgid "Lightbox"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/components/url-control/index.js:74
+msgid "Link rel"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/button/edit.js:54
+#: src/js/blocks/icon/edit.js:114
+#: src/js/components/url-control/index.js:85
+msgid "Link"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/components/url-control/index.js:102
+msgid "Url"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/components/url-control/index.js:113
+msgid "Target"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/components/url-control/index.js:138
+msgid "Lightbox Type"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/accordion/edit.js:75
+#: src/js/blocks/button/edit.js:34
+#: src/js/blocks/button/edit.js:67
+#: src/js/blocks/card/edit.js:76
+#: src/js/blocks/card/edit.js:108
+#: src/js/blocks/container/edit.js:55
+#: src/js/blocks/countdown/edit.js:27
+#: src/js/blocks/countdown/edit.js:186
+#: src/js/blocks/divider/edit.js:34
+#: src/js/blocks/general-options.js:143
+#: src/js/blocks/grid/edit.js:30
+#: src/js/blocks/list/edit.js:62
+#: src/js/blocks/list/edit.js:100
+#: src/js/blocks/list/edit.js:130
+#: src/js/blocks/list/edit.js:151
+#: src/js/blocks/overlay/edit.js:402
+#: src/js/blocks/overlay/edit.js:432
+#: src/js/blocks/overlay/edit.js:496
+#: src/js/blocks/section/edit.js:96
+#: src/js/blocks/section/edit.js:146
+#: src/js/components/url-control/index.js:147
+msgid "Default"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/card/edit.js:128
+#: src/js/blocks/image/edit.js:286
+#: src/js/blocks/overlay/edit.js:140
+#: src/js/components/url-control/index.js:154
+msgid "Image"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/components/url-control/index.js:161
+msgid "Video"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/components/url-control/index.js:168
+msgid "Iframe"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/components/url-control/index.js:186
+msgid "Mark as nofollow"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:31
+#: src/js/blocks/overlay/edit.js:642
+#: src/js/blocks/overlay/edit.js:756
+msgid "Fade"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:35
+#: src/js/blocks/overlay/edit.js:646
+#: src/js/blocks/overlay/edit.js:760
+msgid "Scale Up"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:39
+#: src/js/blocks/overlay/edit.js:650
+#: src/js/blocks/overlay/edit.js:764
+msgid "Scale Down"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:43
+#: src/js/blocks/overlay/edit.js:657
+msgid "Slide Top"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:47
+#: src/js/blocks/overlay/edit.js:664
+msgid "Slide Bottom"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:51
+#: src/js/blocks/overlay/edit.js:671
+msgid "Slide Left"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:55
+#: src/js/blocks/overlay/edit.js:678
+msgid "Slide Right"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:59
+#: src/js/blocks/overlay/edit.js:685
+msgid "Slide Top Small"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:63
+#: src/js/blocks/overlay/edit.js:692
+msgid "Slide Bottom Small"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:67
+#: src/js/blocks/overlay/edit.js:699
+msgid "Slide Left Small"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:71
+#: src/js/blocks/overlay/edit.js:706
+msgid "Slide Right Small"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:75
+#: src/js/blocks/overlay/edit.js:713
+msgid "Slide Top Medium"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:79
+#: src/js/blocks/overlay/edit.js:720
+msgid "Slide Bottom Medium"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:83
+#: src/js/blocks/overlay/edit.js:727
+msgid "Slide Left Medium"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:87
+#: src/js/blocks/overlay/edit.js:734
+msgid "Slide Right Medium"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/card/edit.js:88
+#: src/js/blocks/container/edit.js:79
+#: src/js/blocks/countdown/edit.js:198
+#: src/js/blocks/general-options.js:94
+#: src/js/blocks/general-options.js:550
+#: src/js/blocks/general-options.js:583
+#: src/js/blocks/grid-cell/edit.js:106
+#: src/js/blocks/grid/edit.js:53
+#: src/js/blocks/grid/edit.js:92
+#: src/js/blocks/grid/edit.js:347
+#: src/js/blocks/grid/edit.js:394
+#: src/js/blocks/heading/edit.js:142
+#: src/js/blocks/heading/edit.js:167
+#: src/js/blocks/icon/edit.js:72
+#: src/js/blocks/image/edit.js:195
+#: src/js/blocks/image/edit.js:224
+#: src/js/blocks/list/edit.js:159
+#: src/js/blocks/overlay/edit.js:470
+#: src/js/blocks/section/edit.js:373
+msgid "None"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:114
+msgid "General Settings"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:121
+#: src/js/blocks/overlay/edit.js:466
+msgid "Margin"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:122
+msgid "Set the vertical margin. The first element's top margin and last element's bottom margin are always removed by UIkit."
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:129
+msgid "Keep Defaults"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/button/edit.js:71
+#: src/js/blocks/button/edit.js:140
+#: src/js/blocks/card/edit.js:112
+#: src/js/blocks/container/edit.js:63
+#: src/js/blocks/countdown/edit.js:31
+#: src/js/blocks/countdown/edit.js:190
+#: src/js/blocks/divider/edit.js:42
+#: src/js/blocks/general-options.js:136
+#: src/js/blocks/grid-cell/edit.js:83
+#: src/js/blocks/grid/edit.js:34
+#: src/js/blocks/image/edit.js:199
+#: src/js/blocks/image/edit.js:228
+#: src/js/blocks/overlay/edit.js:474
+#: src/js/blocks/overlay/edit.js:500
+#: src/js/blocks/overlay/edit.js:591
+#: src/js/blocks/section/edit.js:154
+msgid "Small"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/button/edit.js:144
+#: src/js/blocks/countdown/edit.js:35
+#: src/js/blocks/countdown/edit.js:194
+#: src/js/blocks/general-options.js:150
+#: src/js/blocks/grid-cell/edit.js:87
+#: src/js/blocks/grid/edit.js:38
+#: src/js/blocks/image/edit.js:203
+#: src/js/blocks/image/edit.js:232
+#: src/js/blocks/overlay/edit.js:478
+#: src/js/blocks/overlay/edit.js:504
+#: src/js/blocks/overlay/edit.js:595
+msgid "Medium"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/button/edit.js:75
+#: src/js/blocks/button/edit.js:148
+#: src/js/blocks/card/edit.js:116
+#: src/js/blocks/container/edit.js:67
+#: src/js/blocks/countdown/edit.js:39
+#: src/js/blocks/general-options.js:157
+#: src/js/blocks/grid-cell/edit.js:91
+#: src/js/blocks/grid/edit.js:42
+#: src/js/blocks/image/edit.js:207
+#: src/js/blocks/image/edit.js:236
+#: src/js/blocks/list/edit.js:155
+#: src/js/blocks/overlay/edit.js:599
+#: src/js/blocks/section/edit.js:158
+msgid "Large"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:164
+#: src/js/blocks/overlay/edit.js:603
+msgid "XLarge"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:171
+#: src/js/blocks/overlay/edit.js:508
+#: src/js/blocks/section/edit.js:166
+msgid "Remove"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:185
+msgid "Remove top margin"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:199
+msgid "Remove bottom margin"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:219
+msgid "Visiblity"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:220
+msgid "Show or hide the element on this device width and larger. Note: Visiblity is not previewed in editor."
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:227
+#: src/js/blocks/general-options.js:808
+#: src/js/blocks/general-options.js:957
+msgid "Always"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:234
+msgid "Visible Small (Phone Landscape)"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:241
+msgid "Visible Medium (Tablet Landscape)"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:248
+msgid "Visible Large (Desktop)"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:255
+msgid "Visible X-Large (Large Screens)"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:262
+msgid "Hidden Small (Phone Landscape)"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:269
+msgid "Hidden Medium (Tablet Landscape)"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:276
+msgid "Hidden Large (Desktop)"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:283
+msgid "Hidden X-Large (Large Screens)"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:303
+#: src/js/blocks/overlay/edit.js:518
+msgid "Position"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:304
+msgid "Select element position. Note: Position is not previewed in editor."
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:311
+msgid "Static"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:318
+msgid "Relative"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:325
+msgid "Absolute"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:342
+msgid "Position Left"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/card/edit.js:164
+#: src/js/blocks/general-options.js:346
+msgid "Enter value for CSS left property."
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:361
+msgid "Position Right"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:365
+msgid "Enter value for CSS right property."
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:380
+msgid "Position Top"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:384
+msgid "Enter value for CSS top property."
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:399
+msgid "Position Bottom"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:403
+msgid "Enter value for CSS bottom property."
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:419
+msgid "Z-Index"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:423
+msgid "Enter value for CSS z-index property."
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:449
+msgid "Animation/Transition (Parent)"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:459
+msgid "Scrollspy Animation"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:463
+msgid "Set Scrollspy to trigger child blocks animation once they enter the viewport. To enable animation you need to set \"Effect\" to \"Animation\" and \"Animation\" value to \"Inherit\" or an animation name on child blocks in \"Animation/Transition (Child)\" panel."
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:470
+msgid "Disable"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:486
+msgid "Animation Delay"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:490
+msgid "Delay the element animations in milliseconds, e.g. 200."
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:511
+msgid "Transition toggle"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:515
+msgid "Toggle a child blocks transition on hover or focus. To enable transition you need to set \"Effect\" to \"Transition\" and select a transition name on child blocks in \"Animation/Transition (Child)\" panel."
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:535
+msgid "Animation/Transition (Child)"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:542
+msgid "Effect"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:543
+msgid "Select element effect like animation, transition or parallax."
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:554
+#: src/js/blocks/general-options.js:575
+msgid "Animation"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/accordion/edit.js:71
+#: src/js/blocks/general-options.js:558
+#: src/js/blocks/general-options.js:602
+#: src/js/blocks/overlay/edit.js:638
+msgid "Transition"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:562
+#: src/js/blocks/grid/edit.js:416
+#: src/js/blocks/section/edit.js:381
+msgid "Parallax"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:576
+msgid "Make sure to set \"Scrollspy\" to \"Animation\" on any parent block in \"Animation/Transition (Parent)\" panel to enable animation."
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:587
+#: src/js/blocks/general-options.js:904
+#: src/js/blocks/general-options.js:1011
+#: src/js/blocks/grid-cell/edit.js:19
+msgid "Inherit"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:603
+msgid "Make sure to enable \"Transition toggle\" on any parent block in \"Animation/Transition (Parent)\" panel to enable transition."
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:620
+msgid "Parallax Translate X"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:632
+msgid "Parallax Translate Y"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:644
+msgid "Parallax Scale"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:658
+msgid "Parallax Rotate"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:672
+msgid "Parallax Opacity"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:686
+msgid "Parallax Blur"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:700
+msgid "Transform Origin"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:704
+msgid "Define the origin of the element's transformation when scaling or rotating the element."
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:711
+#: src/js/blocks/image/edit.js:143
+#: src/js/blocks/overlay/edit.js:265
+#: src/js/blocks/overlay/edit.js:542
+#: src/js/blocks/section/edit.js:283
+msgid "Top Left"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:718
+#: src/js/blocks/image/edit.js:147
+#: src/js/blocks/overlay/edit.js:269
+#: src/js/blocks/overlay/edit.js:546
+#: src/js/blocks/section/edit.js:287
+msgid "Top Center"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:725
+#: src/js/blocks/image/edit.js:151
+#: src/js/blocks/overlay/edit.js:273
+#: src/js/blocks/overlay/edit.js:550
+#: src/js/blocks/section/edit.js:294
+msgid "Top Right"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:732
+#: src/js/blocks/image/edit.js:155
+#: src/js/blocks/overlay/edit.js:277
+#: src/js/blocks/overlay/edit.js:554
+#: src/js/blocks/section/edit.js:301
+msgid "Center Left"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:739
+#: src/js/blocks/image/edit.js:159
+#: src/js/blocks/overlay/edit.js:281
+#: src/js/blocks/section/edit.js:308
+msgid "Center Center"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:746
+#: src/js/blocks/image/edit.js:166
+#: src/js/blocks/overlay/edit.js:288
+#: src/js/blocks/overlay/edit.js:558
+#: src/js/blocks/section/edit.js:315
+msgid "Center Right"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:753
+#: src/js/blocks/image/edit.js:170
+#: src/js/blocks/overlay/edit.js:292
+#: src/js/blocks/overlay/edit.js:562
+#: src/js/blocks/section/edit.js:322
+msgid "Bottom Left"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:760
+#: src/js/blocks/image/edit.js:174
+#: src/js/blocks/overlay/edit.js:296
+#: src/js/blocks/overlay/edit.js:566
+#: src/js/blocks/section/edit.js:329
+msgid "Bottom Center"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:767
+#: src/js/blocks/image/edit.js:181
+#: src/js/blocks/overlay/edit.js:303
+#: src/js/blocks/overlay/edit.js:570
+#: src/js/blocks/section/edit.js:336
+msgid "Bottom Right"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:781
+msgid "Parallax Easing"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:795
+msgid "Parallax Breakpoint"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:799
+msgid "Display the parallax effect only on this device width and larger."
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:815
+#: src/js/blocks/general-options.js:964
+msgid "Small (Phone Landscape)"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:822
+#: src/js/blocks/general-options.js:971
+msgid "Medium (Tablet Landscape)"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:829
+#: src/js/blocks/general-options.js:978
+msgid "Large (Desktop)"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:836
+#: src/js/blocks/general-options.js:985
+msgid "X-Large (Large Screens)"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:850
+msgid "Custom Parallax Options"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:883
+#: src/js/blocks/general-options.js:897
+msgid "Text Alignment"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:911
+#: src/js/blocks/general-options.js:1018
+#: src/js/blocks/grid/edit.js:96
+#: src/js/blocks/overlay/edit.js:526
+msgid "Left"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:915
+#: src/js/blocks/general-options.js:1025
+#: src/js/blocks/grid/edit.js:100
+#: src/js/blocks/overlay/edit.js:538
+msgid "Center"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:922
+#: src/js/blocks/general-options.js:1032
+#: src/js/blocks/grid/edit.js:104
+#: src/js/blocks/overlay/edit.js:530
+msgid "Right"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:929
+msgid "Justify"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:948
+msgid "Text Alignment Breakpoint"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/general-options.js:1002
+msgid "Text Alignment Fallback"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/accordion-item/edit.js:39
+#: src/js/blocks/accordion/edit.js:55
+#: src/js/blocks/button/edit.js:28
+#: src/js/blocks/card/edit.js:70
+#: src/js/blocks/container/edit.js:49
+#: src/js/blocks/countdown/edit.js:58
+#: src/js/blocks/divider/edit.js:28
+#: src/js/blocks/heading/edit.js:56
+#: src/js/blocks/icon/edit.js:43
+#: src/js/blocks/image/edit.js:79
+#: src/js/blocks/list/edit.js:56
+#: src/js/blocks/section/edit.js:90
+msgid "Settings"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/button/edit.js:30
+#: src/js/blocks/card/edit.js:72
+#: src/js/blocks/divider/edit.js:30
+#: src/js/blocks/heading/edit.js:58
+#: src/js/blocks/list/edit.js:126
+#: src/js/blocks/overlay/edit.js:428
+#: src/js/blocks/section/edit.js:92
+msgid "Style"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/button/edit.js:38
+#: src/js/blocks/card/edit.js:80
+#: src/js/blocks/heading/edit.js:179
+#: src/js/blocks/icon/edit.js:84
+#: src/js/blocks/list/edit.js:112
+#: src/js/blocks/section/edit.js:104
+msgid "Primary"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/button/edit.js:42
+#: src/js/blocks/card/edit.js:84
+#: src/js/blocks/heading/edit.js:183
+#: src/js/blocks/icon/edit.js:88
+#: src/js/blocks/list/edit.js:116
+#: src/js/blocks/section/edit.js:108
+msgid "Secondary"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/button/edit.js:46
+#: src/js/blocks/heading/edit.js:195
+#: src/js/blocks/icon/edit.js:100
+msgid "Danger"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/button/edit.js:50
+msgid "Text"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/button/edit.js:63
+#: src/js/blocks/icon/edit.js:56
+#: src/js/blocks/list/edit.js:147
+msgid "Size"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/button/edit.js:84
+#: src/js/blocks/container/edit.js:51
+#: src/js/blocks/image/edit.js:92
+#: src/js/blocks/overlay/edit.js:211
+#: src/js/blocks/overlay/edit.js:583
+msgid "Width"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/button/edit.js:88
+#: src/js/blocks/grid-cell/edit.js:27
+#: src/js/blocks/grid/edit.js:61
+#: src/js/blocks/overlay/edit.js:587
+#: src/js/blocks/overlay/edit.js:618
+#: src/js/blocks/section/edit.js:125
+#: src/js/blocks/section/edit.js:255
+#: src/js/blocks/section/edit.js:279
+msgid "Auto"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/button/edit.js:92
+#: src/js/blocks/grid-cell/edit.js:31
+msgid "100% (1-1)"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/button/edit.js:96
+#: src/js/blocks/grid-cell/edit.js:35
+msgid "83% (5-6)"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/button/edit.js:100
+#: src/js/blocks/grid-cell/edit.js:39
+msgid "80% (4-5)"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/button/edit.js:104
+#: src/js/blocks/grid-cell/edit.js:43
+msgid "75% (3-4)"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/button/edit.js:108
+#: src/js/blocks/grid-cell/edit.js:47
+msgid "66% (2-3)"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/button/edit.js:112
+#: src/js/blocks/grid-cell/edit.js:51
+msgid "60% (3-5)"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/button/edit.js:116
+#: src/js/blocks/grid-cell/edit.js:55
+msgid "50% (1-2)"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/button/edit.js:120
+#: src/js/blocks/grid-cell/edit.js:59
+msgid "40% (2-5)"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/button/edit.js:124
+#: src/js/blocks/grid-cell/edit.js:63
+msgid "33% (1-3)"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/button/edit.js:128
+#: src/js/blocks/grid-cell/edit.js:67
+msgid "25% (1-4)"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/button/edit.js:132
+#: src/js/blocks/grid-cell/edit.js:71
+msgid "20% (1-5)"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/button/edit.js:136
+#: src/js/blocks/grid-cell/edit.js:75
+msgid "16% (1-6)"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/button/edit.js:152
+#: src/js/blocks/grid-cell/edit.js:95
+#: src/js/blocks/image/edit.js:211
+#: src/js/blocks/image/edit.js:240
+msgid "X-Large"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/button/edit.js:156
+#: src/js/blocks/grid-cell/edit.js:99
+msgid "2X-Large"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/button/edit.js:190
+msgid "Button text"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/button/edit.js:191
+msgid "Add text…"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/heading/edit.js:62
+msgid "Default (Inherit from tag)"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/heading/edit.js:69
+msgid "Heading 3X-Large"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/heading/edit.js:73
+msgid "Heading 2X-Large"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/heading/edit.js:77
+msgid "Heading X-Large"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/heading/edit.js:81
+msgid "Heading Large"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/heading/edit.js:85
+msgid "Heading Medium"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/heading/edit.js:89
+msgid "Heading Small"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/heading/edit.js:93
+msgid "Heading H1"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/heading/edit.js:97
+msgid "Heading H2"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/heading/edit.js:101
+msgid "Heading H3"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/heading/edit.js:105
+msgid "Heading H4"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/heading/edit.js:109
+msgid "Heading H5"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/heading/edit.js:113
+msgid "Heading H6"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/heading/edit.js:117
+msgid "Text Meta"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/heading/edit.js:121
+msgid "Text Lead"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/heading/edit.js:125
+msgid "Text Small"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/heading/edit.js:129
+msgid "Text Large"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/heading/edit.js:138
+msgid "Decoration"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/heading/edit.js:146
+#: src/js/blocks/list/edit.js:134
+msgid "Divider"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/heading/edit.js:150
+msgid "Bullet"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/heading/edit.js:154
+msgid "Line"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/heading/edit.js:163
+#: src/js/blocks/icon/edit.js:68
+msgid "Color"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/heading/edit.js:171
+#: src/js/blocks/icon/edit.js:76
+#: src/js/blocks/list/edit.js:104
+#: src/js/blocks/section/edit.js:100
+msgid "Muted"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/heading/edit.js:175
+#: src/js/blocks/icon/edit.js:80
+#: src/js/blocks/list/edit.js:108
+msgid "Emphasis"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/heading/edit.js:187
+#: src/js/blocks/icon/edit.js:92
+msgid "Success"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/heading/edit.js:191
+#: src/js/blocks/icon/edit.js:96
+msgid "Warning"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/heading/edit.js:199
+msgid "Background"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/heading/edit.js:261
+msgid "Heading text"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/heading/edit.js:262
+msgid "Heading…"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid/templates.js:8
+msgid "Whole"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid/templates.js:9
+msgid "One whole column."
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid/templates.js:23
+msgid "Halves"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid/templates.js:24
+msgid "Two columns, equally split."
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid/templates.js:41
+msgid "Thirds 2-1"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid/templates.js:42
+msgid "Two columns, two-thirds, one-third split."
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid/templates.js:62
+msgid "Thirds"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid/templates.js:63
+msgid "Three columns, equally split."
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid/templates.js:81
+msgid "Halves x 2"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid/templates.js:82
+msgid "Two columns, equally split and two rows."
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid/templates.js:107
+msgid "Thirds x 2"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid/templates.js:108
+msgid "Three columns, equally split and two rows."
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid/edit.js:46
+msgid "Collapse"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/container/edit.js:75
+#: src/js/blocks/grid-cell/edit.js:23
+#: src/js/blocks/grid/edit.js:57
+msgid "Expand"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid/edit.js:65
+msgid "100%"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid/edit.js:69
+msgid "50%"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid/edit.js:73
+msgid "33%"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid/edit.js:77
+msgid "25%"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid/edit.js:81
+msgid "20%"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid/edit.js:85
+msgid "16%"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid/edit.js:108
+msgid "Between"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid/edit.js:112
+msgid "Around"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid/edit.js:203
+msgid "Gap Settings"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/countdown/edit.js:101
+#: src/js/blocks/grid/edit.js:207
+msgid "Column Gap"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/countdown/edit.js:109
+#: src/js/blocks/grid/edit.js:215
+msgid "Row Gap"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid/edit.js:224
+msgid "Child Width Settings"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid/edit.js:228
+msgid "Set the column child width for each breakpoint. If \"Inherit\" is selected, the column width of the next smaller screen size is applied. It can be overridden in each cell settings."
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid/edit.js:234
+msgid "Child Width @ Mobile Portrait"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid/edit.js:245
+msgid "Child Width @ Mobile Landscape"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid/edit.js:256
+msgid "Child Width @ Tablet"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid/edit.js:264
+msgid "Child Width @ Desktop"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid/edit.js:272
+msgid "Child Width @ Large Screen"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid-cell/edit.js:207
+#: src/js/blocks/grid/edit.js:284
+msgid "Flex Settings"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid/edit.js:288
+msgid "Horizontal Alignment @ Mobile Portrait"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid/edit.js:299
+msgid "Horizontal Alignment @ Mobile Landscape"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid/edit.js:310
+msgid "Horizontal Alignment @ Tablet"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid/edit.js:321
+msgid "Horizontal Alignment @ Desktop"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid/edit.js:332
+msgid "Horizontal Alignment @ Large Screen"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid/edit.js:343
+msgid "Vertical Alignment"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid/edit.js:351
+#: src/js/blocks/overlay/edit.js:522
+msgid "Top"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid/edit.js:355
+msgid "Middle"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid/edit.js:359
+#: src/js/blocks/overlay/edit.js:534
+msgid "Bottom"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid/edit.js:369
+msgid "Gird Settings"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid/edit.js:373
+msgid "Enable divider between grid cells"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid/edit.js:383
+msgid "Match cell height"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid/edit.js:390
+msgid "Masonry"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid/edit.js:398
+msgid "Pack"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid/edit.js:402
+msgid "Next"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid/edit.js:412
+msgid "Parallax Settings"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid/edit.js:418
+msgid "To move single columns of a grid at different speeds while scrolling, just add parallax number. The number sets the parallax translation in pixels."
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid/edit.js:427
+msgid "Parallax Start"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid/edit.js:429
+msgid "The parallax-start option defines when the animation starts. The default value of 0 means that the grid's top border and the viewport's bottom border intersect."
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid/edit.js:438
+msgid "Parallax End"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid/edit.js:440
+msgid "The parallax-end option defines when the animation ends. The default value of 0 means that the grid's bottom border and the viewport's top border intersect."
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid/edit.js:449
+msgid "Justify Parallax"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid/edit.js:451
+msgid "To justify the grid parallax if columns have different heights, for example in masonry grids, Check the justify option so all grid columns reach the bottom at the same time."
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid/edit.js:491
+msgid "Select a layout or add a grid cell block to start custom design."
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid-cell/edit.js:110
+msgid "First"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid-cell/edit.js:114
+msgid "Last"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid-cell/edit.js:151
+msgid "Width Settings"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid-cell/edit.js:153
+msgid "Set the column width for each breakpoint. If \"Inherit\" is selected, the column width of the next smaller screen size is applied. If all options are set to \"Inherit\", the \"Child width\" from the parent grid block is applied."
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid-cell/edit.js:160
+msgid "Width @ Mobile Portrait"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid-cell/edit.js:171
+msgid "Width @ Mobile Landscape"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid-cell/edit.js:182
+msgid "Width @ Tablet"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid-cell/edit.js:190
+msgid "Width @ Desktop"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid-cell/edit.js:198
+msgid "Width @ Large Screen"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid-cell/edit.js:211
+msgid "Order @ Mobile Portrait"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid-cell/edit.js:222
+msgid "Order @ Mobile Landscape"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid-cell/edit.js:233
+msgid "Order @ Tablet"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid-cell/edit.js:241
+msgid "Order @ Desktop"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/grid-cell/edit.js:249
+msgid "Order @ Large Screen"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/countdown/edit.js:60
+msgid "Select a date for the countdown to expire."
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/countdown/edit.js:66
+msgid "Date"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/countdown/edit.js:117
+msgid "Show separator"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/countdown/edit.js:127
+msgid "Label Settings"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/countdown/edit.js:129
+msgid "Show Labels"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/countdown/edit.js:142
+msgid "Label for days"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/countdown/edit.js:150
+msgid "Label for hours"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/countdown/edit.js:161
+msgid "Label for minutes"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/countdown/edit.js:171
+msgid "Label for seconds"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/countdown/edit.js:182
+msgid "Label Margin"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/section/edit.js:112
+msgid "Blank"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/overlay/edit.js:614
+#: src/js/blocks/section/edit.js:121
+msgid "Color Mode"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/overlay/edit.js:622
+#: src/js/blocks/section/edit.js:129
+msgid "Light"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/overlay/edit.js:626
+#: src/js/blocks/section/edit.js:133
+msgid "Dark"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/card/edit.js:104
+#: src/js/blocks/overlay/edit.js:492
+#: src/js/blocks/section/edit.js:142
+msgid "Padding"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/container/edit.js:59
+#: src/js/blocks/section/edit.js:150
+msgid "Extra Small"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/container/edit.js:71
+#: src/js/blocks/section/edit.js:162
+msgid "Extra Large"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/section/edit.js:177
+msgid "Remove top padding"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/section/edit.js:189
+msgid "Remove bottom padding"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/section/edit.js:204
+msgid "Background Settings"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/section/edit.js:210
+msgid "Background Image"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/section/edit.js:241
+msgid "Remove background image"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/section/edit.js:248
+msgid "Background Size"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/overlay/edit.js:406
+#: src/js/blocks/section/edit.js:259
+msgid "Cover"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/section/edit.js:263
+msgid "Contain"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/section/edit.js:272
+msgid "Background Position"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/section/edit.js:350
+msgid "Repeat background"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/section/edit.js:362
+msgid "Background Effect"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/section/edit.js:366
+msgid "Note: Parallax is not previewed in editor."
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/section/edit.js:377
+msgid "Fixed"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/section/edit.js:394
+msgid "Background Parallax Horizontal"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/section/edit.js:409
+msgid "Background Parallax Vertical"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/container/edit.js:90
+msgid "Expand Left"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/container/edit.js:99
+msgid "Expand Right"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/accordion/edit.js:57
+msgid "Enable collapsing"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/accordion/edit.js:64
+msgid "Allow multiple open"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/accordion/edit.js:79
+msgid "Linear"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/accordion/edit.js:83
+msgid "Ease"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/accordion/edit.js:87
+msgid "Ease In"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/accordion/edit.js:91
+msgid "Ease In Out"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/accordion/edit.js:95
+msgid "Ease Out"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/accordion/edit.js:104
+msgid "Transition duration"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/accordion-item/edit.js:41
+msgid "Keep open initially"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/accordion-item/edit.js:53
+msgid "Accordion title"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/accordion-item/edit.js:54
+msgid "Add Accordion title…"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/divider/edit.js:38
+#: src/js/blocks/icon/edit.js:45
+msgid "Icon"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/divider/edit.js:46
+msgid "Vertical"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/divider/edit.js:55
+msgid "Tag"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/divider/edit.js:59
+msgid "Hr"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/divider/edit.js:63
+msgid "Div"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/components/uikit-icon-input/index.js:49
+msgid "Icons"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/components/uikit-icon-input/index.js:54
+msgid "Search icon"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/components/uikit-icon-input/index.js:95
+msgid "Icon name…"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/icon/edit.js:46
+msgid "Enter icon name from UIkit or select one."
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/icon/edit.js:57
+msgid "Icon size in px without unit."
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/icon/edit.js:110
+msgid "Link Style"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/icon/edit.js:118
+msgid "Icon Link"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/icon/edit.js:122
+msgid "Icon Button"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/icon/edit.js:126
+msgid "Link Muted"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/icon/edit.js:130
+msgid "Link Text"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/icon/edit.js:134
+msgid "Link Reset"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/card/edit.js:97
+msgid "Hover effect"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/card/edit.js:159
+#: src/js/blocks/overlay/edit.js:163
+msgid "Remove image"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/card/edit.js:163
+msgid "Image alt text"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/image/edit.js:81
+#: src/js/blocks/overlay/edit.js:200
+msgid "Alternative text"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/image/edit.js:102
+#: src/js/blocks/overlay/edit.js:221
+msgid "Height"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/image/edit.js:113
+#: src/js/blocks/overlay/edit.js:233
+msgid "Load image eagerly"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/image/edit.js:114
+#: src/js/blocks/overlay/edit.js:234
+msgid "By default, images are loaded lazy. Enable eager loading for images in the initial viewport."
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/image/edit.js:125
+#: src/js/blocks/overlay/edit.js:246
+msgid "Resolution"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/image/edit.js:126
+#: src/js/blocks/overlay/edit.js:247
+#: src/js/blocks/overlay/edit.js:383
+msgid "Select the size of the source image."
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/image/edit.js:139
+#: src/js/blocks/overlay/edit.js:261
+msgid "Focal Point"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/image/edit.js:191
+msgid "Box Shadow"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/image/edit.js:220
+msgid "Hover Box Shadow"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/image/edit.js:263
+msgid "Replace"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/overlay/edit.js:137
+msgid "Image Settings"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/overlay/edit.js:172
+msgid "Select Image"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/overlay/edit.js:315
+msgid "Hover Image"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/overlay/edit.js:338
+msgid "Remove hover image"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/overlay/edit.js:347
+msgid "Select Hover Image"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/overlay/edit.js:379
+msgid "Hover Image Resolution"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/overlay/edit.js:396
+msgid "Overlay Settings"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/overlay/edit.js:398
+msgid "Mode"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/overlay/edit.js:416
+msgid "Show overlay on hover"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/overlay/edit.js:417
+msgid "Note: Overlay on hover is not previewed in editor."
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/overlay/edit.js:436
+msgid "Overlay Default"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/overlay/edit.js:440
+msgid "Overlay Primary"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/overlay/edit.js:444
+msgid "Tile Default"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/overlay/edit.js:448
+msgid "Tile Muted"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/overlay/edit.js:452
+msgid "Tile Primary"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/overlay/edit.js:456
+msgid "Tile Secondary"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/overlay/edit.js:482
+msgid "large"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/overlay/edit.js:749
+msgid "Image Transition"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/list/edit.js:58
+msgid "Marker"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/list/edit.js:66
+msgid "Disc"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/list/edit.js:70
+msgid "Circle"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/list/edit.js:74
+msgid "Square"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/list/edit.js:78
+msgid "Decimal"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/list/edit.js:82
+msgid "Hyphen"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/list/edit.js:86
+msgid "Image bullet"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/list/edit.js:96
+msgid "Marker Color"
+msgstr ""
+
+#: assets/admin/js/editor.js:1
+#: src/js/blocks/list/edit.js:138
+msgid "Striped"
+msgstr ""
+
+#: blocks/accordion-item/block.json
+msgctxt "block title"
+msgid "Accordion Item (UIkit)"
+msgstr ""
+
+#: blocks/accordion-item/block.json
+msgctxt "block keyword"
+msgid "Accordion Item"
+msgstr ""
+
+#: blocks/accordion-item/block.json
+msgctxt "block keyword"
+msgid "UIkit Accordion Item"
+msgstr ""
+
+#: blocks/accordion-item/block.json
+#: blocks/accordion/block.json
+#: blocks/button/block.json
+#: blocks/card/block.json
+#: blocks/container/block.json
+#: blocks/countdown/block.json
+#: blocks/divider/block.json
+#: blocks/grid-cell/block.json
+#: blocks/grid/block.json
+#: blocks/heading/block.json
+#: blocks/icon/block.json
+#: blocks/image/block.json
+#: blocks/list-item/block.json
+#: blocks/list/block.json
+#: blocks/overlay/block.json
+#: blocks/section/block.json
+msgctxt "block keyword"
+msgid "UIkit"
+msgstr ""
+
+#: blocks/accordion/block.json
+msgctxt "block title"
+msgid "Accordion (UIkit)"
+msgstr ""
+
+#: blocks/accordion/block.json
+msgctxt "block keyword"
+msgid "Accordion"
+msgstr ""
+
+#: blocks/accordion/block.json
+msgctxt "block keyword"
+msgid "UIkit Accordion"
+msgstr ""
+
+#: blocks/button/block.json
+msgctxt "block title"
+msgid "Button (UIkit)"
+msgstr ""
+
+#: blocks/button/block.json
+msgctxt "block keyword"
+msgid "Button"
+msgstr ""
+
+#: blocks/button/block.json
+msgctxt "block keyword"
+msgid "UIkit Button"
+msgstr ""
+
+#: blocks/card/block.json
+msgctxt "block title"
+msgid "Card (UIkit)"
+msgstr ""
+
+#: blocks/card/block.json
+msgctxt "block keyword"
+msgid "Card"
+msgstr ""
+
+#: blocks/card/block.json
+msgctxt "block keyword"
+msgid "UIkit Card"
+msgstr ""
+
+#: blocks/container/block.json
+msgctxt "block title"
+msgid "Container (UIkit)"
+msgstr ""
+
+#: blocks/container/block.json
+msgctxt "block keyword"
+msgid "Container"
+msgstr ""
+
+#: blocks/container/block.json
+msgctxt "block keyword"
+msgid "UIkit Container"
+msgstr ""
+
+#: blocks/countdown/block.json
+msgctxt "block title"
+msgid "Countdown (UIkit)"
+msgstr ""
+
+#: blocks/countdown/block.json
+msgctxt "block keyword"
+msgid "Countdown"
+msgstr ""
+
+#: blocks/countdown/block.json
+msgctxt "block keyword"
+msgid "UIkit Countdown"
+msgstr ""
+
+#: blocks/divider/block.json
+msgctxt "block title"
+msgid "Divider (UIkit)"
+msgstr ""
+
+#: blocks/divider/block.json
+msgctxt "block keyword"
+msgid "Divider"
+msgstr ""
+
+#: blocks/divider/block.json
+msgctxt "block keyword"
+msgid "UIkit Divider"
+msgstr ""
+
+#: blocks/grid-cell/block.json
+msgctxt "block title"
+msgid "Grid Cell (UIkit)"
+msgstr ""
+
+#: blocks/grid-cell/block.json
+msgctxt "block keyword"
+msgid "Grid Cell"
+msgstr ""
+
+#: blocks/grid-cell/block.json
+msgctxt "block keyword"
+msgid "UIkit Grid Cell"
+msgstr ""
+
+#: blocks/grid/block.json
+msgctxt "block title"
+msgid "Grid (UIkit)"
+msgstr ""
+
+#: blocks/grid/block.json
+msgctxt "block keyword"
+msgid "Grid"
+msgstr ""
+
+#: blocks/grid/block.json
+msgctxt "block keyword"
+msgid "UIkit Grid"
+msgstr ""
+
+#: blocks/heading/block.json
+msgctxt "block title"
+msgid "Heading (UIkit)"
+msgstr ""
+
+#: blocks/heading/block.json
+msgctxt "block keyword"
+msgid "Heading"
+msgstr ""
+
+#: blocks/heading/block.json
+msgctxt "block keyword"
+msgid "UIkit Heading"
+msgstr ""
+
+#: blocks/icon/block.json
+msgctxt "block title"
+msgid "Icon (UIkit)"
+msgstr ""
+
+#: blocks/icon/block.json
+msgctxt "block keyword"
+msgid "Icon"
+msgstr ""
+
+#: blocks/icon/block.json
+msgctxt "block keyword"
+msgid "UIkit Icon"
+msgstr ""
+
+#: blocks/image/block.json
+msgctxt "block title"
+msgid "Image (UIkit)"
+msgstr ""
+
+#: blocks/image/block.json
+msgctxt "block keyword"
+msgid "Image"
+msgstr ""
+
+#: blocks/image/block.json
+msgctxt "block keyword"
+msgid "UIkit Image"
+msgstr ""
+
+#: blocks/list-item/block.json
+msgctxt "block title"
+msgid "List Item (UIkit)"
+msgstr ""
+
+#: blocks/list-item/block.json
+msgctxt "block keyword"
+msgid "List Item"
+msgstr ""
+
+#: blocks/list-item/block.json
+msgctxt "block keyword"
+msgid "UIkit List Item"
+msgstr ""
+
+#: blocks/list/block.json
+msgctxt "block title"
+msgid "List (UIkit)"
+msgstr ""
+
+#: blocks/list/block.json
+msgctxt "block keyword"
+msgid "List"
+msgstr ""
+
+#: blocks/list/block.json
+msgctxt "block keyword"
+msgid "UIkit List"
+msgstr ""
+
+#: blocks/overlay/block.json
+msgctxt "block title"
+msgid "Overlay (UIkit)"
+msgstr ""
+
+#: blocks/overlay/block.json
+msgctxt "block keyword"
+msgid "Overlay"
+msgstr ""
+
+#: blocks/overlay/block.json
+msgctxt "block keyword"
+msgid "UIkit Overlay"
+msgstr ""
+
+#: blocks/overlay/block.json
+msgctxt "block keyword"
+msgid "Cover"
+msgstr ""
+
+#: blocks/section/block.json
+msgctxt "block title"
+msgid "Section (UIkit)"
+msgstr ""
+
+#: blocks/section/block.json
+msgctxt "block keyword"
+msgid "Section"
+msgstr ""
+
+#: blocks/section/block.json
+msgctxt "block keyword"
+msgid "UIkit Section"
+msgstr ""

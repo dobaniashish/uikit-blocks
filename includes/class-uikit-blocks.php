@@ -58,22 +58,22 @@ class UIkit_Blocks {
 	 * Initializes hooks.
 	 */
 	private function init_hooks() {
-		add_action( 'plugins_loaded', array( $this, 'plugins_loaded' ) );
-
 		// Hook: Editor assets.
 		add_action( 'enqueue_block_editor_assets', array( $this, 'enqueue_block_editor_assets' ), 99 );
 		add_action( 'enqueue_block_assets', array( $this, 'enqueue_block_editor_assets' ), 99 );
 
 		// Register block category.
 		add_filter( 'block_categories_all', array( $this, 'block_categories_all' ), 10, 2 );
+
+		add_action( 'init', array( $this, 'init_translations' ) );
 	}
 
 	/**
-	 * Acts on plugins_loaded.
+	 * Initializes translations.
 	 */
-	public function plugins_loaded() {
-		// Initialize translations.
+	public function init_translations() {
 		load_plugin_textdomain( 'uikit-blocks', false, UIKIT_BLOCKS_PATH . '/languages' );
+		wp_set_script_translations( 'uikit-blocks-translations', 'uikit-blocks', UIKIT_BLOCKS_PATH . '/languages' );
 	}
 
 	/**

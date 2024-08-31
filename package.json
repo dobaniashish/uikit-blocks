@@ -57,6 +57,7 @@
 		"lint:js": "wp-scripts lint-js",
 		"lint:js-fix": "wp-scripts lint-js --fix",
 		"lint:md-docs": "wp-scripts lint-md-docs",
-		"lint:php": "wp-env run --env-cwd='wp-content/plugins/uikit-blocks' cli composer run-script lint"
+		"lint:php": "wp-env run --env-cwd='wp-content/plugins/uikit-blocks' cli composer run-script lint",
+		"make-pot": "wp-env run --env-cwd='wp-content/plugins/uikit-blocks' cli wp i18n make-pot ./ languages/uikit-blocks.pot -- --exclude=.github,build-scripts,dist,stubs,test-themes"
 	}
 }

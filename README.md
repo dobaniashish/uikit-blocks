@@ -43,7 +43,7 @@ This project is a Work In Progress. Commits can have breaking changes to plugin 
     -   [x] Transition/Animation/Paralax
 -   [ ] Option to include UIkit assets on frontend
 -   [ ] Filters
--   [ ] Translations
+-   [x] Translations
 -   [ ] Documentation for contributers
 -   [ ] Documentation for users
 -   [ ] Documentation for theme developers
