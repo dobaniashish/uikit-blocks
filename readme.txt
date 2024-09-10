@@ -2,8 +2,8 @@
 Contributors: dobaniashish
 Donate link: https://github.com/dobaniashish
 Tags: gutenberg, blocks
-Requires at least: 6.4
-Tested up to: 6.5
+Requires at least: 6.0
+Tested up to: 6.6
 Stable tag: 1.0.0
 Requires PHP: 7.0
 License: GPLv2

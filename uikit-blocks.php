@@ -4,7 +4,7 @@
  * Plugin URI: https://github.com/dobaniashish/uikit-blocks
  * Description: UIkit Gutenberg Blocks for WordPress.
  * Version: 1.0.0
- * Requires at least: 6.4
+ * Requires at least: 6.0
  * Requires PHP: 7.0
  * Author: dobaniashish
  * Author URI: https://github.com/dobaniashish
