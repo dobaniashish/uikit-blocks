@@ -51,6 +51,14 @@ All blocks are implemented as [dynamic blocks](https://wordpress.org/gutenberg/h
 
 To overwrite a block template, you can copy the original template from the plugin into your theme directory in the same path as a starting point and adjust it to your needs.
 
+= Further Information =
+
+* Documentation: [https://github.com/dobaniashish/uikit-blocks#readme](https://github.com/dobaniashish/uikit-blocks#readme)
+* WordPress Plugin: [https://wordpress.org/plugins/uikit-blocks](https://wordpress.org/plugins/uikit-blocks)
+* GitHub Repository: [https://github.com/dobaniashish/uikit-blocks](https://github.com/dobaniashish/uikit-blocks)
+* Changelog: [https://github.com/dobaniashish/uikit-blocks/releases](https://github.com/dobaniashish/uikit-blocks/releases)
+* Issue tracker: [https://github.com/dobaniashish/uikit-blocks/issues](https://github.com/dobaniashish/uikit-blocks/issues)
+
 == Installation ==
 
 1. Upload the `uikit-blocks` directory into the `/wp-content/plugins/` directory
