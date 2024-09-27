@@ -225,7 +225,6 @@ class Utils {
 	 *
 	 * @param string $slug The slug name for the generic template.
 	 * @param string $name The name of the specialised template.
-	 * @param array  $args Additional arguments passed to the template.
 	 *
 	 * @see https://developer.wordpress.org/reference/functions/get_template_part/
 	 * @see https://developer.wordpress.org/reference/functions/locate_template/
@@ -233,9 +232,7 @@ class Utils {
 	 *
 	 * @return string Template location.
 	 */
-	public static function get_template_part( $slug, $name = null, $args = array() ) {
-
-		do_action( "get_template_part_{$slug}", $slug, $name, $args );
+	public static function get_template_part( $slug, $name = null ) {
 
 		$templates = array();
 		$name      = (string) $name;
@@ -244,8 +241,6 @@ class Utils {
 		}
 
 		$templates[] = "{$slug}.php";
-
-		do_action( 'get_template_part', $slug, $name, $templates, $args );
 
 		$located = locate_template( $templates );
 
