@@ -5,6 +5,10 @@
  * @package uikit-blocks
  */
 
+if ( ! defined( 'ABSPATH' ) ) {
+	exit; // Exit if accessed directly.
+}
+
 use UIkit_Blocks\Helpers\Utils;
 
 $attributes         = $arguments['attributes'];
