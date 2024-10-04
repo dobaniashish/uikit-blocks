@@ -3,9 +3,55 @@
 [![Lint Status](https://github.com/dobaniashish/uikit-blocks/workflows/Lint/badge.svg)](https://github.com/dobaniashish/uikit-blocks/actions/workflows/lint.yml)
 [![Build Status](https://github.com/dobaniashish/uikit-blocks/workflows/Build/badge.svg)](https://github.com/dobaniashish/uikit-blocks/actions/workflows/build.yml)
 
-UIkit Gutenberg Blocks for WordPress.
+UIkit Gutenberg Blocks for WordPress. This plugin adds UIkit components and layout options as Gutenberg blocks.
 
 Inspired by [liip/bootstrap-blocks-wordpress-plugin](https://github.com/liip/bootstrap-blocks-wordpress-plugin) and [UIkit](https://github.com/uikit/uikit).
+
+## TODO
+
+This project is a Work In Progress. Commits can have breaking changes to plugin architecture.
+
+-   [ ] Add all basic UIkit components
+    -   [x] Button
+    -   [x] Heading
+    -   [x] Grid
+        -   [x] Grid Cell
+    -   [x] Countdown
+    -   [x] Section
+    -   [x] Container
+    -   [x] Accordion
+        -   [x] Accordion Item
+    -   [x] Divider
+    -   [x] Icon
+    -   [x] Card
+    -   [x] Image
+    -   [x] Overlay (Cover)
+    -   [x] List
+        -   [x] List Item
+    -   [ ] Breadcrumb (dynamic)
+    -   [ ] Text
+    -   [ ] Slider
+    -   [ ] Subnav
+    -   [ ] Tabs
+    -   [ ] Alert
+    -   [ ] ...more
+-   [x] Add general dynamic block options/attributes
+    -   [x] Margin
+    -   [x] Text Alignment
+    -   [x] Visiblity
+    -   [x] Position
+    -   [x] Transition/Animation/Paralax
+-   [ ] Option to include UIkit assets on frontend
+-   [ ] Filters
+-   [x] Translations
+-   [ ] Documentation for contributers
+-   [ ] Documentation for users
+-   [ ] Documentation for theme developers
+-   [ ] Tests and Backward compatibility
+-   [ ] Playground
+-   [x] Lint
+-   [x] Plugin zip (Use `wp-scripts plugin-zip` or write custom build script)
+-   [x] Publish v1.0.0
 
 ## Features
 
@@ -104,6 +150,9 @@ The following commands can be used to set up a local dev environment. See the of
 
 ## Credits
 
+[`UIkit`](https://github.com/uikit/uikit) is an Open Source project developed by YOOtheme.
+
 -   [`liip/bootstrap-blocks-wordpress-plugin`](https://github.com/liip/bootstrap-blocks-wordpress-plugin) - Inspiration for creating this plugin.
 -   [`UIkit`](https://github.com/uikit/uikit) - Using UIkit framework.
 -   [`fix-esm`](https://www.npmjs.com/package/fix-esm) - For `build-scripts/helpers/require-esm.js` - Require esm metadata files into cjs build script with `babel`.
+-   [`Kick-Off`](https://github.com/zzseba78/Kick-Off) - Custom UIkit logo.
