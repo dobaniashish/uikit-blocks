@@ -40,12 +40,13 @@
 		"less": "^4.2.0",
 		"path": "^0.12.7",
 		"postcss": "^8.4.39",
-		"prettier": "npm:wp-prettier@3.0.3"
+		"prettier": "npm:wp-prettier@3.0.3",
+		"sharp": "^0.33.5"
 	},
 	"scripts": {
 		"prebuild": "npm run check-engines && npm run check-licenses",
-		"build": "wp-scripts build && node build-scripts/less && node build-scripts/metadata && node build-scripts/copy",
-		"build:dev": "wp-scripts build --mode development && node build-scripts/less && node build-scripts/metadata && node build-scripts/copy",
+		"build": "wp-scripts build && node build-scripts/less && node build-scripts/metadata && node build-scripts/wp-assets && node build-scripts/copy",
+		"build:dev": "wp-scripts build --mode development && node build-scripts/less && node build-scripts/metadata && node build-scripts/wp-assets && node build-scripts/copy",
 		"watch": "chokidar \"src\" --initial -c \"npm run build:dev\"",
 		"plugin-zip": "npm run build && node build-scripts/plugin-zip",
 		"check-engines": "wp-scripts check-engines",
