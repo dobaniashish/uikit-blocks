@@ -181,9 +181,6 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 	} );
 
 	const innerBlocksProps = useInnerBlocksProps( blockProps, {
-		// renderAppender: hasInnerBlocks
-		// 	? undefined
-		// 	: InnerBlocks.ButtonBlockAppender,
 		renderAppender: hasInnerBlocks
 			? undefined
 			: InnerBlocks.DefaultBlockAppender,
@@ -460,7 +457,9 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 			</InspectorControls>
 
 			<div { ...innerBlocksProps }>
-				{ ! hasInnerBlocks && (
+				{ hasInnerBlocks ? (
+					innerBlocksProps.children
+				) : (
 					<div className="uk-width-1-1">
 						<div className="uk-placeholder uk-padding-small uk-text-center">
 							<div className="uk-flex uk-flex-center uk-flex-wrap uk-child-width-auto uk-text-small">
@@ -496,8 +495,6 @@ export default function Edit( { attributes, setAttributes, clientId } ) {
 						</div>
 					</div>
 				) }
-
-				{ innerBlocksProps.children }
 			</div>
 		</>
 	);

@@ -4,17 +4,11 @@ const CleanCSS = require( 'clean-css' );
 const postcss = require( 'postcss' );
 const autoprefixer = require( 'autoprefixer' );
 const path = require( 'path' );
-const { createHashLikeWP } = require( './helpers/util' );
 
 const lessConfig = [
 	{
 		source: path.resolve( process.cwd(), 'src/less/', 'editor.less' ),
 		destination: path.resolve( process.cwd(), 'dist/css/', 'editor.css' ),
-		assetDataDestination: path.resolve(
-			process.cwd(),
-			'dist/css/',
-			'editor.css.asset.php'
-		),
 	},
 ];
 
@@ -30,7 +24,6 @@ async function run() {
 async function compile( config ) {
 	const source = path.resolve( config.source );
 	const destination = path.resolve( config.destination );
-	const assetDataDestination = path.resolve( config.assetDataDestination );
 
 	console.log( `Compiling Less ${ source } ...` );
 
@@ -70,12 +63,6 @@ async function compile( config ) {
 
 	// Save css.
 	await fs.writeFile( destination, css, 'utf8' );
-
-	// Create hash and save asset data
-	const hash = createHashLikeWP( css );
-
-	const assetData = `<?php return array('dependencies' => array(), 'version' => '${ hash }');`;
-	fs.writeFile( assetDataDestination, assetData, 'utf8' );
 
 	console.log( `CSS saved at ${ destination }` );
 }

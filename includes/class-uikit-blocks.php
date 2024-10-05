@@ -81,6 +81,19 @@ class UIkit_Blocks {
 	 */
 	public function enqueue_block_editor_assets() {
 		if ( is_admin() ) {
+
+			// React-jsx-runtime polyfill.
+			if ( ! wp_script_is( 'react-jsx-runtime', 'registered' ) ) {
+				$react_jsx_runtime_asset_file = include UIKIT_BLOCKS_PATH . '/assets/admin/js/react-jsx-runtime.asset.php';
+				wp_register_script(
+					'react-jsx-runtime',
+					UIKIT_BLOCKS_URL . '/assets/admin/js/react-jsx-runtime.js',
+					$react_jsx_runtime_asset_file['dependencies'],
+					$react_jsx_runtime_asset_file['version'],
+					true
+				);
+			}
+
 			// Editor css.
 			$css_asset_file = include UIKIT_BLOCKS_PATH . '/assets/admin/css/editor.css.asset.php';
 			wp_enqueue_style(
@@ -92,7 +105,6 @@ class UIkit_Blocks {
 
 			// Editor js.
 			$js_asset_file = include UIKIT_BLOCKS_PATH . '/assets/admin/js/editor.asset.php';
-
 			wp_enqueue_script(
 				'uikit-blocks-editor-js',
 				UIKIT_BLOCKS_URL . '/assets/admin/js/editor.js',

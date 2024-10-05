@@ -68,7 +68,7 @@ exports.getBlocks = function () {
 exports.createHashLikeWP = function ( data ) {
 	// Create a webpack compiler with the our config
 	const config = require( '../../webpack.config' );
-	const compiler = webpack( config );
+	const compiler = webpack( config[0] );
 
 	// Get the compiler output options
 	const { hashFunction, hashDigest, hashDigestLength } =

@@ -1,12 +1,37 @@
-const fs = require( 'fs-extra' );
 const path = require( 'path' );
 
 const { copy, getBlocks } = require( './helpers/util' );
 
 const copyConfig = [
+	// React-jsx-runtime polyfill.
+	{
+		source: path.resolve(
+			process.cwd(),
+			'dist/js/react-jsx-runtime',
+			'react-jsx-runtime.js'
+		),
+		destination: path.resolve(
+			process.cwd(),
+			'assets/admin/js/',
+			'react-jsx-runtime.js'
+		),
+	},
+	{
+		source: path.resolve(
+			process.cwd(),
+			'dist/js/react-jsx-runtime',
+			'react-jsx-runtime.asset.php'
+		),
+		destination: path.resolve(
+			process.cwd(),
+			'assets/admin/js/',
+			'react-jsx-runtime.asset.php'
+		),
+	},
+
 	// Editor - All blocks.
 	{
-		source: path.resolve( process.cwd(), 'dist/js/', 'editor.js' ),
+		source: path.resolve( process.cwd(), 'dist/js/main', 'editor.js' ),
 		destination: path.resolve(
 			process.cwd(),
 			'assets/admin/js/',
@@ -14,7 +39,11 @@ const copyConfig = [
 		),
 	},
 	{
-		source: path.resolve( process.cwd(), 'dist/js/', 'editor.asset.php' ),
+		source: path.resolve(
+			process.cwd(),
+			'dist/js/main',
+			'editor.asset.php'
+		),
 		destination: path.resolve(
 			process.cwd(),
 			'assets/admin/js/',
