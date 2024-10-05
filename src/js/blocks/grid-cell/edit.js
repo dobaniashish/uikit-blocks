@@ -28,51 +28,51 @@ const widthResponsiveOptions = [
 		value: 'auto',
 	},
 	{
-		label: __( '100% (1-1)', 'uikit-blocks' ),
+		label: __( '100% (1–1)', 'uikit-blocks' ),
 		value: '1-1',
 	},
 	{
-		label: __( '83% (5-6)', 'uikit-blocks' ),
+		label: __( '83% (5–6)', 'uikit-blocks' ),
 		value: '5-6',
 	},
 	{
-		label: __( '80% (4-5)', 'uikit-blocks' ),
+		label: __( '80% (4–5)', 'uikit-blocks' ),
 		value: '4-5',
 	},
 	{
-		label: __( '75% (3-4)', 'uikit-blocks' ),
+		label: __( '75% (3–4)', 'uikit-blocks' ),
 		value: '3-4',
 	},
 	{
-		label: __( '66% (2-3)', 'uikit-blocks' ),
+		label: __( '66% (2–3)', 'uikit-blocks' ),
 		value: '2-3',
 	},
 	{
-		label: __( '60% (3-5)', 'uikit-blocks' ),
+		label: __( '60% (3–5)', 'uikit-blocks' ),
 		value: '3-5',
 	},
 	{
-		label: __( '50% (1-2)', 'uikit-blocks' ),
+		label: __( '50% (1–2)', 'uikit-blocks' ),
 		value: '1-2',
 	},
 	{
-		label: __( '40% (2-5)', 'uikit-blocks' ),
+		label: __( '40% (2–5)', 'uikit-blocks' ),
 		value: '2-5',
 	},
 	{
-		label: __( '33% (1-3)', 'uikit-blocks' ),
+		label: __( '33% (1–3)', 'uikit-blocks' ),
 		value: '1-3',
 	},
 	{
-		label: __( '25% (1-4)', 'uikit-blocks' ),
+		label: __( '25% (1–4)', 'uikit-blocks' ),
 		value: '1-4',
 	},
 	{
-		label: __( '20% (1-5)', 'uikit-blocks' ),
+		label: __( '20% (1–5)', 'uikit-blocks' ),
 		value: '1-5',
 	},
 	{
-		label: __( '16% (1-6)', 'uikit-blocks' ),
+		label: __( '16% (1–6)', 'uikit-blocks' ),
 		value: '1-6',
 	},
 ];

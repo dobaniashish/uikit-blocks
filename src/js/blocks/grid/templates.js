@@ -38,7 +38,7 @@ export default [
 	},
 	{
 		name: '66-33',
-		title: __( 'Thirds 2-1', 'uikit-blocks' ),
+		title: __( 'Thirds 2–1', 'uikit-blocks' ),
 		description: __(
 			'Two columns, two-thirds, one-third split.',
 			'uikit-blocks'
