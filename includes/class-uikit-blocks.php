@@ -100,7 +100,7 @@ class UIkit_Blocks {
 				'uikit-blocks-editor-style',
 				UIKIT_BLOCKS_URL . '/assets/admin/css/editor.css',
 				$css_asset_file['dependencies'],
-				$css_asset_file['version'],
+				$css_asset_file['version']
 			);
 
 			// Editor js.

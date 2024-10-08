@@ -68,7 +68,7 @@ exports.getBlocks = function () {
 exports.createHashLikeWP = function ( data ) {
 	// Create a webpack compiler with the our config
 	const config = require( '../../webpack.config' );
-	const compiler = webpack( config[0] );
+	const compiler = webpack( config[ 0 ] );
 
 	// Get the compiler output options
 	const { hashFunction, hashDigest, hashDigestLength } =
@@ -81,4 +81,9 @@ exports.createHashLikeWP = function ( data ) {
 		.slice( 0, hashDigestLength );
 
 	return hash;
+};
+
+exports.getPackage = function () {
+	const packagePath = path.resolve( process.cwd(), 'package.json' );
+	return require( packagePath );
 };

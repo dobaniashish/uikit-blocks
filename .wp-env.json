@@ -1,5 +1,5 @@
 {
-	"core": "WordPress/WordPress#6.5.5",
+	"core": "WordPress/WordPress#6.6.2",
 	"plugins": [ "." ],
 	"themes": [ "./test-themes/uikit", "./test-themes/uikit-fse" ]
 }

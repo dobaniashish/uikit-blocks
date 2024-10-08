@@ -3,10 +3,13 @@ const path = require( 'path' );
 const AdmZip = require( 'adm-zip' );
 const { sync: glob } = require( 'fast-glob' );
 
-const packagePath = path.resolve( process.cwd(), 'package.json' );
-const package = require( packagePath );
+const { getPackage } = require( './helpers/util' );
+
+const package = getPackage();
 const fileName = `${ package.name }-${ package.version }.zip`;
 const filePath = path.resolve( process.cwd(), 'dist', fileName );
+
+console.log( `Creating plugin zip at ${ filePath } ...` );
 
 const zip = new AdmZip();
 
@@ -31,3 +34,5 @@ files.forEach( ( file ) => {
 } );
 
 zip.writeZip( filePath );
+
+console.log( `Plugin zip created at ${ filePath } ...` );

@@ -45,13 +45,14 @@
 		"sharp": "^0.33.5"
 	},
 	"scripts": {
-		"prebuild": "npm run check-engines && npm run check-licenses",
+		"prebuild": "npm run check-engines && npm run check-licenses && npm run check-headers",
 		"build": "wp-scripts build && node build-scripts/less && node build-scripts/metadata && node build-scripts/asset-data && node build-scripts/wp-assets && node build-scripts/copy",
 		"build:dev": "cross-env NODE_ENV=development npm run build",
 		"watch": "chokidar \"src\" --initial -c \"npm run build:dev\"",
 		"plugin-zip": "npm run build && node build-scripts/plugin-zip",
 		"check-engines": "wp-scripts check-engines",
 		"check-licenses": "wp-scripts check-licenses --prod --gpl2",
+		"check-headers": "node build-scripts/check-headers",
 		"wp-env": "wp-env",
 		"wp-scripts": "wp-scripts",
 		"lint": "npm run lint:pkg-json && npm run lint:js && npm run lint:md-docs",
