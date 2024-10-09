@@ -7,6 +7,8 @@ UIkit Gutenberg Blocks for WordPress. This plugin adds UIkit components and layo
 
 Inspired by [liip/bootstrap-blocks-wordpress-plugin](https://github.com/liip/bootstrap-blocks-wordpress-plugin) and [UIkit](https://github.com/uikit/uikit).
 
+Explore UIkit Blocks in [WordPress Playground](https://playground.wordpress.net/?plugin=uikit-blocks&url=/wp-admin/post-new.php).
+
 ## Features
 
 -   Supports UIkit 3
@@ -142,8 +144,9 @@ The following features are in progress.
 -   [ ] Documentation for contributers
 -   [ ] Documentation for users
 -   [ ] Documentation for theme developers
--   [ ] Tests and Backward compatibility
--   [ ] Playground
+-   [x] Backward compatibility
+-   [ ] Tests
+-   [x] Playground
 -   [x] Lint
 -   [x] Plugin zip (Use `wp-scripts plugin-zip` or write custom build script)
 -   [x] Publish v1.0.0
